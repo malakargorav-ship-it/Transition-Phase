@@ -477,3 +477,87 @@
   }
   .approach.tp-spotlight-host .section-heading>p{margin-top:18px}
 }
+
+
+/* CHAPTER FLOW REFINEMENT — remove blank gutters, prevent clipped layouts,
+   and soften the hand-off between photographic sections. */
+.metrics.tp-spotlight-host{
+  margin-bottom:0!important;
+}
+.approach.tp-spotlight-host{
+  margin-top:0!important;
+  margin-bottom:0!important;
+  padding-top:76px!important;
+  padding-bottom:76px!important;
+}
+.approach.tp-spotlight-host .principles{
+  margin-bottom:0!important;
+}
+.approach.tp-spotlight-host::before{
+  background-image:
+    linear-gradient(to bottom,#fbf8f2 0%,rgba(251,248,242,.10) 18%,rgba(251,248,242,.10) 82%,#fbf8f2 100%),
+    linear-gradient(100deg,rgba(251,248,242,.78),rgba(251,248,242,.62)),
+    url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=2200&q=90")!important;
+}
+.approach.tp-spotlight-host .section-heading h2{
+  color:#171614!important;
+  text-shadow:0 2px 18px rgba(255,253,248,.62);
+}
+.approach.tp-spotlight-host .section-heading h2 em{
+  color:#a77d3d!important;
+}
+
+/* Make the learning-cycle chapter genuinely full-bleed, not a centered 1160px island. */
+.system-section.tp-spotlight-host{
+  width:100vw!important;
+  max-width:none!important;
+  margin-left:calc(50% - 50vw)!important;
+  padding:100px max(24px,calc((100vw - 1120px)/2))!important;
+  grid-template-columns:minmax(0,520px) minmax(0,420px)!important;
+  justify-content:center;
+  gap:clamp(42px,7vw,100px)!important;
+  box-sizing:border-box;
+}
+.system-section.tp-spotlight-host::before{
+  background-image:
+    linear-gradient(to bottom,#fbf8f2 0%,rgba(251,248,242,.08) 18%,rgba(251,248,242,.08) 82%,#e9dfcf 100%),
+    linear-gradient(100deg,rgba(251,248,242,.70),rgba(251,248,242,.58)),
+    url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=2200&q=90")!important;
+}
+.subjects-section.tp-spotlight-host::before{
+  background-image:
+    linear-gradient(to bottom,#fbf8f2 0%,rgba(13,14,15,.04) 18%,rgba(13,14,15,.04) 82%,#171614 100%),
+    linear-gradient(100deg,rgba(13,14,15,.64),rgba(13,14,15,.58)),
+    url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=2200&q=90")!important;
+}
+.study-cta.tp-spotlight-host::before{
+  background-image:
+    linear-gradient(to bottom,#e9dfcf 0%,rgba(233,223,207,.08) 18%,rgba(233,223,207,.08) 82%,#fbf8f2 100%),
+    linear-gradient(100deg,rgba(233,223,207,.68),rgba(233,223,207,.58)),
+    url("https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=2200&q=90")!important;
+}
+
+/* The cursor-reveal layer was restarting at every chapter and looked like a
+   sudden animation jump. Keep one calm, continuous photographic drift instead. */
+.metrics.tp-spotlight-host::after,
+.approach.tp-spotlight-host::after,
+.subjects-section.tp-spotlight-host::after,
+.system-section.tp-spotlight-host::after,
+.study-cta.tp-spotlight-host::after{
+  display:none!important;
+}
+.metrics.tp-spotlight-host::before,
+.approach.tp-spotlight-host::before,
+.subjects-section.tp-spotlight-host::before,
+.system-section.tp-spotlight-host::before,
+.study-cta.tp-spotlight-host::before{
+  animation:tp-chapter-drift 38s ease-in-out infinite alternate!important;
+  transform-origin:center center;
+}
+@media(max-width:760px){
+  .system-section.tp-spotlight-host{
+    grid-template-columns:minmax(0,1fr)!important;
+    padding:72px 20px!important;
+    gap:38px!important;
+  }
+}
