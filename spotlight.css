@@ -561,3 +561,94 @@
     gap:38px!important;
   }
 }
+
+
+/* PHILOSOPHY CARDS — inset content, prevent edge clipping, and give each
+   principle its own balanced card surface without changing page behaviour. */
+.approach.tp-spotlight-host .principles{
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:16px!important;
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  background:transparent!important;
+  backdrop-filter:none!important;
+}
+.approach.tp-spotlight-host .principle,
+.approach.tp-spotlight-host .principle+.principle{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  min-width:0;
+  min-height:260px;
+  height:100%;
+  padding:30px 30px 32px!important;
+  border:1px solid rgba(67,56,40,.16)!important;
+  border-radius:4px;
+  background:rgba(255,253,248,.93)!important;
+  box-shadow:0 12px 34px rgba(44,37,27,.07);
+  backdrop-filter:blur(10px);
+  overflow:visible;
+}
+.approach.tp-spotlight-host .principle-no{
+  display:block;
+  margin:0 0 14px;
+  font-size:10px;
+  line-height:1.4;
+  letter-spacing:.16em;
+}
+.approach.tp-spotlight-host .principle-symbol{
+  display:block;
+  margin:0 0 20px!important;
+  min-height:30px;
+  font-size:28px;
+  line-height:1;
+}
+.approach.tp-spotlight-host .principle h3{
+  margin:0 0 10px!important;
+  max-width:100%;
+  font-size:clamp(17px,1.55vw,20px);
+  line-height:1.3;
+  letter-spacing:-.045em;
+  overflow-wrap:normal;
+  word-break:normal;
+}
+.approach.tp-spotlight-host .principle p{
+  margin:0!important;
+  max-width:34ch;
+  font-size:12px;
+  line-height:1.8;
+  overflow-wrap:break-word;
+  word-break:normal;
+}
+@media(hover:hover) and (pointer:fine){
+  .approach.tp-spotlight-host .principle{
+    transition:transform 260ms cubic-bezier(.2,.75,.25,1),box-shadow 260ms ease,border-color 260ms ease;
+  }
+  .approach.tp-spotlight-host .principle:hover{
+    transform:translateY(-4px);
+    border-color:rgba(167,125,61,.48)!important;
+    box-shadow:0 18px 42px rgba(44,37,27,.12);
+  }
+}
+@media(max-width:800px){
+  .approach.tp-spotlight-host .principles{
+    grid-template-columns:1fr!important;
+    gap:12px!important;
+  }
+  .approach.tp-spotlight-host .principle,
+  .approach.tp-spotlight-host .principle+.principle{
+    min-height:0;
+    padding:26px 24px 28px!important;
+  }
+  .approach.tp-spotlight-host .principle-symbol{margin-bottom:14px!important}
+  .approach.tp-spotlight-host .principle h3{font-size:19px}
+  .approach.tp-spotlight-host .principle p{max-width:48ch;font-size:12px}
+}
+@media(max-width:460px){
+  .approach.tp-spotlight-host .principle,
+  .approach.tp-spotlight-host .principle+.principle{
+    padding:23px 20px 25px!important;
+  }
+}
