@@ -428,12 +428,12 @@ window.reasoningLessons = {
         "If TABLE is coded as ELBAT, how is CHAIR coded?",
         [
           "RIAHC",
-          "RIAHC",
+          "RIAHCX",
           "HCAIR",
           "IRAHC"
         ],
         0,
-        "The word is reversed."
+        "The word is reversed: CHAIR becomes RIAHC."
       ],
       [
         "In a code, each letter is replaced by the next letter. What is the code for FISH?",
@@ -547,7 +547,7 @@ window.reasoningLessons = {
     ],
     "questions": [
       [
-        "Choose the odd one out.",
+        "Which item is not a flower?",
         [
           "Rose",
           "Lotus",
@@ -558,7 +558,7 @@ window.reasoningLessons = {
         "Carrot is a vegetable; the others are flowers."
       ],
       [
-        "Choose the odd number.",
+        "Which number is not a perfect square?",
         [
           "9",
           "16",
@@ -569,7 +569,7 @@ window.reasoningLessons = {
         "9, 16 and 25 are perfect squares; 30 is not."
       ],
       [
-        "Choose the odd one out.",
+        "Which material is not a metal?",
         [
           "Copper",
           "Iron",
@@ -580,7 +580,7 @@ window.reasoningLessons = {
         "Plastic is not a metal."
       ],
       [
-        "Choose the odd number.",
+        "Which number is composite?",
         [
           "2",
           "3",
@@ -591,7 +591,7 @@ window.reasoningLessons = {
         "2, 3 and 5 are prime; 9 is composite."
       ],
       [
-        "Choose the odd one out.",
+        "Which shape is three-dimensional?",
         [
           "Square",
           "Rectangle",
@@ -602,7 +602,7 @@ window.reasoningLessons = {
         "Cube is three-dimensional; the others are plane figures."
       ],
       [
-        "Choose the odd one.",
+        "Which item is not a month?",
         [
           "January",
           "March",
@@ -613,7 +613,7 @@ window.reasoningLessons = {
         "Tuesday is a weekday; the others are months."
       ],
       [
-        "Choose the odd number.",
+        "Which number is not a perfect cube?",
         [
           "8",
           "27",
@@ -624,7 +624,7 @@ window.reasoningLessons = {
         "8, 27 and 64 are perfect cubes; 100 is not."
       ],
       [
-        "Choose the odd one out.",
+        "Which unit measures mass rather than length?",
         [
           "Kilometre",
           "Metre",
@@ -635,7 +635,7 @@ window.reasoningLessons = {
         "Kilogram measures mass; the others measure length."
       ],
       [
-        "Choose the odd one.",
+        "Which letter is a consonant?",
         [
           "A",
           "E",
@@ -646,7 +646,7 @@ window.reasoningLessons = {
         "A, E and I are vowels; B is a consonant."
       ],
       [
-        "Choose the odd one out.",
+        "Which option is two-dimensional?",
         [
           "Circle",
           "Sphere",
