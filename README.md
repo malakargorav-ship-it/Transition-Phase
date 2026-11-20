@@ -1,35 +1,47 @@
 # Transition Phase
 
-A personal preparation ecosystem for Assam Police SI and Constable aspirants.
+A static, responsive preparation platform for Assam Police Constable and Sub Inspector aspirants.
 
-## Brand direction
-- Premium, bold and editorial visual identity
-- Charcoal, graphite, gold and cream palette
-- Syne for headings; Manrope for body and interface text
-- HTML, CSS and vanilla JavaScript — no build step or local installation required
+## Brand and stack
+- Premium charcoal, gold and cream visual identity
+- Syne headings and Manrope interface/body typography
+- HTML, CSS and vanilla JavaScript
+- No Node.js, package installation, paid backend or build step required
+- Hosted as a static site on Cloudflare Pages from the GitHub `main` branch
 
-## Current milestone
-The first responsive landing-page foundation includes:
-- Brand hero and navigation
-- Preparation philosophy and learning cycle
-- Seven initial subject areas
-- Responsive layouts and subtle reveal interactions
+## Available modules
+- Responsive landing page and subject navigation
+- Separate Constable and SI full-syllabus checklists
+- Number System: 6 lessons
+- Mathematics: 17 lessons
+- General English: 14 lessons
+- Reasoning and Mental Ability: 22 lessons
+- 59 lesson topics across those four learning areas
+- 1,466 topic MCQs with four options, answer keys and explanations
+- Concept notes, worked examples and quick-revision points
+- Lesson quiz scoring, answer feedback and retry
+- Preparation Command Centre with exam-track selector, daily topic practice, adaptive Number System stages, score history, revision queue and JSON export
+- Local progress persistence in browser storage
 
-## Planned modules
-1. Student dashboard and daily goals
-2. Study centre and subject/topic structure
-3. Practice zone with MCQs and explanations
-4. Mock tests and results
-5. Progress analytics and revision queue
-6. Study planner and local backup/export
+## Progress and privacy limitations
+- Progress is stored in the current browser/device using `localStorage`; it does not sync across devices or browsers.
+- Use the Command Centre's export option to download a local JSON backup.
+- Clearing browser site data can erase locally stored progress.
+- There are no user accounts, cloud database, paid API or live AI tutor in this static version.
+- Current Affairs, General Knowledge and Assam GK lesson content are intentionally not built yet; their subject outlines remain visible. The detailed syllabus checklist includes these exam areas.
 
-## Important notes
-The initial subject list and daily study target are personal planning defaults, not a claim about official examination syllabus or weightage. Verify the current official recruitment notification and syllabus before finalising study content.
-
-The first version is static and does not yet include accounts, cloud sync or a live AI tutor. Progress persistence and backup will be implemented in later milestones.
-
-## Run locally
-Open index.html in a browser. No Node.js or package installation is required.
+## Content and exam accuracy
+- Lesson topics and question banks are preparation material, not official topic-wise weightage.
+- The syllabus checklist is organised from the topic outline supplied for this project.
+- Verify exam patterns and updates against the latest Assam SLPRB notification before relying on dates, marks or negative-marking rules.
 
 ## Deployment
-Designed for static hosting such as Cloudflare Pages, connected to this GitHub repository.
+- Repository: `malakargorav-ship-it/Transition-Phase`
+- Branch: `main`
+- Cloudflare Pages project: `transition-phase`
+- Build command: blank
+- Output directory: `.`
+- Each GitHub commit to `main` triggers the connected Cloudflare Pages deployment.
+
+## Local preview
+Open `index.html` directly in a modern browser. No local build tooling is required.
