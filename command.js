@@ -100,8 +100,8 @@ const levelBanks={
 ["Remainder of 7⁹⁹+8⁹⁹ divided by 15?",["0","1","2","14"],0,"7⁹⁹≡13 and 8⁹⁹≡2; sum=15."],
 ["Occurrences of digit 7 in integers 1–999?",["280","300","320","333"],1,"Across 000–999 each of 3 places has 100 sevens."],
 ["HCF of 2¹⁰−1 and 2⁶−1?",["3","7","15","31"],0,"2^gcd(10,6)−1=2²−1=3."],
-["Divisors of 2³×3² that are multiples of 6?",["6","9","12","18"],2,"Exponent of 2:1..3 (3 choices); 3:1..2 (2 choices); total 6. Correct option A."],
-["Remainder of 5¹⁰⁰ divided by 13?",["1","3","5","12"],2,"5²≡−1 mod13; 5¹⁰⁰=(5²)^50≡(−1)^50=1. Correct option A."]
+["Divisors of 2³×3² that are multiples of 6?",["6","9","12","18"],0,"Exponent of 2:1..3 (3 choices); 3:1..2 (2 choices); total 6. Correct option A."],
+["Remainder of 5¹⁰⁰ divided by 13?",["1","3","5","12"],0,"5²≡−1 mod13; 5¹⁰⁰=(5²)^50≡(−1)^50=1. Correct option A."]
 ],
 5:[
 ["Smallest N leaving remainder 1 on division by every integer 2–10?",["2521","2520","1261","5041"],0,"LCM(2,...,10)=2520; add 1."],
@@ -110,7 +110,7 @@ const levelBanks={
 ["Which exponent pair gives exactly 24 divisors for pᵃqᵇ?",["(5,3)","(7,2)","(11,1)","All"],3,"(a+1)(b+1)=24 for each pair."],
 ["Smallest number divisible by 16 with exactly 15 divisors?",["400","480","560","640"],0,"400=2⁴×5²; divisor count=5×3=15."],
 ["Sum of divisors of 2⁴×3²?",["300","360","403","450"],2,"(1+2+4+8+16)(1+3+9)=31×13=403."],
-["Remainder of 1²+...+100² divided by 7?",["0","1","2","3"],0,"Sum=338350=7×48335+5; remainder 5. Correct option not listed."],
+["Remainder of 1²+2²+...+6² divided by 7?",["0","1","2","3"],0,"The sum is 91, which is divisible by 7."],
 ["If gcd(a,b)=1, gcd(a+b,a−b) can be?",["1 or 2","2 or 4","1 or 3","Any"],0,"Any common divisor divides 2a and 2b, hence divides 2."],
 ["Remainder of 7⁹⁹+8⁹⁹ divided by 15?",["0","1","2","14"],0,"7³≡13 and 8³≡2; exponent cycle 4 gives sum 15."],
 ["gcd(2ᵐ−1,2ⁿ−1) equals?",["2^(m+n)−1","2^gcd(m,n)−1","2^lcm(m,n)−1","1"],1,"Standard gcd-of-powers identity."],
