@@ -331,11 +331,11 @@ revision:["Find the real subject/head noun before choosing the verb.","Each, eve
 ["Parallel structure","She likes reading, writing and to swim.","Use reading, writing and swimming for parallel structure."],
 ["Connector","He was tired; however, he continued working.","However shows contrast between tiredness and continuing."]
 ],[
-["Which sentence uses the gerund after enjoy?",["Each of the students have a book.","Each of the students has a book.","Each students has a book.","Each student have a book."],1,"Each is singular and takes has."],
-["Identify the grammatically correct sentence.",["She is senior than me.","She is senior to me.","She is more senior than to me.","She senior to I."],1,"Senior takes the preposition to."],
-["Identify the grammatically correct sentence.",["He did not went there.","He did not go there.","He does not went there.","He not go there."],1,"Did not is followed by base verb go."],
-["Identify the grammatically correct sentence.",["Neither of the answers are correct.","Neither of the answers is correct.","Neither answers is correct.","Neither answer are correct."],1,"Neither is generally singular in formal exam grammar."],
-["Identify the grammatically correct sentence.",["She enjoys to read.","She enjoys reading.","She enjoy reading.","She enjoying read."],1,"Enjoy is followed by a gerund."],
+["Which sentence shows correct subject–verb agreement?",["Each of the students have a book.","Each of the students has a book.","Each students has a book.","Each student have a book."],1,"Each is singular and takes has."],
+["Which sentence uses the correct comparative form?",["She is senior than me.","She is senior to me.","She is more senior than to me.","She senior to I."],1,"Senior takes the preposition to."],
+["Which sentence uses the correct verb after did?",["He did not went there.","He did not go there.","He does not went there.","He not go there."],1,"Did not is followed by base verb go."],
+["Which sentence uses neither with correct agreement?",["Neither of the answers are correct.","Neither of the answers is correct.","Neither answers is correct.","Neither answer are correct."],1,"Neither is generally singular in formal exam grammar."],
+["Which sentence correctly uses the verb enjoy?",["She enjoys to read.","She enjoys reading.","She enjoy reading.","She enjoying read."],1,"Enjoy is followed by a gerund."],
 ["Fill in: He is capable ___ solving the problem.",["to","for","of","with"],2,"Capable takes of + gerund/noun."],
 ["Fill in: I would rather walk ___ wait.",["than","to","from","then"],0,"Would rather X than Y."],
 ["Choose the correct connector: It was raining, ___ we stayed inside.",["because","so","although","unless"],1,"So introduces the result."],
@@ -345,7 +345,7 @@ revision:["Find the real subject/head noun before choosing the verb.","Each, eve
 ["Identify the error: 'The news are encouraging.'",["The","news","are","encouraging"],2,"News is grammatically singular: the news is."],
 ["Choose the best improvement: 'He is more taller than me.'",["He is tallest than me.","He is taller than me.","He is more tall than me.","No improvement"],1,"Do not use more with the -er comparative."],
 ["Fill in: No sooner had he arrived ___ it began to rain.",["when","then","than","that"],2,"The correlative structure is no sooner...than."],
-["Identify the grammatically correct sentence.",["Despite of the rain, we played.","Despite the rain, we played.","Although the rain, we played.","In spite the rain, we played."],1,"Despite is not followed by of."]
+["Which sentence uses despite correctly?",["Despite of the rain, we played.","Despite the rain, we played.","Although the rain, we played.","In spite the rain, we played."],1,"Despite is not followed by of."]
 ],["Check subject–verb agreement, tense, pronoun, article, preposition and word order.","Modal + V1; enjoy + gerund; capable of + gerund/noun.","Use connectors according to logic: because (reason), so (result), although (contrast).","Keep lists parallel: reading, writing and speaking.","Capitalise sentence starts, proper nouns and months; punctuate direct questions with ?."]),
 "cloze-para-jumbles":makeEnglishLesson("Cloze Test & Para Jumbles","Cloze test mein passage context aur grammar dono test karta hai. Para jumble mein sentence links, chronology, pronoun reference aur logical flow identify karke paragraph arrange karo.",[
 ["1. Cloze test approach","Passage ek baar overall meaning ke liye padho. Har blank ka part of speech, tense, collocation, connector aur positive/negative tone identify karo."],
