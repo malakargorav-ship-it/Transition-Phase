@@ -1,5 +1,3 @@
-// Transition Phase — Reasoning lesson library for Assam Police Constable and SI
-// MCQ format: [question, options, correctOptionIndex, explanation]
 window.reasoningLessons = {
   "analogy": {
     "title": "Analogy",
@@ -2360,14 +2358,1333 @@ window.reasoningLessons = {
       "Draw a quick diagram or table whenever it reduces memory load.",
       "Check every option against the exact rule in the question."
     ]
+  },
+  "seating-arrangement-puzzles": {
+    "title": "Seating Arrangement & Puzzles",
+    "intro": "Assam Police Constable + SI preparation. Linear/circular seating, facing direction, ordering and multi-condition logic. Learn the method, inspect worked examples, then practise and review explanations.",
+    "sections": [
+      [
+        "1. Understand the question",
+        "Identify the information given, the exact thing being asked and every condition. Linear/circular seating, facing direction, ordering and multi-condition logic."
+      ],
+      [
+        "2. Use a systematic method",
+        "Write conditions or steps clearly. Never assume information not supplied."
+      ],
+      [
+        "3. Track orientation and order",
+        "For visual and arrangement questions, track position, direction, rotation and reflection carefully."
+      ],
+      [
+        "4. Eliminate impossible choices",
+        "Test each option against every stated condition; reject any option that violates one."
+      ],
+      [
+        "5. Avoid common traps",
+        "Watch left/right perspective, inclusive counting, units, base values and unstated assumptions."
+      ],
+      [
+        "6. Exam approach",
+        "Solve direct questions first, mark lengthy puzzles for review and verify calculations."
+      ]
+    ],
+    "examples": [
+      [
+        "Worked example 1",
+        "What is the first step?",
+        "List the given facts and identify the required result."
+      ],
+      [
+        "Worked example 2",
+        "How should alternatives be checked?",
+        "Apply every condition to each candidate and eliminate contradictions."
+      ],
+      [
+        "Worked example 3",
+        "What if a condition is missing?",
+        "Do not invent it; conclude only what follows from the information supplied."
+      ]
+    ],
+    "questions": [
+      [
+        "Seating Arrangement & Puzzles — In a row, B is between A and C. Who is in the middle?",
+        [
+          "A",
+          "B",
+          "C",
+          "Cannot say"
+        ],
+        1,
+        "B is between A and C."
+      ],
+      [
+        "Seating Arrangement & Puzzles — P sits immediately left of Q; Q is at the right end. Where is P?",
+        [
+          "At right end",
+          "Immediately before Q",
+          "At left end",
+          "Cannot say"
+        ],
+        1,
+        "P is immediately before Q."
+      ],
+      [
+        "Seating Arrangement & Puzzles — Five face north. R is second from left. Position from right?",
+        [
+          "Second",
+          "Third",
+          "Fourth",
+          "Fifth"
+        ],
+        2,
+        "Second from left is fourth from right."
+      ],
+      [
+        "Seating Arrangement & Puzzles — Everyone faces centre in a circle. A's right is which way?",
+        [
+          "Clockwise",
+          "Anticlockwise",
+          "North",
+          "Cannot say"
+        ],
+        0,
+        "Facing centre, right is clockwise."
+      ],
+      [
+        "Seating Arrangement & Puzzles — M is left of N; O right of N. Which order works?",
+        [
+          "O-N-M",
+          "M-N-O",
+          "N-M-O",
+          "O-M-N"
+        ],
+        1,
+        "M is before N and O after N."
+      ],
+      [
+        "Seating Arrangement & Puzzles — Advanced practice 1: Four seats in a row: L is at seat 1. Which seat is immediately right of L?",
+        [
+          "Seat 2",
+          "Seat 3",
+          "Seat 4",
+          "Cannot say"
+        ],
+        0,
+        "The seat immediately right of seat 1 is seat 2."
+      ],
+      [
+        "Seating Arrangement & Puzzles — Advanced practice 2: If D is immediately between E and F, D must be:",
+        [
+          "At an end",
+          "Adjacent to both E and F",
+          "Two places from E",
+          "Outside the row"
+        ],
+        1,
+        "Immediately between means adjacent to both."
+      ],
+      [
+        "Seating Arrangement & Puzzles — Advanced practice 3: A sits left of B and B left of C. Who is at the farthest right among them?",
+        [
+          "A",
+          "B",
+          "C",
+          "Cannot say"
+        ],
+        2,
+        "A < B < C."
+      ],
+      [
+        "Seating Arrangement & Puzzles — Advanced practice 4: In a circular arrangement facing centre, a person's left is:",
+        [
+          "Clockwise",
+          "Anticlockwise",
+          "Always north",
+          "Always south"
+        ],
+        1,
+        "Facing centre, left is anticlockwise."
+      ],
+      [
+        "Seating Arrangement & Puzzles — Advanced practice 5: If all seats are occupied and one person moves two places right, what changes?",
+        [
+          "Their relative position",
+          "Their seat position",
+          "The number of people",
+          "The direction faced"
+        ],
+        1,
+        "Their seat position changes."
+      ]
+    ],
+    "revision": [
+      "Read every condition before solving.",
+      "Use a diagram or table when helpful.",
+      "Never assume an unstated direction, order or value.",
+      "Check units, base values and inclusive counting.",
+      "Review the explanation for every incorrect answer."
+    ]
+  },
+  "clocks-calendars": {
+    "title": "Clocks & Calendars",
+    "intro": "Assam Police Constable + SI preparation. Clock angles, hand movement, odd days, leap years and dates. Learn the method, inspect worked examples, then practise and review explanations.",
+    "sections": [
+      [
+        "1. Understand the question",
+        "Identify the information given, the exact thing being asked and every condition. Clock angles, hand movement, odd days, leap years and dates."
+      ],
+      [
+        "2. Use a systematic method",
+        "Write conditions or steps clearly. Never assume information not supplied."
+      ],
+      [
+        "3. Track orientation and order",
+        "For visual and arrangement questions, track position, direction, rotation and reflection carefully."
+      ],
+      [
+        "4. Eliminate impossible choices",
+        "Test each option against every stated condition; reject any option that violates one."
+      ],
+      [
+        "5. Avoid common traps",
+        "Watch left/right perspective, inclusive counting, units, base values and unstated assumptions."
+      ],
+      [
+        "6. Exam approach",
+        "Solve direct questions first, mark lengthy puzzles for review and verify calculations."
+      ]
+    ],
+    "examples": [
+      [
+        "Worked example 1",
+        "What is the first step?",
+        "List the given facts and identify the required result."
+      ],
+      [
+        "Worked example 2",
+        "How should alternatives be checked?",
+        "Apply every condition to each candidate and eliminate contradictions."
+      ],
+      [
+        "Worked example 3",
+        "What if a condition is missing?",
+        "Do not invent it; conclude only what follows from the information supplied."
+      ]
+    ],
+    "questions": [
+      [
+        "Clocks & Calendars — Clock angle at 3:00?",
+        [
+          "60°",
+          "75°",
+          "90°",
+          "120°"
+        ],
+        2,
+        "Three spaces × 30° = 90°."
+      ],
+      [
+        "Clocks & Calendars — Clock angle at 6:00?",
+        [
+          "90°",
+          "120°",
+          "150°",
+          "180°"
+        ],
+        3,
+        "The hands are opposite."
+      ],
+      [
+        "Clocks & Calendars — Minute hand movement in 15 minutes?",
+        [
+          "45°",
+          "60°",
+          "90°",
+          "180°"
+        ],
+        2,
+        "6° × 15 = 90°."
+      ],
+      [
+        "Clocks & Calendars — Days in a leap year?",
+        [
+          "364",
+          "365",
+          "366",
+          "367"
+        ],
+        2,
+        "A leap year has 366 days."
+      ],
+      [
+        "Clocks & Calendars — If today is Monday, day after 10 days?",
+        [
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        1,
+        "10 mod 7 = 3; Thursday."
+      ],
+      [
+        "Clocks & Calendars — Advanced practice 1: How many degrees does the hour hand move in one hour?",
+        [
+          "15°",
+          "30°",
+          "45°",
+          "60°"
+        ],
+        1,
+        "The hour hand moves 30° per hour."
+      ],
+      [
+        "Clocks & Calendars — Advanced practice 2: How many degrees does the minute hand move in one minute?",
+        [
+          "3°",
+          "6°",
+          "12°",
+          "30°"
+        ],
+        1,
+        "The minute hand moves 6° per minute."
+      ],
+      [
+        "Clocks & Calendars — Advanced practice 3: How many odd days are in 14 days?",
+        [
+          "0",
+          "1",
+          "2",
+          "7"
+        ],
+        0,
+        "Two complete weeks leave zero odd days."
+      ],
+      [
+        "Clocks & Calendars — Advanced practice 4: A common year has how many days?",
+        [
+          "364",
+          "365",
+          "366",
+          "367"
+        ],
+        1,
+        "A common year has 365 days."
+      ],
+      [
+        "Clocks & Calendars — Advanced practice 5: If Sunday is today, what day will it be after 15 days?",
+        [
+          "Monday",
+          "Tuesday",
+          "Sunday",
+          "Wednesday"
+        ],
+        1,
+        "15 mod 7 = 1; Monday."
+      ]
+    ],
+    "revision": [
+      "Read every condition before solving.",
+      "Use a diagram or table when helpful.",
+      "Never assume an unstated direction, order or value.",
+      "Check units, base values and inclusive counting.",
+      "Review the explanation for every incorrect answer."
+    ]
+  },
+  "mathematical-operations-sequences": {
+    "title": "Mathematical Operations & Logical Sequence",
+    "intro": "Assam Police Constable + SI preparation. Symbol substitution, operations, word order and missing values. Learn the method, inspect worked examples, then practise and review explanations.",
+    "sections": [
+      [
+        "1. Understand the question",
+        "Identify the information given, the exact thing being asked and every condition. Symbol substitution, operations, word order and missing values."
+      ],
+      [
+        "2. Use a systematic method",
+        "Write conditions or steps clearly. Never assume information not supplied."
+      ],
+      [
+        "3. Track orientation and order",
+        "For visual and arrangement questions, track position, direction, rotation and reflection carefully."
+      ],
+      [
+        "4. Eliminate impossible choices",
+        "Test each option against every stated condition; reject any option that violates one."
+      ],
+      [
+        "5. Avoid common traps",
+        "Watch left/right perspective, inclusive counting, units, base values and unstated assumptions."
+      ],
+      [
+        "6. Exam approach",
+        "Solve direct questions first, mark lengthy puzzles for review and verify calculations."
+      ]
+    ],
+    "examples": [
+      [
+        "Worked example 1",
+        "What is the first step?",
+        "List the given facts and identify the required result."
+      ],
+      [
+        "Worked example 2",
+        "How should alternatives be checked?",
+        "Apply every condition to each candidate and eliminate contradictions."
+      ],
+      [
+        "Worked example 3",
+        "What if a condition is missing?",
+        "Do not invent it; conclude only what follows from the information supplied."
+      ]
+    ],
+    "questions": [
+      [
+        "Mathematical Operations & Logical Sequence — If + means ×, evaluate 4 + 3.",
+        [
+          "7",
+          "12",
+          "16",
+          "43"
+        ],
+        1,
+        "4 × 3 = 12."
+      ],
+      [
+        "Mathematical Operations & Logical Sequence — If − means +, evaluate 8 − 5.",
+        [
+          "3",
+          "8",
+          "13",
+          "40"
+        ],
+        2,
+        "8 + 5 = 13."
+      ],
+      [
+        "Mathematical Operations & Logical Sequence — Complete weekdays: Monday, Tuesday, Wednesday, __.",
+        [
+          "Friday",
+          "Sunday",
+          "Thursday",
+          "Saturday"
+        ],
+        2,
+        "Thursday follows Wednesday."
+      ],
+      [
+        "Mathematical Operations & Logical Sequence — Logical order: seed, plant, flower, fruit.",
+        [
+          "Plant-seed-fruit-flower",
+          "Seed-plant-flower-fruit",
+          "Flower-seed-plant-fruit",
+          "Fruit-flower-plant-seed"
+        ],
+        1,
+        "A seed grows into plant, flower, then fruit."
+      ],
+      [
+        "Mathematical Operations & Logical Sequence — Missing number: 2, 4, 8, 16, __.",
+        [
+          "18",
+          "24",
+          "30",
+          "32"
+        ],
+        3,
+        "Each term doubles."
+      ],
+      [
+        "Mathematical Operations & Logical Sequence — Advanced practice 1: If × means +, evaluate 7 × 5.",
+        [
+          "2",
+          "12",
+          "35",
+          "75"
+        ],
+        1,
+        "Replace × with +: 12."
+      ],
+      [
+        "Mathematical Operations & Logical Sequence — Advanced practice 2: Complete the sequence: 3, 6, 9, 12, __.",
+        [
+          "13",
+          "14",
+          "15",
+          "16"
+        ],
+        2,
+        "Add 3 each time."
+      ],
+      [
+        "Mathematical Operations & Logical Sequence — Advanced practice 3: Arrange: interview, application, offer, joining.",
+        [
+          "Offer-application-interview-joining",
+          "Application-interview-offer-joining",
+          "Joining-offer-interview-application",
+          "Interview-joining-application-offer"
+        ],
+        1,
+        "Application precedes interview, offer and joining."
+      ],
+      [
+        "Mathematical Operations & Logical Sequence — Advanced practice 4: If # means division, 24 # 6 = ?",
+        [
+          "4",
+          "18",
+          "30",
+          "144"
+        ],
+        0,
+        "24 ÷ 6 = 4."
+      ],
+      [
+        "Mathematical Operations & Logical Sequence — Advanced practice 5: Missing number: 1, 4, 9, 16, __.",
+        [
+          "20",
+          "24",
+          "25",
+          "36"
+        ],
+        2,
+        "These are consecutive square numbers; next is 25."
+      ]
+    ],
+    "revision": [
+      "Read every condition before solving.",
+      "Use a diagram or table when helpful.",
+      "Never assume an unstated direction, order or value.",
+      "Check units, base values and inclusive counting.",
+      "Review the explanation for every incorrect answer."
+    ]
+  },
+  "figure-series-matrix": {
+    "title": "Figure Series & Matrix",
+    "intro": "Assam Police Constable + SI preparation. Visual progression, rotation, reflection and figure matrices. Learn the method, inspect worked examples, then practise and review explanations.",
+    "sections": [
+      [
+        "1. Understand the question",
+        "Identify the information given, the exact thing being asked and every condition. Visual progression, rotation, reflection and figure matrices."
+      ],
+      [
+        "2. Use a systematic method",
+        "Write conditions or steps clearly. Never assume information not supplied."
+      ],
+      [
+        "3. Track orientation and order",
+        "For visual and arrangement questions, track position, direction, rotation and reflection carefully."
+      ],
+      [
+        "4. Eliminate impossible choices",
+        "Test each option against every stated condition; reject any option that violates one."
+      ],
+      [
+        "5. Avoid common traps",
+        "Watch left/right perspective, inclusive counting, units, base values and unstated assumptions."
+      ],
+      [
+        "6. Exam approach",
+        "Solve direct questions first, mark lengthy puzzles for review and verify calculations."
+      ]
+    ],
+    "examples": [
+      [
+        "Worked example 1",
+        "What is the first step?",
+        "List the given facts and identify the required result."
+      ],
+      [
+        "Worked example 2",
+        "How should alternatives be checked?",
+        "Apply every condition to each candidate and eliminate contradictions."
+      ],
+      [
+        "Worked example 3",
+        "What if a condition is missing?",
+        "Do not invent it; conclude only what follows from the information supplied."
+      ]
+    ],
+    "questions": [
+      [
+        "Figure Series & Matrix — Arrow rotates 90° clockwise. After 180° comes:",
+        [
+          "0°",
+          "90°",
+          "180°",
+          "270°"
+        ],
+        3,
+        "Next is 270° clockwise."
+      ],
+      [
+        "Figure Series & Matrix — Dots increase 1, 2, 3, __.",
+        [
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        2,
+        "Add one dot each time."
+      ],
+      [
+        "Figure Series & Matrix — Arrow directions up, right, down, __.",
+        [
+          "Up",
+          "Right",
+          "Down",
+          "Left"
+        ],
+        3,
+        "Rotate 90° clockwise."
+      ],
+      [
+        "Figure Series & Matrix — Pattern circle, square, circle, square, __.",
+        [
+          "Triangle",
+          "Circle",
+          "Square",
+          "Rectangle"
+        ],
+        1,
+        "Alternating pattern repeats."
+      ],
+      [
+        "Figure Series & Matrix — Polygon side counts 3, 4, 5, __.",
+        [
+          "4",
+          "5",
+          "6",
+          "7"
+        ],
+        2,
+        "Next polygon has six sides."
+      ],
+      [
+        "Figure Series & Matrix — Advanced practice 1: A shape turns 90° anticlockwise each step. After 90° comes:",
+        [
+          "0°",
+          "180°",
+          "270°",
+          "360°"
+        ],
+        1,
+        "Another 90° anticlockwise gives 180°."
+      ],
+      [
+        "Figure Series & Matrix — Advanced practice 2: A sequence adds two dots each frame: 2, 4, 6, __.",
+        [
+          "7",
+          "8",
+          "9",
+          "10"
+        ],
+        1,
+        "Add two dots."
+      ],
+      [
+        "Figure Series & Matrix — Advanced practice 3: A square is reflected in a vertical mirror. Its shape remains:",
+        [
+          "Square",
+          "Triangle",
+          "Circle",
+          "Trapezium"
+        ],
+        0,
+        "Reflection preserves the square's shape."
+      ],
+      [
+        "Figure Series & Matrix — Advanced practice 4: A pattern alternates triangle, circle, square, triangle, circle, __.",
+        [
+          "Triangle",
+          "Circle",
+          "Square",
+          "Rectangle"
+        ],
+        2,
+        "The cycle repeats with square."
+      ],
+      [
+        "Figure Series & Matrix — Advanced practice 5: A figure rotates 360°. Its final orientation is:",
+        [
+          "Opposite",
+          "Unchanged",
+          "Mirrored",
+          "Upside down"
+        ],
+        1,
+        "A full turn returns to its original orientation."
+      ]
+    ],
+    "revision": [
+      "Read every condition before solving.",
+      "Use a diagram or table when helpful.",
+      "Never assume an unstated direction, order or value.",
+      "Check units, base values and inclusive counting.",
+      "Review the explanation for every incorrect answer."
+    ]
+  },
+  "mirror-water-paper-folding": {
+    "title": "Mirror/Water Images & Paper Folding",
+    "intro": "Assam Police Constable + SI preparation. Reflection, fold sequence, punch positions and symmetry. Learn the method, inspect worked examples, then practise and review explanations.",
+    "sections": [
+      [
+        "1. Understand the question",
+        "Identify the information given, the exact thing being asked and every condition. Reflection, fold sequence, punch positions and symmetry."
+      ],
+      [
+        "2. Use a systematic method",
+        "Write conditions or steps clearly. Never assume information not supplied."
+      ],
+      [
+        "3. Track orientation and order",
+        "For visual and arrangement questions, track position, direction, rotation and reflection carefully."
+      ],
+      [
+        "4. Eliminate impossible choices",
+        "Test each option against every stated condition; reject any option that violates one."
+      ],
+      [
+        "5. Avoid common traps",
+        "Watch left/right perspective, inclusive counting, units, base values and unstated assumptions."
+      ],
+      [
+        "6. Exam approach",
+        "Solve direct questions first, mark lengthy puzzles for review and verify calculations."
+      ]
+    ],
+    "examples": [
+      [
+        "Worked example 1",
+        "What is the first step?",
+        "List the given facts and identify the required result."
+      ],
+      [
+        "Worked example 2",
+        "How should alternatives be checked?",
+        "Apply every condition to each candidate and eliminate contradictions."
+      ],
+      [
+        "Worked example 3",
+        "What if a condition is missing?",
+        "Do not invent it; conclude only what follows from the information supplied."
+      ]
+    ],
+    "questions": [
+      [
+        "Mirror/Water Images & Paper Folding — Vertical mirror reverses:",
+        [
+          "Top-bottom",
+          "Left-right",
+          "Both",
+          "Neither"
+        ],
+        1,
+        "Vertical reflection reverses left-right."
+      ],
+      [
+        "Mirror/Water Images & Paper Folding — Horizontal water reflection reverses:",
+        [
+          "Left-right",
+          "Top-bottom",
+          "Both",
+          "Neither"
+        ],
+        1,
+        "Horizontal reflection reverses top-bottom."
+      ],
+      [
+        "Mirror/Water Images & Paper Folding — One fold and one punch away from crease gives how many holes?",
+        [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        1,
+        "Unfolding creates two reflected holes."
+      ],
+      [
+        "Mirror/Water Images & Paper Folding — Two folds and one punch through all layers gives how many distinct holes?",
+        [
+          "2",
+          "3",
+          "4",
+          "8"
+        ],
+        2,
+        "Two folds create four symmetric positions."
+      ],
+      [
+        "Mirror/Water Images & Paper Folding — An arrow points left. In a vertical mirror it points:",
+        [
+          "Left",
+          "Right",
+          "Up",
+          "Down"
+        ],
+        1,
+        "Left-right is reversed."
+      ],
+      [
+        "Mirror/Water Images & Paper Folding — Advanced practice 1: A vertical mirror is placed to the right of an object. The image appears:",
+        [
+          "To the left in the mirror",
+          "Above it",
+          "Below it",
+          "Behind the mirror's surface only"
+        ],
+        0,
+        "The image is laterally reversed."
+      ],
+      [
+        "Mirror/Water Images & Paper Folding — Advanced practice 2: A horizontal mirror-like water surface reverses:",
+        [
+          "Left and right",
+          "Top and bottom",
+          "Only colour",
+          "Only size"
+        ],
+        1,
+        "Water reflection reverses vertical orientation."
+      ],
+      [
+        "Mirror/Water Images & Paper Folding — Advanced practice 3: A paper is folded once and two separate holes are punched. On unfolding, maximum distinct holes?",
+        [
+          "2",
+          "3",
+          "4",
+          "6"
+        ],
+        2,
+        "Each punch is mirrored, giving four holes."
+      ],
+      [
+        "Mirror/Water Images & Paper Folding — Advanced practice 4: A shape has a line of vertical symmetry. Its right half can be obtained by:",
+        [
+          "Rotating left half 90°",
+          "Reflecting left half",
+          "Enlarging left half",
+          "Removing left half"
+        ],
+        1,
+        "Reflect across the vertical symmetry line."
+      ],
+      [
+        "Mirror/Water Images & Paper Folding — Advanced practice 5: In a paper-folding problem, unfolding is performed:",
+        [
+          "In the same order as folding",
+          "In reverse order",
+          "Randomly",
+          "Without reversing folds"
+        ],
+        1,
+        "Undo folds in reverse order."
+      ]
+    ],
+    "revision": [
+      "Read every condition before solving.",
+      "Use a diagram or table when helpful.",
+      "Never assume an unstated direction, order or value.",
+      "Check units, base values and inclusive counting.",
+      "Review the explanation for every incorrect answer."
+    ]
+  },
+  "embedded-counting-cubes-dice": {
+    "title": "Embedded Figures, Counting, Cubes & Dice",
+    "intro": "Assam Police Constable + SI preparation. Hidden figures, counting shapes, painted cubes and dice. Learn the method, inspect worked examples, then practise and review explanations.",
+    "sections": [
+      [
+        "1. Understand the question",
+        "Identify the information given, the exact thing being asked and every condition. Hidden figures, counting shapes, painted cubes and dice."
+      ],
+      [
+        "2. Use a systematic method",
+        "Write conditions or steps clearly. Never assume information not supplied."
+      ],
+      [
+        "3. Track orientation and order",
+        "For visual and arrangement questions, track position, direction, rotation and reflection carefully."
+      ],
+      [
+        "4. Eliminate impossible choices",
+        "Test each option against every stated condition; reject any option that violates one."
+      ],
+      [
+        "5. Avoid common traps",
+        "Watch left/right perspective, inclusive counting, units, base values and unstated assumptions."
+      ],
+      [
+        "6. Exam approach",
+        "Solve direct questions first, mark lengthy puzzles for review and verify calculations."
+      ]
+    ],
+    "examples": [
+      [
+        "Worked example 1",
+        "What is the first step?",
+        "List the given facts and identify the required result."
+      ],
+      [
+        "Worked example 2",
+        "How should alternatives be checked?",
+        "Apply every condition to each candidate and eliminate contradictions."
+      ],
+      [
+        "Worked example 3",
+        "What if a condition is missing?",
+        "Do not invent it; conclude only what follows from the information supplied."
+      ]
+    ],
+    "questions": [
+      [
+        "Embedded Figures, Counting, Cubes & Dice — Faces of a cube?",
+        [
+          "4",
+          "6",
+          "8",
+          "12"
+        ],
+        1,
+        "A cube has six faces."
+      ],
+      [
+        "Embedded Figures, Counting, Cubes & Dice — Edges of a cube?",
+        [
+          "8",
+          "10",
+          "12",
+          "14"
+        ],
+        2,
+        "A cube has twelve edges."
+      ],
+      [
+        "Embedded Figures, Counting, Cubes & Dice — Vertices of a cube?",
+        [
+          "6",
+          "8",
+          "10",
+          "12"
+        ],
+        1,
+        "A cube has eight vertices."
+      ],
+      [
+        "Embedded Figures, Counting, Cubes & Dice — Painted cube cut into 27 equal cubes: cubes with 3 painted faces?",
+        [
+          "4",
+          "6",
+          "8",
+          "12"
+        ],
+        2,
+        "Eight corner cubes have three painted faces."
+      ],
+      [
+        "Embedded Figures, Counting, Cubes & Dice — Painted 3×3×3 cube cut up: cubes with no paint?",
+        [
+          "0",
+          "1",
+          "6",
+          "8"
+        ],
+        1,
+        "Only the central cube has no paint."
+      ],
+      [
+        "Embedded Figures, Counting, Cubes & Dice — Advanced practice 1: A cube has how many diagonals through its interior?",
+        [
+          "2",
+          "3",
+          "4",
+          "6"
+        ],
+        2,
+        "A cube has four body diagonals."
+      ],
+      [
+        "Embedded Figures, Counting, Cubes & Dice — Advanced practice 2: A standard die has how many numbered faces?",
+        [
+          "4",
+          "6",
+          "8",
+          "12"
+        ],
+        1,
+        "A die is a six-faced cube."
+      ],
+      [
+        "Embedded Figures, Counting, Cubes & Dice — Advanced practice 3: A 3×3×3 cube is painted on all sides. How many small cubes have exactly 2 painted faces?",
+        [
+          "8",
+          "12",
+          "16",
+          "24"
+        ],
+        1,
+        "There are 12 edge-centre cubes."
+      ],
+      [
+        "Embedded Figures, Counting, Cubes & Dice — Advanced practice 4: A 3×3×3 painted cube is cut. How many small cubes have exactly 1 painted face?",
+        [
+          "6",
+          "8",
+          "12",
+          "18"
+        ],
+        0,
+        "One centre cube on each of six faces."
+      ],
+      [
+        "Embedded Figures, Counting, Cubes & Dice — Advanced practice 5: When counting triangles in a complex figure, what prevents double-counting?",
+        [
+          "Count by size systematically",
+          "Count only the largest",
+          "Ignore overlapping lines",
+          "Count each line"
+        ],
+        0,
+        "Group triangles by size and orientation."
+      ]
+    ],
+    "revision": [
+      "Read every condition before solving.",
+      "Use a diagram or table when helpful.",
+      "Never assume an unstated direction, order or value.",
+      "Check units, base values and inclusive counting.",
+      "Review the explanation for every incorrect answer."
+    ]
+  },
+  "arithmetical-reasoning": {
+    "title": "Arithmetical Reasoning",
+    "intro": "Assam Police Constable + SI preparation. Age, ratio, percentage, work, speed and applied word problems. Learn the method, inspect worked examples, then practise and review explanations.",
+    "sections": [
+      [
+        "1. Understand the question",
+        "Identify the information given, the exact thing being asked and every condition. Age, ratio, percentage, work, speed and applied word problems."
+      ],
+      [
+        "2. Use a systematic method",
+        "Write conditions or steps clearly. Never assume information not supplied."
+      ],
+      [
+        "3. Track orientation and order",
+        "For visual and arrangement questions, track position, direction, rotation and reflection carefully."
+      ],
+      [
+        "4. Eliminate impossible choices",
+        "Test each option against every stated condition; reject any option that violates one."
+      ],
+      [
+        "5. Avoid common traps",
+        "Watch left/right perspective, inclusive counting, units, base values and unstated assumptions."
+      ],
+      [
+        "6. Exam approach",
+        "Solve direct questions first, mark lengthy puzzles for review and verify calculations."
+      ]
+    ],
+    "examples": [
+      [
+        "Worked example 1",
+        "What is the first step?",
+        "List the given facts and identify the required result."
+      ],
+      [
+        "Worked example 2",
+        "How should alternatives be checked?",
+        "Apply every condition to each candidate and eliminate contradictions."
+      ],
+      [
+        "Worked example 3",
+        "What if a condition is missing?",
+        "Do not invent it; conclude only what follows from the information supplied."
+      ]
+    ],
+    "questions": [
+      [
+        "Arithmetical Reasoning — Father is 3 times son's age; total 48. Son's age?",
+        [
+          "10",
+          "12",
+          "14",
+          "16"
+        ],
+        1,
+        "4x=48, so x=12."
+      ],
+      [
+        "Arithmetical Reasoning — A number increases 20% to 120. Original?",
+        [
+          "90",
+          "96",
+          "100",
+          "110"
+        ],
+        2,
+        "1.2x=120, so x=100."
+      ],
+      [
+        "Arithmetical Reasoning — A finishes work in 6 days, B in 3. Combined daily work?",
+        [
+          "1/2",
+          "1/3",
+          "1/6",
+          "1/9"
+        ],
+        0,
+        "1/6 + 1/3 = 1/2."
+      ],
+      [
+        "Arithmetical Reasoning — 150 km in 3 hours. Speed?",
+        [
+          "30 km/h",
+          "40 km/h",
+          "50 km/h",
+          "60 km/h"
+        ],
+        2,
+        "150÷3=50 km/h."
+      ],
+      [
+        "Arithmetical Reasoning — Divide ₹600 in ratio 2:3. Larger share?",
+        [
+          "₹200",
+          "₹240",
+          "₹360",
+          "₹400"
+        ],
+        2,
+        "3/5 × 600 = ₹360."
+      ],
+      [
+        "Arithmetical Reasoning — Advanced practice 1: A sum of ₹500 is divided 3:2. Smaller share?",
+        [
+          "₹100",
+          "₹200",
+          "₹250",
+          "₹300"
+        ],
+        1,
+        "2/5 × 500 = ₹200."
+      ],
+      [
+        "Arithmetical Reasoning — Advanced practice 2: A 120 m train passes a pole in 6 seconds. Speed?",
+        [
+          "10 m/s",
+          "15 m/s",
+          "20 m/s",
+          "25 m/s"
+        ],
+        2,
+        "120/6 = 20 m/s."
+      ],
+      [
+        "Arithmetical Reasoning — Advanced practice 3: Average of 5 numbers is 12. Their total is:",
+        [
+          "50",
+          "55",
+          "60",
+          "65"
+        ],
+        2,
+        "Average × count = 12×5=60."
+      ],
+      [
+        "Arithmetical Reasoning — Advanced practice 4: An item bought for ₹400 is sold at 10% loss. Selling price?",
+        [
+          "₹340",
+          "₹350",
+          "₹360",
+          "₹380"
+        ],
+        2,
+        "90% of ₹400 is ₹360."
+      ],
+      [
+        "Arithmetical Reasoning — Advanced practice 5: A can finish a task in 10 days. One day's work is:",
+        [
+          "1/5",
+          "1/10",
+          "1/15",
+          "1/20"
+        ],
+        1,
+        "One day's work is 1/10."
+      ]
+    ],
+    "revision": [
+      "Read every condition before solving.",
+      "Use a diagram or table when helpful.",
+      "Never assume an unstated direction, order or value.",
+      "Check units, base values and inclusive counting.",
+      "Review the explanation for every incorrect answer."
+    ]
+  },
+  "reasoning-data-interpretation": {
+    "title": "Data Interpretation & Analysis",
+    "intro": "Assam Police Constable + SI preparation. Tables, bar/line graphs, pie charts, caselets and comparison. Learn the method, inspect worked examples, then practise and review explanations.",
+    "sections": [
+      [
+        "1. Understand the question",
+        "Identify the information given, the exact thing being asked and every condition. Tables, bar/line graphs, pie charts, caselets and comparison."
+      ],
+      [
+        "2. Use a systematic method",
+        "Write conditions or steps clearly. Never assume information not supplied."
+      ],
+      [
+        "3. Track orientation and order",
+        "For visual and arrangement questions, track position, direction, rotation and reflection carefully."
+      ],
+      [
+        "4. Eliminate impossible choices",
+        "Test each option against every stated condition; reject any option that violates one."
+      ],
+      [
+        "5. Avoid common traps",
+        "Watch left/right perspective, inclusive counting, units, base values and unstated assumptions."
+      ],
+      [
+        "6. Exam approach",
+        "Solve direct questions first, mark lengthy puzzles for review and verify calculations."
+      ]
+    ],
+    "examples": [
+      [
+        "Worked example 1",
+        "What is the first step?",
+        "List the given facts and identify the required result."
+      ],
+      [
+        "Worked example 2",
+        "How should alternatives be checked?",
+        "Apply every condition to each candidate and eliminate contradictions."
+      ],
+      [
+        "Worked example 3",
+        "What if a condition is missing?",
+        "Do not invent it; conclude only what follows from the information supplied."
+      ]
+    ],
+    "questions": [
+      [
+        "Data Interpretation & Analysis — Values 20, 30, 50. Total?",
+        [
+          "80",
+          "90",
+          "100",
+          "110"
+        ],
+        2,
+        "20+30+50=100."
+      ],
+      [
+        "Data Interpretation & Analysis — Sales rise 40 to 50. Percentage increase?",
+        [
+          "10%",
+          "20%",
+          "25%",
+          "30%"
+        ],
+        2,
+        "10/40 × 100 = 25%."
+      ],
+      [
+        "Data Interpretation & Analysis — Pie sector is 90°. Fraction of whole?",
+        [
+          "1/2",
+          "1/3",
+          "1/4",
+          "1/5"
+        ],
+        2,
+        "90/360 = 1/4."
+      ],
+      [
+        "Data Interpretation & Analysis — Average of 12, 18, 20, 30?",
+        [
+          "18",
+          "19",
+          "20",
+          "21"
+        ],
+        2,
+        "Sum 80 / 4 = 20."
+      ],
+      [
+        "Data Interpretation & Analysis — Bar graph values 15, 25, 35. Range?",
+        [
+          "10",
+          "15",
+          "20",
+          "35"
+        ],
+        2,
+        "35−15=20."
+      ],
+      [
+        "Data Interpretation & Analysis — Advanced practice 1: A table records 18, 22 and 30 candidates. Total?",
+        [
+          "60",
+          "68",
+          "70",
+          "72"
+        ],
+        2,
+        "18+22+30=70."
+      ],
+      [
+        "Data Interpretation & Analysis — Advanced practice 2: A value falls from 80 to 60. Percentage decrease?",
+        [
+          "20%",
+          "25%",
+          "30%",
+          "40%"
+        ],
+        1,
+        "20/80 × 100 = 25%."
+      ],
+      [
+        "Data Interpretation & Analysis — Advanced practice 3: A 180° pie sector represents what fraction?",
+        [
+          "1/2",
+          "1/3",
+          "1/4",
+          "3/4"
+        ],
+        0,
+        "180/360 = 1/2."
+      ],
+      [
+        "Data Interpretation & Analysis — Advanced practice 4: Values are 5, 10, 15, 20. Median?",
+        [
+          "10",
+          "12.5",
+          "15",
+          "17.5"
+        ],
+        1,
+        "Median is average of middle values 10 and 15 = 12.5."
+      ],
+      [
+        "Data Interpretation & Analysis — Advanced practice 5: If 40% of a total is 80, total is:",
+        [
+          "160",
+          "180",
+          "200",
+          "240"
+        ],
+        2,
+        "Total = 80/0.4 = 200."
+      ]
+    ],
+    "revision": [
+      "Read every condition before solving.",
+      "Use a diagram or table when helpful.",
+      "Never assume an unstated direction, order or value.",
+      "Check units, base values and inclusive counting.",
+      "Review the explanation for every incorrect answer."
+    ]
   }
-,
-"seating-arrangement-puzzles":{"title":"Seating Arrangement & Puzzles","intro":"Assam Police Constable + SI preparation. Linear/circular seating, facing direction, ordering and multi-condition logic. Learn the method, inspect worked examples, then practise and review explanations.","sections":[["1. Understand the question","Identify the information given, the exact thing being asked and every condition. Linear/circular seating, facing direction, ordering and multi-condition logic."],["2. Use a systematic method","Write conditions or steps clearly. Never assume information not supplied."],["3. Track orientation and order","For visual and arrangement questions, track position, direction, rotation and reflection carefully."],["4. Eliminate impossible choices","Test each option against every stated condition; reject any option that violates one."],["5. Avoid common traps","Watch left/right perspective, inclusive counting, units, base values and unstated assumptions."],["6. Exam approach","Solve direct questions first, mark lengthy puzzles for review and verify calculations."]],"examples":[["Worked example 1","What is the first step?","List the given facts and identify the required result."],["Worked example 2","How should alternatives be checked?","Apply every condition to each candidate and eliminate contradictions."],["Worked example 3","What if a condition is missing?","Do not invent it; conclude only what follows from the information supplied."]],"questions":[["Seating Arrangement & Puzzles — In a row, B is between A and C. Who is in the middle?",["A","B","C","Cannot say"],1,"B is between A and C."],["Seating Arrangement & Puzzles — P sits immediately left of Q; Q is at the right end. Where is P?",["At right end","Immediately before Q","At left end","Cannot say"],1,"P is immediately before Q."],["Seating Arrangement & Puzzles — Five face north. R is second from left. Position from right?",["Second","Third","Fourth","Fifth"],2,"Second from left is fourth from right."],["Seating Arrangement & Puzzles — Everyone faces centre in a circle. A's right is which way?",["Clockwise","Anticlockwise","North","Cannot say"],0,"Facing centre, right is clockwise."],["Seating Arrangement & Puzzles — M is left of N; O right of N. Which order works?",["O-N-M","M-N-O","N-M-O","O-M-N"],1,"M is before N and O after N."]],"revision":["Read every condition before solving.","Use a diagram or table when helpful.","Never assume an unstated direction, order or value.","Check units, base values and inclusive counting.","Review the explanation for every incorrect answer."]},
-"clocks-calendars":{"title":"Clocks & Calendars","intro":"Assam Police Constable + SI preparation. Clock angles, hand movement, odd days, leap years and dates. Learn the method, inspect worked examples, then practise and review explanations.","sections":[["1. Understand the question","Identify the information given, the exact thing being asked and every condition. Clock angles, hand movement, odd days, leap years and dates."],["2. Use a systematic method","Write conditions or steps clearly. Never assume information not supplied."],["3. Track orientation and order","For visual and arrangement questions, track position, direction, rotation and reflection carefully."],["4. Eliminate impossible choices","Test each option against every stated condition; reject any option that violates one."],["5. Avoid common traps","Watch left/right perspective, inclusive counting, units, base values and unstated assumptions."],["6. Exam approach","Solve direct questions first, mark lengthy puzzles for review and verify calculations."]],"examples":[["Worked example 1","What is the first step?","List the given facts and identify the required result."],["Worked example 2","How should alternatives be checked?","Apply every condition to each candidate and eliminate contradictions."],["Worked example 3","What if a condition is missing?","Do not invent it; conclude only what follows from the information supplied."]],"questions":[["Clocks & Calendars — Clock angle at 3:00?",["60°","75°","90°","120°"],2,"Three spaces × 30° = 90°."],["Clocks & Calendars — Clock angle at 6:00?",["90°","120°","150°","180°"],3,"The hands are opposite."],["Clocks & Calendars — Minute hand movement in 15 minutes?",["45°","60°","90°","180°"],2,"6° × 15 = 90°."],["Clocks & Calendars — Days in a leap year?",["364","365","366","367"],2,"A leap year has 366 days."],["Clocks & Calendars — If today is Monday, day after 10 days?",["Wednesday","Thursday","Friday","Saturday"],1,"10 mod 7 = 3; Thursday."]],"revision":["Read every condition before solving.","Use a diagram or table when helpful.","Never assume an unstated direction, order or value.","Check units, base values and inclusive counting.","Review the explanation for every incorrect answer."]},
-"mathematical-operations-sequences":{"title":"Mathematical Operations & Logical Sequence","intro":"Assam Police Constable + SI preparation. Symbol substitution, operations, word order and missing values. Learn the method, inspect worked examples, then practise and review explanations.","sections":[["1. Understand the question","Identify the information given, the exact thing being asked and every condition. Symbol substitution, operations, word order and missing values."],["2. Use a systematic method","Write conditions or steps clearly. Never assume information not supplied."],["3. Track orientation and order","For visual and arrangement questions, track position, direction, rotation and reflection carefully."],["4. Eliminate impossible choices","Test each option against every stated condition; reject any option that violates one."],["5. Avoid common traps","Watch left/right perspective, inclusive counting, units, base values and unstated assumptions."],["6. Exam approach","Solve direct questions first, mark lengthy puzzles for review and verify calculations."]],"examples":[["Worked example 1","What is the first step?","List the given facts and identify the required result."],["Worked example 2","How should alternatives be checked?","Apply every condition to each candidate and eliminate contradictions."],["Worked example 3","What if a condition is missing?","Do not invent it; conclude only what follows from the information supplied."]],"questions":[["Mathematical Operations & Logical Sequence — If + means ×, evaluate 4 + 3.",["7","12","16","43"],1,"4 × 3 = 12."],["Mathematical Operations & Logical Sequence — If − means +, evaluate 8 − 5.",["3","8","13","40"],2,"8 + 5 = 13."],["Mathematical Operations & Logical Sequence — Complete weekdays: Monday, Tuesday, Wednesday, __.",["Friday","Sunday","Thursday","Saturday"],2,"Thursday follows Wednesday."],["Mathematical Operations & Logical Sequence — Logical order: seed, plant, flower, fruit.",["Plant-seed-fruit-flower","Seed-plant-flower-fruit","Flower-seed-plant-fruit","Fruit-flower-plant-seed"],1,"A seed grows into plant, flower, then fruit."],["Mathematical Operations & Logical Sequence — Missing number: 2, 4, 8, 16, __.",["18","24","30","32"],3,"Each term doubles."]],"revision":["Read every condition before solving.","Use a diagram or table when helpful.","Never assume an unstated direction, order or value.","Check units, base values and inclusive counting.","Review the explanation for every incorrect answer."]},
-"figure-series-matrix":{"title":"Figure Series & Matrix","intro":"Assam Police Constable + SI preparation. Visual progression, rotation, reflection and figure matrices. Learn the method, inspect worked examples, then practise and review explanations.","sections":[["1. Understand the question","Identify the information given, the exact thing being asked and every condition. Visual progression, rotation, reflection and figure matrices."],["2. Use a systematic method","Write conditions or steps clearly. Never assume information not supplied."],["3. Track orientation and order","For visual and arrangement questions, track position, direction, rotation and reflection carefully."],["4. Eliminate impossible choices","Test each option against every stated condition; reject any option that violates one."],["5. Avoid common traps","Watch left/right perspective, inclusive counting, units, base values and unstated assumptions."],["6. Exam approach","Solve direct questions first, mark lengthy puzzles for review and verify calculations."]],"examples":[["Worked example 1","What is the first step?","List the given facts and identify the required result."],["Worked example 2","How should alternatives be checked?","Apply every condition to each candidate and eliminate contradictions."],["Worked example 3","What if a condition is missing?","Do not invent it; conclude only what follows from the information supplied."]],"questions":[["Figure Series & Matrix — Arrow rotates 90° clockwise. After 180° comes:",["0°","90°","180°","270°"],3,"Next is 270° clockwise."],["Figure Series & Matrix — Dots increase 1, 2, 3, __.",["2","3","4","5"],2,"Add one dot each time."],["Figure Series & Matrix — Arrow directions up, right, down, __.",["Up","Right","Down","Left"],3,"Rotate 90° clockwise."],["Figure Series & Matrix — Pattern circle, square, circle, square, __.",["Triangle","Circle","Square","Rectangle"],1,"Alternating pattern repeats."],["Figure Series & Matrix — Polygon side counts 3, 4, 5, __.",["4","5","6","7"],2,"Next polygon has six sides."]],"revision":["Read every condition before solving.","Use a diagram or table when helpful.","Never assume an unstated direction, order or value.","Check units, base values and inclusive counting.","Review the explanation for every incorrect answer."]},
-"mirror-water-paper-folding":{"title":"Mirror/Water Images & Paper Folding","intro":"Assam Police Constable + SI preparation. Reflection, fold sequence, punch positions and symmetry. Learn the method, inspect worked examples, then practise and review explanations.","sections":[["1. Understand the question","Identify the information given, the exact thing being asked and every condition. Reflection, fold sequence, punch positions and symmetry."],["2. Use a systematic method","Write conditions or steps clearly. Never assume information not supplied."],["3. Track orientation and order","For visual and arrangement questions, track position, direction, rotation and reflection carefully."],["4. Eliminate impossible choices","Test each option against every stated condition; reject any option that violates one."],["5. Avoid common traps","Watch left/right perspective, inclusive counting, units, base values and unstated assumptions."],["6. Exam approach","Solve direct questions first, mark lengthy puzzles for review and verify calculations."]],"examples":[["Worked example 1","What is the first step?","List the given facts and identify the required result."],["Worked example 2","How should alternatives be checked?","Apply every condition to each candidate and eliminate contradictions."],["Worked example 3","What if a condition is missing?","Do not invent it; conclude only what follows from the information supplied."]],"questions":[["Mirror/Water Images & Paper Folding — Vertical mirror reverses:",["Top-bottom","Left-right","Both","Neither"],1,"Vertical reflection reverses left-right."],["Mirror/Water Images & Paper Folding — Horizontal water reflection reverses:",["Left-right","Top-bottom","Both","Neither"],1,"Horizontal reflection reverses top-bottom."],["Mirror/Water Images & Paper Folding — One fold and one punch away from crease gives how many holes?",["1","2","3","4"],1,"Unfolding creates two reflected holes."],["Mirror/Water Images & Paper Folding — Two folds and one punch through all layers gives how many distinct holes?",["2","3","4","8"],2,"Two folds create four symmetric positions."],["Mirror/Water Images & Paper Folding — An arrow points left. In a vertical mirror it points:",["Left","Right","Up","Down"],1,"Left-right is reversed."]],"revision":["Read every condition before solving.","Use a diagram or table when helpful.","Never assume an unstated direction, order or value.","Check units, base values and inclusive counting.","Review the explanation for every incorrect answer."]},
-"embedded-counting-cubes-dice":{"title":"Embedded Figures, Counting, Cubes & Dice","intro":"Assam Police Constable + SI preparation. Hidden figures, counting shapes, painted cubes and dice. Learn the method, inspect worked examples, then practise and review explanations.","sections":[["1. Understand the question","Identify the information given, the exact thing being asked and every condition. Hidden figures, counting shapes, painted cubes and dice."],["2. Use a systematic method","Write conditions or steps clearly. Never assume information not supplied."],["3. Track orientation and order","For visual and arrangement questions, track position, direction, rotation and reflection carefully."],["4. Eliminate impossible choices","Test each option against every stated condition; reject any option that violates one."],["5. Avoid common traps","Watch left/right perspective, inclusive counting, units, base values and unstated assumptions."],["6. Exam approach","Solve direct questions first, mark lengthy puzzles for review and verify calculations."]],"examples":[["Worked example 1","What is the first step?","List the given facts and identify the required result."],["Worked example 2","How should alternatives be checked?","Apply every condition to each candidate and eliminate contradictions."],["Worked example 3","What if a condition is missing?","Do not invent it; conclude only what follows from the information supplied."]],"questions":[["Embedded Figures, Counting, Cubes & Dice — Faces of a cube?",["4","6","8","12"],1,"A cube has six faces."],["Embedded Figures, Counting, Cubes & Dice — Edges of a cube?",["8","10","12","14"],2,"A cube has twelve edges."],["Embedded Figures, Counting, Cubes & Dice — Vertices of a cube?",["6","8","10","12"],1,"A cube has eight vertices."],["Embedded Figures, Counting, Cubes & Dice — Painted cube cut into 27 equal cubes: cubes with 3 painted faces?",["4","6","8","12"],2,"Eight corner cubes have three painted faces."],["Embedded Figures, Counting, Cubes & Dice — Painted 3×3×3 cube cut up: cubes with no paint?",["0","1","6","8"],1,"Only the central cube has no paint."]],"revision":["Read every condition before solving.","Use a diagram or table when helpful.","Never assume an unstated direction, order or value.","Check units, base values and inclusive counting.","Review the explanation for every incorrect answer."]},
-"arithmetical-reasoning":{"title":"Arithmetical Reasoning","intro":"Assam Police Constable + SI preparation. Age, ratio, percentage, work, speed and applied word problems. Learn the method, inspect worked examples, then practise and review explanations.","sections":[["1. Understand the question","Identify the information given, the exact thing being asked and every condition. Age, ratio, percentage, work, speed and applied word problems."],["2. Use a systematic method","Write conditions or steps clearly. Never assume information not supplied."],["3. Track orientation and order","For visual and arrangement questions, track position, direction, rotation and reflection carefully."],["4. Eliminate impossible choices","Test each option against every stated condition; reject any option that violates one."],["5. Avoid common traps","Watch left/right perspective, inclusive counting, units, base values and unstated assumptions."],["6. Exam approach","Solve direct questions first, mark lengthy puzzles for review and verify calculations."]],"examples":[["Worked example 1","What is the first step?","List the given facts and identify the required result."],["Worked example 2","How should alternatives be checked?","Apply every condition to each candidate and eliminate contradictions."],["Worked example 3","What if a condition is missing?","Do not invent it; conclude only what follows from the information supplied."]],"questions":[["Arithmetical Reasoning — Father is 3 times son's age; total 48. Son's age?",["10","12","14","16"],1,"4x=48, so x=12."],["Arithmetical Reasoning — A number increases 20% to 120. Original?",["90","96","100","110"],2,"1.2x=120, so x=100."],["Arithmetical Reasoning — A finishes work in 6 days, B in 3. Combined daily work?",["1/2","1/3","1/6","1/9"],0,"1/6 + 1/3 = 1/2."],["Arithmetical Reasoning — 150 km in 3 hours. Speed?",["30 km/h","40 km/h","50 km/h","60 km/h"],2,"150÷3=50 km/h."],["Arithmetical Reasoning — Divide ₹600 in ratio 2:3. Larger share?",["₹200","₹240","₹360","₹400"],2,"3/5 × 600 = ₹360."]],"revision":["Read every condition before solving.","Use a diagram or table when helpful.","Never assume an unstated direction, order or value.","Check units, base values and inclusive counting.","Review the explanation for every incorrect answer."]},
-"reasoning-data-interpretation":{"title":"Data Interpretation & Analysis","intro":"Assam Police Constable + SI preparation. Tables, bar/line graphs, pie charts, caselets and comparison. Learn the method, inspect worked examples, then practise and review explanations.","sections":[["1. Understand the question","Identify the information given, the exact thing being asked and every condition. Tables, bar/line graphs, pie charts, caselets and comparison."],["2. Use a systematic method","Write conditions or steps clearly. Never assume information not supplied."],["3. Track orientation and order","For visual and arrangement questions, track position, direction, rotation and reflection carefully."],["4. Eliminate impossible choices","Test each option against every stated condition; reject any option that violates one."],["5. Avoid common traps","Watch left/right perspective, inclusive counting, units, base values and unstated assumptions."],["6. Exam approach","Solve direct questions first, mark lengthy puzzles for review and verify calculations."]],"examples":[["Worked example 1","What is the first step?","List the given facts and identify the required result."],["Worked example 2","How should alternatives be checked?","Apply every condition to each candidate and eliminate contradictions."],["Worked example 3","What if a condition is missing?","Do not invent it; conclude only what follows from the information supplied."]],"questions":[["Data Interpretation & Analysis — Values 20, 30, 50. Total?",["80","90","100","110"],2,"20+30+50=100."],["Data Interpretation & Analysis — Sales rise 40 to 50. Percentage increase?",["10%","20%","25%","30%"],2,"10/40 × 100 = 25%."],["Data Interpretation & Analysis — Pie sector is 90°. Fraction of whole?",["1/2","1/3","1/4","1/5"],2,"90/360 = 1/4."],["Data Interpretation & Analysis — Average of 12, 18, 20, 30?",["18","19","20","21"],2,"Sum 80 / 4 = 20."],["Data Interpretation & Analysis — Bar graph values 15, 25, 35. Range?",["10","15","20","35"],2,"35−15=20."]],"revision":["Read every condition before solving.","Use a diagram or table when helpful.","Never assume an unstated direction, order or value.","Check units, base values and inclusive counting.","Review the explanation for every incorrect answer."]}
 };
