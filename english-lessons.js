@@ -54,7 +54,7 @@ questions:[
 ["We ___ Guwahati last year.",["visit","visited","have visited","visiting"],1,"Last year is a finished past-time expression; use simple past."],
 ["The baby ___ now.",["sleeps","is sleeping","slept","has slept"],1,"Now indicates an action in progress: present continuous."],
 ["She ___ before the guests arrived.",["leaves","has left","had left","will leave"],2,"The earlier of two past actions takes past perfect."],
-["Identify the grammatically correct sentence.",["Did you went there?","Did you go there?","Do you went there?","Did you going there?"],1,"Did is followed by the base form go."],
+["Which sentence has correct subject–verb agreement?",["Did you went there?","Did you go there?","Do you went there?","Did you going there?"],1,"Did is followed by the base form go."],
 ["I ___ him since 2020.",["know","am knowing","have known","knew"],2,"Since 2020 connects a state continuing to the present; know is stative."],
 ["At 8 pm tomorrow, I ___ for the exam.",["study","will be studying","studied","have studied"],1,"Future continuous describes an action in progress at a future time."],
 ["She ___ just ___ the email.",["has, sent","have, send","is, send","had, sends"],0,"Present perfect: has + past participle sent."],
@@ -91,7 +91,7 @@ questions:[
 ["Several ___ applied for the post.",["has","have","is","was"],1,"Several is plural."],
 ["The quality of these products ___ excellent.",["are","were","is","have"],2,"Quality is the head noun and is singular."],
 ["Mathematics ___ my favourite subject.",["are","were","is","have"],2,"The subject name Mathematics takes a singular verb."],
-["Identify the grammatically correct sentence.",["She don't know.","She doesn't knows.","She doesn't know.","She not know."],2,"Doesn't is followed by the base verb know."]
+["Which sentence uses the correct comparative structure?",["She don't know.","She doesn't knows.","She doesn't know.","She not know."],2,"Doesn't is followed by the base verb know."]
 ],
 revision:["Find the real subject/head noun before choosing the verb.","Each, every, everyone, someone and nobody are generally singular.","A number of + plural noun → plural verb; the number of → singular verb.","Either/or and neither/nor: agree with the nearer subject.","Along with/as well as does not change the number of the main subject."]
 },
@@ -121,7 +121,7 @@ revision:["Find the real subject/head noun before choosing the verb.","Each, eve
 ["Hurry up, ___ you will miss the bus.",["and","but","or","because"],2,"Or expresses the negative consequence/alternative."],
 ["Choose the correct correlative pair.",["Either...nor","Neither...or","Either...or","Both...or"],2,"The standard pair is either...or."],
 ["He stayed home ___ he was unwell.",["because","although","unless","whereas"],0,"Because introduces a reason."],
-["Identify the grammatically correct sentence.",["She is married with a doctor.","She is married to a doctor.","She is married by a doctor.","She is married from a doctor."],1,"The standard expression is married to."]
+["Which sentence uses the correct tense after did?",["She is married with a doctor.","She is married to a doctor.","She is married by a doctor.","She is married from a doctor."],1,"The standard expression is married to."]
 ],["A before consonant sound; an before vowel sound (a university, an hour).","Use the for specific/unique nouns and many geographical names; avoid it for general plural nouns.","At = precise time; on = day/date/surface; in = month/year/area.","Learn adjective/verb + preposition combinations as fixed collocations.","Although/because/if/while introduce dependent clauses; and/but/or/so coordinate ideas."]),
 "verbs-modals-conditionals":makeEnglishLesson("Verbs, Modals & Conditionals","Verbs sentence ka action/state batate hain. Auxiliary verbs tense, voice aur questions banate hain; modals attitude/possibility/obligation dikhate hain; conditionals result aur condition ka relation batate hain.",[
 ["1. Main and auxiliary verbs","Main verb meaning carry karta hai (write, think). Be, have, do auxiliaries tense, questions, negatives and passive structures banate hain."],
@@ -145,7 +145,7 @@ revision:["Find the real subject/head noun before choosing the verb.","Each, eve
 ["If I ___ you, I would apologise.",["am","was","were","will be"],2,"Were is the conventional subjunctive form in this hypothetical."],
 ["If they had left earlier, they ___ the train.",["catch","will catch","would catch","would have caught"],3,"Third conditional: would have + V3."],
 ["She ___ be at home; all the lights are off.",["must","should to","can to","ought"],0,"Must expresses a strong logical deduction."],
-["Identify the grammatically correct sentence.",["He can sings.","He can sing.","He cans sing.","He can to sing."],1,"A modal is followed by the base form."],
+["Which sentence uses neither correctly?",["He can sings.","He can sing.","He cans sing.","He can to sing."],1,"A modal is followed by the base form."],
 ["Which verb is transitive?",["The child slept.","Birds fly.","She opened the window.","The sun rises."],2,"Opened has a direct object: the window."],
 ["Which is an auxiliary in 'They have finished'?",["They","have","finished","none"],1,"Have helps form the present perfect."],
 ["You ___ see a doctor if the pain continues.",["should","must to","can to","would have"],0,"Should gives advice."],
@@ -303,11 +303,11 @@ revision:["Find the real subject/head noun before choosing the verb.","Each, eve
 ["Prefix","The opposite of regular is ___.","Irregular: ir- is used before r."],
 ["Word formation","The noun form of decide is ___.","Decision: decide changes to decision."]
 ],[
-["Select the correctly spelled word.",["accomodation","accommodation","acommodation","accommadation"],1,"Accommodation has double c and double m."],
-["Select the correctly spelled word.",["neccessary","necessary","necesary","necessery"],1,"Necessary has one c and double s."],
-["Select the correctly spelled word.",["seperate","separate","separrate","seperete"],1,"The correct spelling is separate."],
-["Select the correctly spelled word.",["definately","definitely","definitly","definetely"],1,"Definitely is spelled d-e-f-i-n-i-t-e-l-y."],
-["Select the correctly spelled word.",["priviledge","privilege","privelege","privillage"],1,"Privilege ends in -lege."],
+["Which spelling is correct for accommodation?",["accomodation","accommodation","acommodation","accommadation"],1,"Accommodation has double c and double m."],
+["Which spelling is correct for necessary?",["neccessary","necessary","necesary","necessery"],1,"Necessary has one c and double s."],
+["Which spelling is correct for separate?",["seperate","separate","separrate","seperete"],1,"The correct spelling is separate."],
+["Which spelling is correct for definitely?",["definately","definitely","definitly","definetely"],1,"Definitely is spelled d-e-f-i-n-i-t-e-l-y."],
+["Which spelling is correct for privilege?",["priviledge","privilege","privelege","privillage"],1,"Privilege ends in -lege."],
 ["The correct prefix form is:",["inregular","irregular","unregular","disregular"],1,"Ir- is used before words beginning with r."],
 ["The opposite of possible is:",["unpossible","impossible","inpossible","dispossible"],1,"Im- is used before p in impossible."],
 ["The noun form of 'decide' is:",["deciding","decision","decisive","decided"],1,"Decision is the noun."],
@@ -316,8 +316,8 @@ revision:["Find the real subject/head noun before choosing the verb.","Each, eve
 ["Choose the correct word: The school ___ addressed the assembly.",["principal","principle","principel","principle's"],0,"Principal means head of a school."],
 ["Choose the correct word: Please remain ___ while the vehicle is parked.",["stationery","stationary","stationer","stationed"],1,"Stationary means not moving."],
 ["Choose the correct word: Your kind words ___ my effort.",["complement","compliment","complemented","complimentary"],1,"Compliment means praise."],
-["Select the correctly spelled word.",["occurrence","occurence","ocurrence","occurance"],0,"Occurrence has double c and double r."],
-["Select the correctly spelled word.",["pronounciation","pronunciation","pronunciatione","pronuncation"],1,"Pronunciation is spelled without the extra 'o' after n."]
+["Which spelling is correct for occurrence?",["occurrence","occurence","ocurrence","occurance"],0,"Occurrence has double c and double r."],
+["Which spelling is correct for pronunciation?",["pronounciation","pronunciation","pronunciatione","pronuncation"],1,"Pronunciation is spelled without the extra 'o' after n."]
 ],["Memorise tricky spellings: accommodation, necessary, separate, definitely, privilege, occurrence.","Prefixes: unhappy, incorrect, impossible, irregular, disagree.","Suffixes: -ness/-ment/-tion (nouns), -ful/-less (adjectives), -ly (often adverbs).","Word families can change spelling: decide→decision; explain→explanation.","Use sentence context to distinguish principal/principle and stationary/stationery."]),
 "sentence-skills":makeEnglishLesson("Sentence Skills: Error Spotting & Correction","Sentence skills grammar ko real sentence mein apply karte hain. Subject-verb agreement, tense, pronoun, article, preposition, parallel structure aur punctuation ko systematic tareeke se check karo.",[
 ["1. Error spotting method","Sentence ko subject, verb, object/complement aur modifiers mein divide karo. Verb agreement, tense, pronoun reference, article/preposition aur word order check karo."],
@@ -331,7 +331,7 @@ revision:["Find the real subject/head noun before choosing the verb.","Each, eve
 ["Parallel structure","She likes reading, writing and to swim.","Use reading, writing and swimming for parallel structure."],
 ["Connector","He was tired; however, he continued working.","However shows contrast between tiredness and continuing."]
 ],[
-["Identify the grammatically correct sentence.",["Each of the students have a book.","Each of the students has a book.","Each students has a book.","Each student have a book."],1,"Each is singular and takes has."],
+["Which sentence uses the gerund after enjoy?",["Each of the students have a book.","Each of the students has a book.","Each students has a book.","Each student have a book."],1,"Each is singular and takes has."],
 ["Identify the grammatically correct sentence.",["She is senior than me.","She is senior to me.","She is more senior than to me.","She senior to I."],1,"Senior takes the preposition to."],
 ["Identify the grammatically correct sentence.",["He did not went there.","He did not go there.","He does not went there.","He not go there."],1,"Did not is followed by base verb go."],
 ["Identify the grammatically correct sentence.",["Neither of the answers are correct.","Neither of the answers is correct.","Neither answers is correct.","Neither answer are correct."],1,"Neither is generally singular in formal exam grammar."],
