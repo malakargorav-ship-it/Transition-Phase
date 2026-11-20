@@ -391,3 +391,89 @@
     transform:none!important;
   }
 }
+
+
+/* FINAL READABILITY + TRUE EDGE-TO-EDGE SECTION WIDTH PATCH */
+.approach.tp-spotlight-host{
+  width:100vw!important;
+  max-width:none!important;
+  margin-left:calc(50% - 50vw)!important;
+  padding-left:max(24px,calc((100vw - 1160px)/2))!important;
+  padding-right:max(24px,calc((100vw - 1160px)/2))!important;
+  padding-top:72px;
+  padding-bottom:72px;
+}
+.approach.tp-spotlight-host .section-heading{
+  color:#171614;
+}
+.approach.tp-spotlight-host .section-heading>p{
+  color:#39352f!important;
+  font-weight:600;
+  text-shadow:0 1px 10px rgba(255,255,255,.65);
+}
+.approach.tp-spotlight-host .principles{
+  background:rgba(255,253,248,.88)!important;
+  border:1px solid rgba(55,48,38,.12);
+  backdrop-filter:blur(8px);
+}
+.approach.tp-spotlight-host .principle h3{color:#171614}
+.approach.tp-spotlight-host .principle p{color:#514a40!important}
+.approach.tp-spotlight-host .principle-no{color:#94703c}
+
+/* Dark photographic study chapter: force readable light typography on every card. */
+.subjects-section.tp-spotlight-host{color:#f7f1e7!important}
+.subjects-section.tp-spotlight-host .section-heading-light h2,
+.subjects-section.tp-spotlight-host .section-heading-light h2 em,
+.subjects-section.tp-spotlight-host .section-heading-light>p,
+.subjects-section.tp-spotlight-host .subject-card,
+.subjects-section.tp-spotlight-host .subject-card h3,
+.subjects-section.tp-spotlight-host .subject-card p,
+.subjects-section.tp-spotlight-host .subject-card .subject-count,
+.subjects-section.tp-spotlight-host .subject-card .subject-icon,
+.subjects-section.tp-spotlight-host .subject-card .subject-arrow{
+  color:#f7f1e7!important;
+}
+.subjects-section.tp-spotlight-host .section-heading-light>p,
+.subjects-section.tp-spotlight-host .subject-card p{
+  color:#ded6c9!important;
+}
+.subjects-section.tp-spotlight-host .subject-card{
+  background:rgba(22,21,20,.84)!important;
+  border-color:rgba(247,241,231,.28);
+  backdrop-filter:blur(8px);
+}
+.subjects-section.tp-spotlight-host .subject-card.featured{
+  background:rgba(43,36,26,.88)!important;
+  border-color:rgba(213,180,119,.72);
+}
+.subjects-section.tp-spotlight-host .subject-card:hover{
+  background:rgba(51,42,29,.94)!important;
+}
+
+/* Warm CTA photograph: keep heading and supporting copy dark and high-contrast. */
+.study-cta.tp-spotlight-host{
+  color:#171614!important;
+}
+.study-cta.tp-spotlight-host .cta-inner h2,
+.study-cta.tp-spotlight-host .cta-inner h2 em,
+.study-cta.tp-spotlight-host .cta-inner .eyebrow{
+  color:#171614!important;
+  text-shadow:0 1px 14px rgba(255,248,235,.62);
+}
+.study-cta.tp-spotlight-host .cta-side p{
+  color:#29251f!important;
+  font-weight:600;
+  text-shadow:0 1px 12px rgba(255,248,235,.75);
+}
+.study-cta.tp-spotlight-host .button-gold{
+  color:#171614!important;
+  background:#d5b477;
+  border:1px solid rgba(23,22,20,.25);
+}
+@media(max-width:760px){
+  .approach.tp-spotlight-host{
+    padding-left:20px!important;
+    padding-right:20px!important;
+  }
+  .approach.tp-spotlight-host .section-heading>p{margin-top:18px}
+}
