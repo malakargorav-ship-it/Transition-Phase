@@ -2,8 +2,11 @@
 /* Subject cards are navigable links */
 a.subject-card{display:block;color:inherit;text-decoration:none;cursor:pointer}a.subject-card:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
 
-/* Creator attribution */
-.creator-byline{margin:18px 0 0;font-size:9px;line-height:1.7;letter-spacing:.13em;font-weight:800;color:#8b8377}
-.creator-byline strong,.footer-credit strong{color:#a78249;font-weight:800}
+/* Prominent creator attribution */
+.creator-byline{display:flex;flex-direction:column;align-items:flex-start;gap:3px;margin:20px 0 18px;padding:11px 16px;border-left:3px solid var(--gold);background:rgba(197,160,100,.10);max-width:360px}
+.creator-byline span{font-size:9px;line-height:1.5;letter-spacing:.16em;font-weight:800;color:#827766}
+.creator-byline strong{font:800 21px/1.2 var(--heading);letter-spacing:.015em;color:#a78249}
+.creator-byline small{font-size:10px;letter-spacing:.04em;color:#8b8377}
 .footer-credit{font-size:8px;letter-spacing:.1em;color:#8b8377;font-weight:800}
-@media(max-width:800px){.creator-byline{max-width:330px;font-size:8px}.footer-credit{flex-basis:100%;order:3}}
+.footer-credit strong{color:#a78249;font-weight:800}
+@media(max-width:800px){.creator-byline{max-width:340px;margin:18px 0 16px;padding:10px 14px}.creator-byline strong{font-size:19px}.footer-credit{flex-basis:100%;order:3}}
