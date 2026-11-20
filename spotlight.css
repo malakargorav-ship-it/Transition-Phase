@@ -127,3 +127,115 @@
 @media(prefers-reduced-motion:reduce){
   .tp-spotlight-host::before{animation:none;transform:none}
 }
+
+/* PAGE-WIDE ART DIRECTION — distinct photographic chapter backgrounds.
+   The image layers stay behind readable content and existing interactive cards. */
+
+/* Remove the two floating paper labels sitting over the preparation-log card. */
+.hero-art .floating-tag{display:none!important}
+
+/* Landing page chapters: each section gets its own atmosphere. */
+.metrics{
+  position:relative;
+  background:
+    linear-gradient(90deg,rgba(251,248,242,.93),rgba(251,248,242,.86)),
+    url("https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1800&q=85") center 45%/cover no-repeat;
+  padding-inline:24px;
+}
+.approach{
+  position:relative;
+  padding:55px 32px 1px;
+  background:
+    linear-gradient(100deg,rgba(251,248,242,.93),rgba(251,248,242,.87)),
+    url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1800&q=85") center/cover no-repeat;
+}
+.approach .principles{background:rgba(251,248,242,.72);backdrop-filter:blur(3px)}
+.subjects-section{
+  background-image:
+    linear-gradient(100deg,rgba(17,17,17,.91),rgba(17,17,17,.86)),
+    url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=2000&q=85");
+  background-position:center;background-size:cover;background-attachment:fixed;
+}
+.system-section{
+  position:relative;
+  padding-inline:28px;
+  background:
+    linear-gradient(100deg,rgba(251,248,242,.91),rgba(251,248,242,.83)),
+    url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1800&q=85") center/cover no-repeat;
+}
+.study-cta{
+  background:
+    linear-gradient(100deg,rgba(233,223,207,.91),rgba(233,223,207,.82)),
+    url("https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=1800&q=85") center/cover no-repeat;
+}
+
+/* Command Centre: distinct photographic bands for stats and each work area. */
+.command .stat-grid{
+  padding:22px;
+  background:
+    linear-gradient(100deg,rgba(251,248,242,.91),rgba(251,248,242,.82)),
+    url("https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1600&q=85") center/cover no-repeat;
+}
+.command .command-section{
+  padding:28px;
+  margin-top:24px;
+  border:1px solid rgba(199,166,106,.24);
+  background:
+    linear-gradient(100deg,rgba(251,248,242,.94),rgba(251,248,242,.88)),
+    url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=85") center/cover no-repeat;
+}
+.command .command-section:nth-of-type(4n){
+  background-image:
+    linear-gradient(100deg,rgba(244,235,221,.93),rgba(244,235,221,.86)),
+    url("https://images.unsplash.com/photo-1506784983877-45594gesetzt?auto=format&fit=crop&w=1600&q=85");
+}
+
+/* Subject and syllabus pages: the masthead has its own image; learning content
+   receives quieter, different backdrops without changing cards or checkboxes. */
+.subject-page .topic-section{
+  padding:34px 26px;
+  background:
+    linear-gradient(100deg,rgba(251,248,242,.94),rgba(251,248,242,.88)),
+    url("https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=1700&q=85") center/cover no-repeat;
+}
+.syllabus-summary{
+  background-image:
+    linear-gradient(100deg,rgba(33,31,28,.91),rgba(33,31,28,.86)),
+    url("https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1600&q=85");
+  background-position:center;background-size:cover;
+}
+.syllabus-tools{
+  padding-inline:24px;
+  background:
+    linear-gradient(100deg,rgba(251,248,242,.94),rgba(251,248,242,.88)),
+    url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1600&q=85") center/cover no-repeat;
+}
+.syllabus-section{
+  background:
+    linear-gradient(100deg,rgba(255,253,248,.94),rgba(255,253,248,.88)),
+    url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1200&q=80") center/cover no-repeat;
+}
+
+/* Lesson chapters use alternating images to make scrolling feel like chapters. */
+.lesson-section{
+  padding:42px 26px;
+  background:
+    linear-gradient(100deg,rgba(251,248,242,.94),rgba(251,248,242,.89)),
+    url("https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=1600&q=85") center/cover no-repeat;
+}
+.lesson-section:nth-of-type(3n){
+  background-image:
+    linear-gradient(100deg,rgba(244,235,221,.94),rgba(244,235,221,.88)),
+    url("https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=1600&q=85");
+}
+.lesson-section .concept-card,
+.lesson-section .example-card,
+.lesson-section .question-card{backdrop-filter:blur(2px)}
+
+@media(max-width:760px){
+  .approach,.system-section{padding-inline:20px}
+  .command .command-section{padding:20px}
+  .subject-page .topic-section,.lesson-section{padding:25px 16px}
+  .subjects-section{background-attachment:scroll}
+  .metrics{padding-inline:10px}
+}
