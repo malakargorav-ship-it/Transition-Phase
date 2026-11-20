@@ -1,5 +1,5 @@
-/* TRANSITION PHASE — cinematic exam-preparation image reveal
-   Base: athletic preparation. Spotlight: dramatic mountain terrain. */
+/* TRANSITION PHASE — full-bleed cinematic preparation heroes.
+   Keep photography inside hero bands only; all study content remains untouched. */
 .tp-spotlight-host{
   --tp-spot-x:-1000px;
   --tp-spot-y:-1000px;
@@ -7,6 +7,8 @@
   position:relative;
   isolation:isolate;
   overflow:hidden;
+  background:#111315;
+  color:#f5f0e7;
 }
 .tp-spotlight-host::before,
 .tp-spotlight-host::after{
@@ -21,45 +23,105 @@
 }
 .tp-spotlight-host::before{
   background-image:
-    linear-gradient(110deg,rgba(251,248,242,.43),rgba(251,248,242,.34)),
-    url("https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=2000&q=90");
-  transform:scale(1.015);
-  animation:tp-spot-base-in 1.25s cubic-bezier(.16,1,.3,1) both;
+    linear-gradient(90deg,rgba(9,12,15,.82) 0%,rgba(9,12,15,.58) 53%,rgba(9,12,15,.30) 100%),
+    url("https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=2200&q=90");
+  transform:scale(1.025);
+  animation:tp-spot-base-in 1.5s cubic-bezier(.16,1,.3,1) both;
 }
 .tp-spotlight-host::after{
-  background-image:url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2000&q=90");
-  opacity:1;
+  background-image:
+    linear-gradient(90deg,rgba(9,12,15,.20),rgba(9,12,15,.08)),
+    url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2200&q=90");
   -webkit-mask-image:radial-gradient(circle var(--tp-spot-size) at var(--tp-spot-x) var(--tp-spot-y),
-    rgba(0,0,0,1) 0%,
-    rgba(0,0,0,1) 40%,
-    rgba(0,0,0,.75) 60%,
-    rgba(0,0,0,.4) 75%,
-    rgba(0,0,0,.12) 88%,
-    rgba(0,0,0,0) 100%);
+    #000 0%,#000 40%,rgba(0,0,0,.75) 60%,rgba(0,0,0,.4) 75%,rgba(0,0,0,.12) 88%,transparent 100%);
   mask-image:radial-gradient(circle var(--tp-spot-size) at var(--tp-spot-x) var(--tp-spot-y),
-    rgba(0,0,0,1) 0%,
-    rgba(0,0,0,1) 40%,
-    rgba(0,0,0,.75) 60%,
-    rgba(0,0,0,.4) 75%,
-    rgba(0,0,0,.12) 88%,
-    rgba(0,0,0,0) 100%);
+    #000 0%,#000 40%,rgba(0,0,0,.75) 60%,rgba(0,0,0,.4) 75%,rgba(0,0,0,.12) 88%,transparent 100%);
   -webkit-mask-repeat:no-repeat;
   mask-repeat:no-repeat;
 }
 .tp-spotlight-host>*{position:relative;z-index:1}
+
+/* Landing page: true viewport-wide hero with the site's content grid retained. */
+.hero.section-wrap.tp-spotlight-host{
+  width:100vw;
+  max-width:none;
+  margin-left:calc(50% - 50vw);
+  padding-left:max(24px,calc((100vw - 1160px)/2));
+  padding-right:max(24px,calc((100vw - 1160px)/2));
+  min-height:calc(100svh - 82px);
+  padding-top:90px;
+  padding-bottom:80px;
+  color:#f5f0e7;
+}
+.hero.tp-spotlight-host::before,.hero.tp-spotlight-host::after{
+  background-position:center 48%;
+}
+.hero.tp-spotlight-host .eyebrow{color:#d5b477}
+.hero.tp-spotlight-host h1{color:#fff}
+.hero.tp-spotlight-host h1 em{color:#d5b477}
+.hero.tp-spotlight-host .creator-byline,
+.hero.tp-spotlight-host .hero-lede,
+.hero.tp-spotlight-host .hero-note{color:rgba(255,255,255,.78)}
+.hero.tp-spotlight-host .creator-byline strong{color:#d5b477}
+.hero.tp-spotlight-host .text-link{color:#fff}
+.hero.tp-spotlight-host .text-link span{color:#d5b477}
+.hero.tp-spotlight-host .hero-art{min-height:440px}
+.hero.tp-spotlight-host .hero-card{box-shadow:18px 22px 0 rgba(213,180,119,.22)}
+
+/* Inner pages: contained cinematic mastheads, not backgrounds behind study content. */
+.command-hero.tp-spotlight-host{
+  min-height:290px;
+  padding:42px;
+  border:1px solid rgba(213,180,119,.25);
+  color:#f5f0e7;
+}
+.command-hero.tp-spotlight-host .eyebrow,
+.subject-hero.tp-spotlight-host .eyebrow,
+.lesson-head.tp-spotlight-host .eyebrow,
+.syllabus-hero.tp-spotlight-host .eyebrow{color:#d5b477}
+.command-hero.tp-spotlight-host h1,
+.subject-hero.tp-spotlight-host h1,
+.lesson-head.tp-spotlight-host h1,
+.syllabus-hero.tp-spotlight-host h1{color:#fff}
+.command-hero.tp-spotlight-host h1 em,
+.subject-hero.tp-spotlight-host h1 em,
+.lesson-head.tp-spotlight-host h1 em,
+.syllabus-hero.tp-spotlight-host h1 em{color:#d5b477}
+.command-hero.tp-spotlight-host p,
+.subject-hero.tp-spotlight-host>div>p,
+.lesson-head.tp-spotlight-host>p,
+.syllabus-hero.tp-spotlight-host>p{color:rgba(255,255,255,.78)}
+.command-hero.tp-spotlight-host .track-select label{color:#d5b477}
+.command-hero.tp-spotlight-host .track-select select{background:#f5f0e7;color:#171717}
+.subject-hero.tp-spotlight-host{padding:48px 30px;border:1px solid rgba(213,180,119,.25)}
+.subject-hero.tp-spotlight-host .subject-progress{background:rgba(10,12,14,.82);border:1px solid rgba(213,180,119,.35)}
+.lesson-head.tp-spotlight-host{padding:44px 30px 30px;border:1px solid rgba(213,180,119,.25)}
+.lesson-head.tp-spotlight-host .lesson-tabs a{color:#f5f0e7;border-color:rgba(255,255,255,.28)}
+.lesson-head.tp-spotlight-host .lesson-tabs a:hover{border-color:#d5b477;color:#d5b477}
+.syllabus-hero.tp-spotlight-host{padding:45px 30px 34px;border:1px solid rgba(213,180,119,.25)}
+.syllabus-hero.tp-spotlight-host .track-button{background:rgba(245,240,231,.92);color:#171717}
+.syllabus-hero.tp-spotlight-host .track-button.active{background:#d5b477;color:#171717;border-color:#fff}
+
 @keyframes tp-spot-base-in{
-  from{opacity:.6;transform:scale(1.06)}
-  to{opacity:1;transform:scale(1.015)}
+  from{opacity:.65;transform:scale(1.07)}
+  to{opacity:1;transform:scale(1.025)}
 }
-@media(max-width:650px){
-  .tp-spotlight-host{--tp-spot-size:210px}
-  .tp-spotlight-host::before,.tp-spotlight-host::after{background-position:center}
+@media(max-width:760px){
+  .hero.section-wrap.tp-spotlight-host{
+    min-height:auto;
+    padding:64px 22px 54px;
+    margin-left:calc(50% - 50vw);
+  }
+  .hero.tp-spotlight-host .hero-art{min-height:360px}
+  .command-hero.tp-spotlight-host,
+  .subject-hero.tp-spotlight-host,
+  .lesson-head.tp-spotlight-host,
+  .syllabus-hero.tp-spotlight-host{padding:30px 20px}
 }
-/* Touch screens get a fixed soft reveal; no hover interaction is required. */
 @media(hover:none),(pointer:coarse){
   .tp-spotlight-host::after{
-    -webkit-mask-image:radial-gradient(circle 220px at 50% 50%,#000 0%,rgba(0,0,0,.9) 48%,transparent 100%);
-    mask-image:radial-gradient(circle 220px at 50% 50%,#000 0%,rgba(0,0,0,.9) 48%,transparent 100%);
+    -webkit-mask-image:radial-gradient(circle 220px at 50% 50%,#000 0%,rgba(0,0,0,.86) 48%,transparent 100%);
+    mask-image:radial-gradient(circle 220px at 50% 50%,#000 0%,rgba(0,0,0,.86) 48%,transparent 100%);
   }
 }
 @media(prefers-reduced-motion:reduce){
