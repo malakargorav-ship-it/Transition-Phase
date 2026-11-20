@@ -1,8 +1,8 @@
-/* TRANSITION PHASE — cinematic exam-preparation spotlight
-   Shared by landing, Command Centre, subject, lesson and syllabus heroes. */
+/* TRANSITION PHASE — cinematic exam-preparation image reveal
+   Base: athletic preparation. Spotlight: dramatic mountain terrain. */
 .tp-spotlight-host{
-  --tp-spot-x:50%;
-  --tp-spot-y:50%;
+  --tp-spot-x:-1000px;
+  --tp-spot-y:-1000px;
   --tp-spot-size:260px;
   position:relative;
   isolation:isolate;
@@ -15,23 +15,20 @@
   inset:0;
   pointer-events:none;
   z-index:0;
+  background-position:center center;
+  background-repeat:no-repeat;
+  background-size:cover;
 }
 .tp-spotlight-host::before{
   background-image:
-    linear-gradient(110deg,rgba(251,248,242,.78),rgba(251,248,242,.70)),
-    url("https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=1800&q=85");
-  background-size:cover;
-  background-position:center;
-  transform:scale(1.035);
-  animation:tp-spot-base-in 1.5s cubic-bezier(.16,1,.3,1) both;
+    linear-gradient(110deg,rgba(251,248,242,.43),rgba(251,248,242,.34)),
+    url("https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=2000&q=90");
+  transform:scale(1.015);
+  animation:tp-spot-base-in 1.25s cubic-bezier(.16,1,.3,1) both;
 }
 .tp-spotlight-host::after{
-  background-image:
-    linear-gradient(110deg,rgba(251,248,242,.32),rgba(251,248,242,.24)),
-    url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1800&q=85");
-  background-size:cover;
-  background-position:center;
-  opacity:.98;
+  background-image:url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2000&q=90");
+  opacity:1;
   -webkit-mask-image:radial-gradient(circle var(--tp-spot-size) at var(--tp-spot-x) var(--tp-spot-y),
     rgba(0,0,0,1) 0%,
     rgba(0,0,0,1) 40%,
@@ -48,30 +45,21 @@
     rgba(0,0,0,0) 100%);
   -webkit-mask-repeat:no-repeat;
   mask-repeat:no-repeat;
-  will-change:mask-position;
-  transition:opacity .25s ease;
 }
 .tp-spotlight-host>*{position:relative;z-index:1}
-.tp-spotlight-host .hero-art>*{position:absolute}
-.tp-spotlight-host .hero-art .hero-card{position:relative}
-.tp-spotlight-host .hero-art .orbit{position:absolute}
-.tp-spotlight-host .hero-art .floating-tag{position:absolute}
-.tp-spotlight-host .track-select{position:relative;z-index:2}
-.tp-spotlight-host::selection{background:rgba(199,166,106,.35)}
 @keyframes tp-spot-base-in{
-  from{opacity:.55;transform:scale(1.09)}
-  to{opacity:1;transform:scale(1.035)}
+  from{opacity:.6;transform:scale(1.06)}
+  to{opacity:1;transform:scale(1.015)}
 }
-/* Keep the spotlight visually contained to the hero band on smaller screens. */
 @media(max-width:650px){
   .tp-spotlight-host{--tp-spot-size:210px}
   .tp-spotlight-host::before,.tp-spotlight-host::after{background-position:center}
 }
-/* Touch devices receive a gentle fixed reveal; pointer devices follow the cursor. */
+/* Touch screens get a fixed soft reveal; no hover interaction is required. */
 @media(hover:none),(pointer:coarse){
   .tp-spotlight-host::after{
-    -webkit-mask-image:radial-gradient(circle 220px at 50% 55%,#000 0%,rgba(0,0,0,.9) 48%,transparent 100%);
-    mask-image:radial-gradient(circle 220px at 50% 55%,#000 0%,rgba(0,0,0,.9) 48%,transparent 100%);
+    -webkit-mask-image:radial-gradient(circle 220px at 50% 50%,#000 0%,rgba(0,0,0,.9) 48%,transparent 100%);
+    mask-image:radial-gradient(circle 220px at 50% 50%,#000 0%,rgba(0,0,0,.9) 48%,transparent 100%);
   }
 }
 @media(prefers-reduced-motion:reduce){
