@@ -24,6 +24,20 @@ Run this checklist only after the Preview D1 binding and secrets are configured 
 - [ ] Confirm each new practice set randomizes question order.
 - [ ] Confirm existing guest progress is still present in guest mode.
 
+## Constable model-practice starter banks
+- [ ] Sign in with an approved account and select the General Constable track; confirm the five clearly labelled starter topics are enabled.
+- [ ] Switch to SI; confirm the Constable starter topics are disabled and a direct API request for one is rejected.
+- [ ] Sign out or use guest mode; confirm Constable starter topics are disabled and existing guest banks continue to work.
+- [ ] Start each starter topic; confirm only question text/options are returned before submission and the number of questions matches the small bank size.
+- [ ] Submit each set; confirm server-side scoring and explanations are returned once, and a second submission is rejected.
+- [ ] Confirm these starter topics are not described as PYQs or full-length mock tests.
+
+## Cloud progress refresh
+- [ ] Complete a stage, sign out, and sign back in without changing devices; confirm the local view refreshes from the server snapshot and unlock records.
+- [ ] Sign in to the same account on a second browser/device; confirm server snapshot and stage unlocks are reflected.
+- [ ] Temporarily make the progress API unavailable; confirm account UI still loads and local progress is not erased.
+- [ ] Sign in as a different account on the same browser; confirm the previous account's local progress is not shown.
+
 ## Other Maths topic progression
 - [ ] For each of the 22 additional Maths topics, start Stage 1 while signed in; confirm question text/options are returned without answer keys.
 - [ ] Submit a complete test; confirm score and explanations are returned only after submission.
