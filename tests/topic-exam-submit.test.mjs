@@ -8,7 +8,7 @@ const storedQuestions = [
   { id: 0, question: "2 + 2?", options: ["3", "4", "5", "6"], explanation: "Two plus two equals four." },
   { id: 1, question: "3 + 1?", options: ["2", "3", "4", "5"], explanation: "Three plus one equals four." }
 ];
-function setup({ submitted = null, expired = false } = {}) {
+function setup({ submitted = null, expired = false, claimChanges = 1 } = {}) {
   const batches = [];
   const set = {
     id: "set-1", user_id: account.id, exam_track: "constable", topic_id: "constable-starter-arithmetic",
@@ -35,7 +35,7 @@ function setup({ submitted = null, expired = false } = {}) {
     },
     async batch(statements) {
       batches.push(statements.map(statement => ({ sql: statement.sql, values: statement.values })));
-      return [{ meta: { changes: 1 } }, ...statements.slice(1).map(() => ({ meta: { changes: 1 } }))];
+      return [{ meta: { changes: claimChanges } }, ...statements.slice(1).map(() => ({ meta: { changes: 1 } }))];
     }
   };
   return db;
@@ -95,4 +95,11 @@ test("topic exam submit does not unlock the next stage on a failed score", async
   assert.equal(result.passed, false);
   assert.equal(result.unlockedStage, null);
   assert.equal(db.batches[0].length, 2);
+});
+
+test("topic exam submit returns conflict when another request wins the one-time claim", async () => {
+  const db = setup({ claimChanges: 0 });
+  const response = await onRequestPost({ request: makeRequest([1, 2]), env: { DB: db } });
+  assert.equal(response.status, 409);
+  assert.equal(db.batches.length, 1);
 });
