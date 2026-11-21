@@ -23,11 +23,11 @@ function loginRedirect(request) {
 export async function onRequest(context) {
   const { request, env, next } = context;
   const url = new URL(request.url);
-  const path = url.pathname.replace(/\\/+$/, "") || "/";
+  const path = url.pathname.length > 1 && url.pathname.endsWith("/") ? url.pathname.slice(0, -1) : url.pathname;
   if (PUBLIC_PATHS.has(path)) return next();
 
   // Public presentation assets are not study content or application data.
-  if (/\\.(?:css|svg|png|jpe?g|webp|ico|woff2?)$/i.test(path)) return next();
+  const extension = path.includes(".") ? path.slice(path.lastIndexOf(".")).toLowerCase() : "";\n  if ([".css", ".svg", ".png", ".jpg", ".jpeg", ".webp", ".ico", ".woff", ".woff2"].includes(extension)) return next();
 
   // All study pages, question banks, application JavaScript and non-auth APIs
   // require a valid, approved server-side session.
