@@ -187,6 +187,10 @@ export const fullMockBanks = {
     ,q("The Uniform Civil Code, Assam, 2026 received Presidential assent on:",["7 September 2026","17 September 2026","29 September 2026","30 October 2026"],2,"The MHA September 2026 achievements report records assent on 29 September 2026.")
     ,q("The 28th meeting of the Western Zonal Council in September 2026 was held at:",["Mumbai","Panaji","Jaipur","Bhopal"],1,"The MHA September 2026 report records the meeting at Panaji on 7 September 2026.")
     ,q("Which programme was launched in Assam in February 2026 with an outlay of ₹6,839 crore?",["PM-KISAN","Vibrant Villages Programme-II","PMAY-Urban 2.0","AMRUT 3.0"],1,"Vibrant Villages Programme-II was launched at Nathanpur, Assam, on 20 February 2026.")
+    ,q("Which citizen vision portal was launched by the Assam Transformation and Development Department on 12 October 2026?",["Viksit Assam @2047 Citizen Vision Portal","Assam Startup Portal","Digital Tea Mission Portal","Assam Flood Watch Portal"],0,"The Government of Assam Transformation and Development Department records the launch of the Viksit Assam @2047 Citizen Vision Portal on 12 October 2026.")
+    ,q("Mission Senehjori Assam is associated with the development of:",["Muga silk","Bamboo paper","Tea tourism","River fisheries"],0,"The Government of Assam Transformation and Development Department lists the launch of Mission Senehjori Assam Muga Silk.")
+    ,q("Which new department's Gazette notification is listed by Assam's Administrative Reforms and Training Department in 2026?",["Youth Welfare and Empowerment Department","Space Research Department","Coastal Affairs Department","Mining Safety Department"],0,"The Assam government portal lists a Gazette notification for the newly created Youth Welfare and Empowerment Department.")
+    ,q("The Assam Right to Public Services Rules referred to in the 2026 government notifications are from which year?",["2024","2025","2026","2027"],2,"The Government of Assam Administrative Reforms and Training portal lists the Assam Right to Public Services Rules, 2026.")
   ]
 };
 
