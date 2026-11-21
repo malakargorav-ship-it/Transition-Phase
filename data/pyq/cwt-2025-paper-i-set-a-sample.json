@@ -1,0 +1,151 @@
+{
+  "schema_version": "1.0.0",
+  "dataset_id": "assam-police-cwt-2025-paper-i-set-a-sample",
+  "exam": "CWT-2025 Paper-I",
+  "set": "A",
+  "exam_date": "2025-01-05",
+  "official_answer_key_url": "https://www.slprbassam.in/pdf/Notice2025/28022025/final_anskey-Set_A.pdf",
+  "question_text_transcription_source": "https://examsrepo.com/previous-year-papers/assam-police-si-or-assam-police-sub-inspector/2025/paper-i-si-ub-assam-police-si-ab-commando-battalions-si-communication-apro-asst-deputy-controller-civil-defence-jr",
+  "records": [
+    {
+      "question_id": "AP-CWT25-P1-A-Q040",
+      "exam_category": [
+        "SI_UB",
+        "SI_AB"
+      ],
+      "subject": "Mathematics",
+      "topic": "Ages",
+      "subtopic": "Age equations",
+      "question_type": "MCQ",
+      "question_text": "A man is 24 years older than his son. After 2 years, his age will be twice the age of his son. The present age of his son is:",
+      "options": {
+        "A": "14 years",
+        "B": "18 years",
+        "C": "20 years",
+        "D": "22 years"
+      },
+      "correct_option": "D",
+      "correct_answer": "22 years",
+      "explanation": "Let the son's present age be x. The father's age is x + 24. After two years, x + 26 = 2(x + 2). Therefore x = 22.",
+      "difficulty": "INTERMEDIATE",
+      "source_type": "VERIFIED_ASSAM_POLICE_PYQ",
+      "source_name": "CWT-2025 Paper-I, Set A, Q40 (question text transcribed by ExamsRepo; answer matched to SLPRB final key)",
+      "source_url": "https://slprbassam.in/",
+      "exam_year": 2025,
+      "page_number": 22,
+      "verification_status": "SECONDARY_TRANSCRIPTION",
+      "tags": [
+        "CWT-2025",
+        "Paper-I",
+        "Set-A",
+        "ages",
+        "algebra"
+      ]
+    },
+    {
+      "question_id": "AP-CWT25-P1-A-Q041",
+      "exam_category": [
+        "SI_UB",
+        "SI_AB"
+      ],
+      "subject": "Mathematics",
+      "topic": "Time and Clocks",
+      "subtopic": "Coincidence of clock hands",
+      "question_type": "MCQ",
+      "question_text": "How many times do the hands of a clock coincide in a day?",
+      "options": {
+        "A": "24",
+        "B": "22",
+        "C": "21",
+        "D": "20"
+      },
+      "correct_option": "B",
+      "correct_answer": "22",
+      "explanation": "The minute and hour hands coincide 11 times in 12 hours. Therefore, they coincide 22 times in 24 hours.",
+      "difficulty": "INTERMEDIATE",
+      "source_type": "VERIFIED_ASSAM_POLICE_PYQ",
+      "source_name": "CWT-2025 Paper-I, Set A, Q41 (question text transcribed by ExamsRepo; answer matched to SLPRB final key)",
+      "source_url": "https://slprbassam.in/",
+      "exam_year": 2025,
+      "page_number": 22,
+      "verification_status": "SECONDARY_TRANSCRIPTION",
+      "tags": [
+        "CWT-2025",
+        "Paper-I",
+        "Set-A",
+        "clock",
+        "reasoning"
+      ]
+    },
+    {
+      "question_id": "AP-CWT25-P1-A-Q043",
+      "exam_category": [
+        "SI_UB",
+        "SI_AB"
+      ],
+      "subject": "Mathematics",
+      "topic": "Ratio and Proportion",
+      "subtopic": "Ratio of coin counts",
+      "question_type": "MCQ",
+      "question_text": "A bag contains 50 paise, 25 paise and 10 paise coins and the ratio of the numbers of coins is 4:5:9. If the total value of all the coins is ₹830, find the number of 25 paise coins in the bag.",
+      "options": {
+        "A": "800",
+        "B": "1000",
+        "C": "1800",
+        "D": "900"
+      },
+      "correct_option": "B",
+      "correct_answer": "1000",
+      "explanation": "Let the coin counts be 4x, 5x and 9x. Total value in rupees is 0.50(4x) + 0.25(5x) + 0.10(9x) = 4.15x. Thus x = 830/4.15 = 200, so 25-paise coins = 5x = 1000.",
+      "difficulty": "ADVANCED",
+      "source_type": "VERIFIED_ASSAM_POLICE_PYQ",
+      "source_name": "CWT-2025 Paper-I, Set A, Q43 (question text transcribed by ExamsRepo; answer matched to SLPRB final key)",
+      "source_url": "https://slprbassam.in/",
+      "exam_year": 2025,
+      "page_number": 23,
+      "verification_status": "SECONDARY_TRANSCRIPTION",
+      "tags": [
+        "CWT-2025",
+        "Paper-I",
+        "Set-A",
+        "ratio",
+        "coins"
+      ]
+    },
+    {
+      "question_id": "AP-CWT25-P1-A-Q044",
+      "exam_category": [
+        "SI_UB",
+        "SI_AB"
+      ],
+      "subject": "Mathematics",
+      "topic": "Mensuration",
+      "subtopic": "Percentage change in sphere volume",
+      "question_type": "MCQ",
+      "question_text": "The radius of a sphere is increased by 10%. By what percentage will the volume of the sphere increase?",
+      "options": {
+        "A": "30%",
+        "B": "21%",
+        "C": "33.33%",
+        "D": "33.1%"
+      },
+      "correct_option": "D",
+      "correct_answer": "33.1%",
+      "explanation": "Sphere volume is proportional to r³. New volume factor = 1.1³ = 1.331, so the increase is 0.331 × 100 = 33.1%.",
+      "difficulty": "ADVANCED",
+      "source_type": "VERIFIED_ASSAM_POLICE_PYQ",
+      "source_name": "CWT-2025 Paper-I, Set A, Q44 (question text transcribed by ExamsRepo; answer matched to SLPRB final key)",
+      "source_url": "https://slprbassam.in/",
+      "exam_year": 2025,
+      "page_number": 23,
+      "verification_status": "SECONDARY_TRANSCRIPTION",
+      "tags": [
+        "CWT-2025",
+        "Paper-I",
+        "Set-A",
+        "mensuration",
+        "sphere"
+      ]
+    }
+  ]
+}
