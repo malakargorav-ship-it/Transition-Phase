@@ -104,6 +104,7 @@
     if (remaining === 0) finish();
   };
   loadHistory();
+  $("refreshFullMockHistory").addEventListener("click", loadHistory);
   $("startFullMock").addEventListener("click", async () => {
     const track = $("fullMockTrack").value;
     $("startFullMock").disabled = true; message("Preparing a randomized 100-question paper…");
