@@ -134,5 +134,13 @@ export const fullMockBanks = {
     q("The 2024 ICC Men's T20 World Cup was won by:",["Australia","South Africa","India","England"],2,"India defeated South Africa in the 2024 final."),
     q("Which Indian space mission was launched to study X-ray polarisation?",["XPoSat","INSAT-3DS","NISAR","RISAT-2"],0,"XPoSat is India's X-ray Polarimeter Satellite."),
     q("Which city hosted the 2024 Summer Olympics?",["Paris","Tokyo","Los Angeles","Brisbane"],0,"Paris hosted the 2024 Summer Olympics.")
+    ,q("Where was Vibrant Villages Programme-II launched in Assam on 20 February 2026?",["Nathanpur","Dibrugarh","Silchar","Tezpur"],0,"The Ministry of Home Affairs records the launch at Nathanpur village, Assam, with an outlay of ₹6,839 crore.")
+    ,q("The foundation stone of the headquarters of Assam Police's 10th Battalion was laid in February 2026 at:",["Kamrup","Cachar","Dhemaji","Tinsukia"],0,"The Ministry of Home Affairs records the foundation stone event on 21 February 2026 in Kamrup.")
+    ,q("The FCRA 2.0 Portal and e-OCI Registration System were launched on:",["1 January 2026","30 June 2026","15 August 2026","2 October 2026"],1,"The Ministry of Home Affairs records the launch on 30 June 2026.")
+    ,q("A tripartite MOU signed in June 2026 between India, Assam and Nagaland concerned:",["Border tourism","Mineral oil operations in boundary areas","River transport","Forest conservation"],1,"The MHA June 2026 achievements report records the MOU for facilitating mineral oil operations in Assam-Nagaland boundary areas.")
+    ,q("The Criminal Procedure Identification (CrPI) System was inaugurated at which event in June 2026?",["26th All India Fingerprint Conference","73rd Plenary Session of NEC","G20 Summit","National Police Academy convocation"],0,"The MHA June 2026 report records its inauguration at the 26th All India Fingerprint Conference.")
+    ,q("The Uniform Civil Code, Assam, 2026 received Presidential assent on:",["7 September 2026","17 September 2026","29 September 2026","30 October 2026"],2,"The MHA September 2026 achievements report records assent on 29 September 2026.")
+    ,q("The 28th meeting of the Western Zonal Council in September 2026 was held at:",["Mumbai","Panaji","Jaipur","Bhopal"],1,"The MHA September 2026 report records the meeting at Panaji on 7 September 2026.")
+    ,q("Which programme was launched in Assam in February 2026 with an outlay of ₹6,839 crore?",["PM-KISAN","Vibrant Villages Programme-II","PMAY-Urban 2.0","AMRUT 3.0"],1,"Vibrant Villages Programme-II was launched at Nathanpur, Assam, on 20 February 2026.")
   ]
 };
