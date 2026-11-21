@@ -104,7 +104,12 @@
         "wrong_mark": 0,
         "set_a_question_paper": "https://slprbassam.in/pdf/Notice2025/14042025/Question-Booklet-Set-A-%28CWT-2025-Paper-II%29.pdf",
         "set_a_provisional_key": "https://slprbassam.in/pdf/Notice2025/14042025/Provisional-Ans-Key-Set-A%20-%28CWT-2025-Paper-II%29.pdf",
-        "key_status": "provisional"
+        "key_status": "provisional",
+        "paper_code": "CWT-2025/P-II/302-A",
+        "question_booklet_url": "https://slprbassam.in/pdf/Notice2025/14042025/Question-Booklet-Set-A-%28CWT-2025-Paper-II%29.pdf",
+        "provisional_answer_key_url": "https://slprbassam.in/pdf/Notice2025/14042025/Provisional-Ans-Key-Set-A-%28CWT-2025-Paper-II%29.pdf",
+        "provisional_answer_key_notice_date": "2025-04-11",
+        "source_note": "Official SLPRB homepage notice lists question booklets and provisional keys for Sets A-D; this catalog entry is Set A only."
       },
       "notes": "2025 Paper-II covered Constable UB/AB and equivalent posts. It is a historical paper, not proof that all equivalent posts share every rule in the 2025-26 recruitment."
     },
@@ -149,7 +154,12 @@
         "wrong_mark": 0,
         "set_a_question_paper": "https://slprbassam.in/pdf/Notice2025/14042025/Question-Booklet-Set-A-%28CWT-2025-Paper-II%29.pdf",
         "set_a_provisional_key": "https://slprbassam.in/pdf/Notice2025/14042025/Provisional-Ans-Key-Set-A%20-%28CWT-2025-Paper-II%29.pdf",
-        "key_status": "provisional"
+        "key_status": "provisional",
+        "paper_code": "CWT-2025/P-II/302-A",
+        "question_booklet_url": "https://slprbassam.in/pdf/Notice2025/14042025/Question-Booklet-Set-A-%28CWT-2025-Paper-II%29.pdf",
+        "provisional_answer_key_url": "https://slprbassam.in/pdf/Notice2025/14042025/Provisional-Ans-Key-Set-A-%28CWT-2025-Paper-II%29.pdf",
+        "provisional_answer_key_notice_date": "2025-04-11",
+        "source_note": "Official SLPRB homepage notice lists question booklets and provisional keys for Sets A-D; this catalog entry is Set A only."
       },
       "notes": "This is general Assam Police Constable (AB), not Commando Battalions Constable (AB)."
     },
