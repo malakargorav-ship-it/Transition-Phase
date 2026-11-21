@@ -16,7 +16,7 @@ const required = [
 ];
 
 if (catalog.schema_version !== "1.0.0") fail("Unexpected or missing catalog schema_version.");
-if (!catalog.authority || !/^\\d{4}-\\d{2}-\\d{2}$/.test(catalog.last_verified || "")) {
+if (!catalog.authority || !isIsoDate(catalog.last_verified)) {
   fail("Catalog authority and ISO last_verified date are required.");
 }
 if (profiles.length !== required.length) fail("Catalog must contain exactly five separately modelled recruitment profiles.");
@@ -28,7 +28,7 @@ for (const profile of profiles) {
   const label = profile.exam_id || "unnamed profile";
   if (!profile.label || !profile.category) fail(label + ": label and category are required.");
   const recruitment = profile.recruitment_reference;
-  if (!recruitment?.advertisement_no || !/^\\d{4}-\\d{2}-\\d{2}$/.test(recruitment.date || "") ||
+  if (!recruitment?.advertisement_no || !isIsoDate(recruitment.date) ||
       typeof recruitment.vacancies !== "number" || recruitment.vacancies < 0 ||
       !(recruitment.url || "").startsWith("https://")) {
     fail(label + ": recruitment reference must include advertisement, date, non-negative vacancies and HTTPS source URL.");
