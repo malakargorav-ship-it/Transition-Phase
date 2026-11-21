@@ -75,3 +75,16 @@ Open the Preview Command Centre. Register using the configured admin email and t
 - Current Affairs, GK and Assam GK question content availability is unchanged.
 - The account layer does not delete existing guest progress. Guest mode remains available.
 - No production merge or deployment has been performed. Preview configuration and end-to-end testing are still required.
+
+## Official Assam Police exam catalog and PYQ ingestion
+
+The following research artifacts are maintained on this feature branch:
+
+- `data/official-exam-catalog.json`: separate recruitment profiles for SI (UB), SI (AB) Commando, general Constable (UB), general Constable (AB), and Commando Constable (AB). Historical CWT references are not treated as future recruitment dates.
+- `docs/official-assam-police-baseline.md`: source-linked official recruitment and examination baseline.
+- `data/pyq/cwt-2025-paper-i-set-a-sample.json`: first four answer-key-matched Paper-I Set A questions. Question wording is transcribed from a secondary paper rendering; answers are matched against the SLPRB final Set A key. The records are explicitly marked `SECONDARY_TRANSCRIPTION`, not direct-PDF text extraction.
+- `scripts/validate-exam-data.mjs`: validates exam profiles, unique question IDs, MCQ options, correct-answer consistency, source labels, and PYQ answer-key references. Run with `node scripts/validate-exam-data.mjs`.
+
+The CWT-2025 Paper-II Set A answer key currently located is provisional. It must remain labelled provisional until a final key is found. General Constable (AB) must remain separate from Commando Constable (AB); the latter's identified advertisement does not list a written test.
+
+These research artifacts do not yet change the production exam UI or replace the existing Number System / Maths engine. Full paper extraction, all-set reconciliation, and the exam-category-aware UI/API integration remain subsequent implementation steps.
