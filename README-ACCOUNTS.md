@@ -35,7 +35,7 @@ Open the Preview Command Centre. Register using the configured admin email and t
 - `GET /api/admin/stage-rules`, `POST /api/admin/stage-rules`
 - `GET /api/account/settings`, `POST /api/account/settings`
 - `GET /api/progress/state`, `POST /api/progress/state`
-- `POST /api/progress/attempt` (disabled; direct client scores are rejected)\n- `POST /api/exam/start`, `POST /api/exam/submit` (server-issued sets and server-side scoring)
+- `POST /api/progress/attempt` (disabled; direct client scores are rejected)\n- `POST /api/exam/start`, `POST /api/exam/submit` (server-issued sets and server-side scoring)\n- Login throttling: 8 failed attempts per 15-minute window per email and email/IP pair
 
 ## Security notes and remaining production gates
 
