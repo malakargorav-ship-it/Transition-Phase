@@ -1,0 +1,44 @@
+name: Validate exam data and JavaScript
+on:
+  pull_request:
+    branches:
+      - main
+      - feature/hybrid-motion
+  push:
+    branches:
+      - feature/individual-accounts-exam-engine
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v5
+      - name: Set up Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: 22
+      - name: Validate official exam catalog
+        run: node scripts/validate-exam-catalog.mjs
+      - name: Apply and validate D1 migrations in SQLite
+        run: node scripts/validate-migrations.mjs
+      - name: Test authentication and session security
+        run: node --test tests/*.test.mjs
+      - name: Validate exam data
+        run: node scripts/validate-exam-data.mjs
+      - name: Validate server-side topic banks
+        run: node scripts/validate-topic-banks.mjs
+      - name: Validate full-length mock banks
+        run: node scripts/validate-full-mock-banks.mjs
+      - name: Check JavaScript syntax
+        shell: bash
+        run: |
+          set -euo pipefail
+          while IFS= read -r -d '' file; do
+            echo "Checking syntax: $file"
+            node --input-type=module --check < "$file"
+          done < <(find . -path './.git' -prune -o -name '*.js' -print0)
+      - name: Check whitespace errors
+        run: git diff --check

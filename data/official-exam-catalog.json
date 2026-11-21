@@ -1,0 +1,225 @@
+{
+  "schema_version": "1.0.0",
+  "last_verified": "2026-11-21",
+  "authority": "State Level Police Recruitment Board, Assam",
+  "exam_profiles": [
+    {
+      "exam_id": "assam-police-si-ub",
+      "label": "Sub Inspector (UB) — Assam Police",
+      "category": "SI_UB",
+      "recruitment_reference": {
+        "advertisement_no": "SLPRB/REC/SI (UB) & EQUIVALENT/699/2024/171",
+        "date": "2025-12-12",
+        "vacancies": 48,
+        "url": "https://slprbassam.in/pdf/Notice2025/12122025/adv_SI_UB_communication_station_officer_etc.pdf"
+      },
+      "historical_written_reference": {
+        "exam": "CWT-2025 Paper-I",
+        "date": "2025-01-05",
+        "questions": 100,
+        "marks": 100,
+        "duration_minutes": 120,
+        "correct_mark": 1,
+        "wrong_mark": -0.5,
+        "final_answer_key_available": true,
+        "official_key_set_a": "https://www.slprbassam.in/pdf/Notice2025/28022025/final_anskey-Set_A.pdf",
+        "official_question_paper_sets": "https://slprbassam.in/"
+      },
+      "written_pattern_status": "historical_CWT_verified; latest_advertisement_pattern_requires_full_document_reconciliation",
+      "subjects": [
+        "logical-reasoning-aptitude-english-comprehension",
+        "history-culture-assam-india",
+        "general-knowledge"
+      ],
+      "notes": "CWT-2025 is a historical paper shared across multiple graduate posts. Do not treat its date as the next recruitment examination date."
+    },
+    {
+      "exam_id": "assam-police-si-ab-commando",
+      "label": "Sub Inspector (AB) — Assam Commando Battalions",
+      "category": "SI_AB",
+      "recruitment_reference": {
+        "advertisement_no": "SLPRB/REC/SI & CONST (AB)/CDO BN/733/2025/65",
+        "date": "2025-12-12",
+        "vacancies": 47,
+        "url": "https://slprbassam.in/"
+      },
+      "historical_written_reference": {
+        "exam": "CWT-2025 Paper-I",
+        "date": "2025-01-05",
+        "questions": 100,
+        "marks": 100,
+        "duration_minutes": 120,
+        "correct_mark": 1,
+        "wrong_mark": -0.5,
+        "final_answer_key_available": true,
+        "official_key_set_a": "https://www.slprbassam.in/pdf/Notice2025/28022025/final_anskey-Set_A.pdf",
+        "official_question_paper_sets": "https://slprbassam.in/"
+      },
+      "written_pattern_status": "historical_CWT_verified; current_cycle_rules_reconcile_from_advertisement",
+      "subjects": [
+        "logical-reasoning-aptitude-english-comprehension",
+        "history-culture-assam-india",
+        "general-knowledge"
+      ],
+      "notes": "Keep separate from Commando Constable (AB)."
+    },
+    {
+      "exam_id": "assam-police-constable-ub",
+      "label": "Constable (UB) — Assam Police",
+      "category": "CONSTABLE_UB",
+      "recruitment_reference": {
+        "advertisement_no": "SLPRB/REC/CONST (AB & UB)/727/2025/94",
+        "date": "2025-12-05",
+        "vacancies": 1052,
+        "url": "https://slprbassam.in/pdf/Notice2025/05122025/Advertisement-Constable-%28AB-UB%29.pdf"
+      },
+      "written_pattern": {
+        "questions": 100,
+        "marks": 50,
+        "duration_minutes": 120,
+        "correct_mark": 0.5,
+        "wrong_mark": 0,
+        "question_level": "Class IX-X",
+        "languages": [
+          "Assamese",
+          "Bodo",
+          "Bengali",
+          "English"
+        ],
+        "subjects": [
+          "Elementary Arithmetic",
+          "General English",
+          "Logical Reasoning / Mental Ability",
+          "Assam History, Geography, Polity and Economy",
+          "General Awareness / General Knowledge and Current Affairs"
+        ]
+      },
+      "historical_written_reference": {
+        "exam": "CWT-2025 Paper-II",
+        "date": "2025-04-06",
+        "questions": 100,
+        "marks": 50,
+        "duration_minutes": 120,
+        "correct_mark": 0.5,
+        "wrong_mark": 0,
+        "set_a_question_paper": "https://slprbassam.in/pdf/Notice2025/14042025/Question-Booklet-Set-A-%28CWT-2025-Paper-II%29.pdf",
+        "set_a_provisional_key": "https://slprbassam.in/pdf/Notice2025/14042025/Provisional-Ans-Key-Set-A%20-%28CWT-2025-Paper-II%29.pdf",
+        "key_status": "provisional",
+        "paper_code": "CWT-2025/P-II/302-A",
+        "question_booklet_url": "https://slprbassam.in/pdf/Notice2025/14042025/Question-Booklet-Set-A-%28CWT-2025-Paper-II%29.pdf",
+        "provisional_answer_key_url": "https://slprbassam.in/pdf/Notice2025/14042025/Provisional-Ans-Key-Set-A-%28CWT-2025-Paper-II%29.pdf",
+        "provisional_answer_key_notice_date": "2025-04-11",
+        "source_note": "Official SLPRB homepage notice lists question booklets and provisional keys for Sets A-D; this catalog entry is Set A only."
+      },
+      "notes": "2025 Paper-II covered Constable UB/AB and equivalent posts. It is a historical paper, not proof that all equivalent posts share every rule in the 2025-26 recruitment."
+    },
+    {
+      "exam_id": "assam-police-constable-ab",
+      "label": "Constable (AB) — Assam Police (General)",
+      "category": "CONSTABLE_AB",
+      "recruitment_reference": {
+        "advertisement_no": "SLPRB/REC/CONST (AB & UB)/727/2025/94",
+        "date": "2025-12-05",
+        "vacancies": 663,
+        "url": "https://slprbassam.in/pdf/Notice2025/05122025/Advertisement-Constable-%28AB-UB%29.pdf"
+      },
+      "written_pattern": {
+        "questions": 100,
+        "marks": 50,
+        "duration_minutes": 120,
+        "correct_mark": 0.5,
+        "wrong_mark": 0,
+        "question_level": "Class IX-X",
+        "languages": [
+          "Assamese",
+          "Bodo",
+          "Bengali",
+          "English"
+        ],
+        "subjects": [
+          "Elementary Arithmetic",
+          "General English",
+          "Logical Reasoning / Mental Ability",
+          "Assam History, Geography, Polity and Economy",
+          "General Awareness / General Knowledge and Current Affairs"
+        ]
+      },
+      "historical_written_reference": {
+        "exam": "CWT-2025 Paper-II",
+        "date": "2025-04-06",
+        "questions": 100,
+        "marks": 50,
+        "duration_minutes": 120,
+        "correct_mark": 0.5,
+        "wrong_mark": 0,
+        "set_a_question_paper": "https://slprbassam.in/pdf/Notice2025/14042025/Question-Booklet-Set-A-%28CWT-2025-Paper-II%29.pdf",
+        "set_a_provisional_key": "https://slprbassam.in/pdf/Notice2025/14042025/Provisional-Ans-Key-Set-A%20-%28CWT-2025-Paper-II%29.pdf",
+        "key_status": "provisional",
+        "paper_code": "CWT-2025/P-II/302-A",
+        "question_booklet_url": "https://slprbassam.in/pdf/Notice2025/14042025/Question-Booklet-Set-A-%28CWT-2025-Paper-II%29.pdf",
+        "provisional_answer_key_url": "https://slprbassam.in/pdf/Notice2025/14042025/Provisional-Ans-Key-Set-A-%28CWT-2025-Paper-II%29.pdf",
+        "provisional_answer_key_notice_date": "2025-04-11",
+        "source_note": "Official SLPRB homepage notice lists question booklets and provisional keys for Sets A-D; this catalog entry is Set A only."
+      },
+      "notes": "This is general Assam Police Constable (AB), not Commando Battalions Constable (AB)."
+    },
+    {
+      "exam_id": "assam-commando-constable-ab",
+      "label": "Constable (AB) — Assam Commando Battalions",
+      "category": "COMMANDO_CONSTABLE_AB",
+      "recruitment_reference": {
+        "advertisement_no": "SLPRB/REC/SI & CONST (AB)/CDO BN/733/2025/65",
+        "date": "2025-12-12",
+        "vacancies": 3,
+        "url": "https://slprbassam.in/"
+      },
+      "written_pattern": null,
+      "written_pattern_status": "No written examination listed in the identified advertisement; selection stages must be represented separately.",
+      "notes": "Do not assign the general Constable (AB) written test to this Commando Battalion post."
+    }
+  ],
+  "question_source_types": [
+    "VERIFIED_ASSAM_POLICE_PYQ",
+    "OTHER_EXAM_PYQ",
+    "MODEL_PRACTICE_QUESTION"
+  ],
+  "difficulty_levels": [
+    "BEGINNER",
+    "INTERMEDIATE",
+    "ADVANCED"
+  ],
+  "question_record_schema": {
+    "question_id": "string",
+    "exam_category": "array of category codes",
+    "subject": "string",
+    "topic": "string",
+    "subtopic": "string",
+    "question_type": "MCQ",
+    "question_text": "string",
+    "options": {
+      "A": "string",
+      "B": "string",
+      "C": "string",
+      "D": "string"
+    },
+    "correct_option": "A|B|C|D",
+    "correct_answer": "string",
+    "explanation": "string",
+    "difficulty": "BEGINNER|INTERMEDIATE|ADVANCED",
+    "source_type": "VERIFIED_ASSAM_POLICE_PYQ|OTHER_EXAM_PYQ|MODEL_PRACTICE_QUESTION",
+    "source_name": "string",
+    "source_url": "string",
+    "exam_year": "integer|null",
+    "page_number": "integer|null",
+    "verification_status": "OFFICIALLY_VERIFIED|PROVISIONAL_KEY|SECONDARY_TRANSCRIPTION|MODEL_QUESTION",
+    "tags": "array of strings"
+  },
+  "guardrails": [
+    "Never label model questions as PYQs.",
+    "A provisional answer key must not be marked as officially final.",
+    "Paper-I CWT-2025 and Paper-II CWT-2025 are historical examination references.",
+    "General Constable (AB) and Commando Constable (AB) are separate profiles.",
+    "Do not invent official subject-wise question counts where the advertisement only names broad subjects.",
+    "Do not publish a question as officially verified until the question booklet and matching official key/set are reconciled."
+  ]
+}
