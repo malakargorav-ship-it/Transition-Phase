@@ -14,7 +14,7 @@ test("mock history returns only the current user's saved attempts", async () => 
   let values;
   const DB = { prepare(sql) {
     assert.match(sql, /WHERE user_id=\?/);
-    return { bind(...args) { values = args; return this; }, async all() { return { results: [{ id: "attempt-1", exam_track: "constable", score: 42, total_marks: 50 }] }; } };
+    return { bind(...args) { values = args; return this; }, async first() { return sql.includes("FROM sessions") ? { id: "student-1", email: "student@example.com", role: "student", status: "approved", difficulty: "beginner", expires_at: "2099-01-01T00:00:00.000Z" } : null; }, async all() { return { results: [{ id: "attempt-1", exam_track: "constable", score: 42, total_marks: 50 }] }; } };
   } };
   const response = await onRequestGet({ request: request(), env: { DB } });
   assert.equal(response.status, 200);
