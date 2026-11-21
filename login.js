@@ -18,7 +18,12 @@
     try {
       const response = await fetch("/api/auth/me", { credentials: "same-origin" });
       const data = await response.json();
-      if (data.user) location.replace(next);
+      if (data.user) {
+        if (data.user.id && localStorage.getItem("tp-active-user") !== data.user.id) {
+          localStorage.setItem("tp-active-user", data.user.id);
+        }
+        location.replace(next);
+      }
     } catch {}
   }
   $("registerForm").elements.email.addEventListener("input", event => {
@@ -29,7 +34,8 @@
     const button = event.submitter; button.disabled = true;
     message("loginMessage", "Checking your account…");
     try {
-      await api("/api/auth/login", values(event.currentTarget));
+      const result = await api("/api/auth/login", values(event.currentTarget));
+      if (result.user?.id) localStorage.setItem("tp-active-user", result.user.id);
       location.replace(next);
     } catch (error) { message("loginMessage", error.message); button.disabled = false; }
   });
