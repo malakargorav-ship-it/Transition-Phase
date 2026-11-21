@@ -144,23 +144,23 @@
     $("bootstrapWrap").hidden = event.target.value.trim().toLowerCase() !== ADMIN_EMAIL;
   });
   $("registerForm").addEventListener("submit", async event => {
-    event.preventDefault(); const button = event.submitter; button.disabled = true;
+    event.preventDefault(); const form = event.currentTarget; const button = event.submitter; button.disabled = true;
     feedback("registerFeedback", "Submitting registration…");
-    const data = formData(event.currentTarget);
+    const data = formData(form);
     try {
       const result = await api("/api/auth/register", { method: "POST", body: JSON.stringify(data) });
-      event.currentTarget.reset(); $("bootstrapWrap").hidden = true;
+      form.reset(); $("bootstrapWrap").hidden = true;
       feedback("registerFeedback", result.message || "Admin account created. You are signed in.");
       await refresh();
     } catch (error) { feedback("registerFeedback", error.message); }
     finally { button.disabled = false; }
   });
   $("loginForm").addEventListener("submit", async event => {
-    event.preventDefault(); const button = event.submitter; button.disabled = true;
+    event.preventDefault(); const form = event.currentTarget; const button = event.submitter; button.disabled = true;
     feedback("loginFeedback", "Signing in…");
     try {
-      const result = await api("/api/auth/login", { method: "POST", body: JSON.stringify(formData(event.currentTarget)) });
-      event.currentTarget.reset(); feedback("loginFeedback", "Login successful.");
+      const result = await api("/api/auth/login", { method: "POST", body: JSON.stringify(formData(form)) });
+      form.reset(); feedback("loginFeedback", "Login successful.");
       await showSignedIn(result.user);
     } catch (error) { feedback("loginFeedback", error.message); }
     finally { button.disabled = false; }
