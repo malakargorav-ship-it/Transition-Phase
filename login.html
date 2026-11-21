@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#171717">
+<title>Student Login — Transition Phase</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<style>
+.auth-page{min-height:100vh;display:grid;place-items:center;padding:32px 18px;background:var(--paper)}
+.auth-wrap{width:min(960px,100%);background:var(--cream);border:1px solid var(--line);padding:clamp(22px,4vw,44px)}
+.auth-brand{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:30px}
+.auth-brand .brand{color:var(--ink);text-decoration:none}
+.auth-brand .back-link{color:var(--ink);font-weight:700;text-decoration:none}
+.auth-intro{margin-bottom:26px}.auth-intro .eyebrow{color:#94713d}.auth-intro h1{font:800 clamp(34px,6vw,58px)/1.05 var(--heading);margin:14px 0}.auth-intro p{color:var(--muted);max-width:620px}
+.auth-grid-public{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.auth-card-public{background:#fffdfa;border:1px solid var(--line);padding:clamp(18px,3vw,28px)}
+.auth-card-public h2{font:800 25px var(--heading);margin:0 0 22px}
+.auth-card-public label{display:grid;gap:8px;font-size:13px;font-weight:700;margin:14px 0}
+.auth-card-public input{width:100%;padding:14px;border:1px solid #d8cbb7;background:white;font:inherit;min-height:46px}
+.auth-card-public button{width:100%;margin-top:8px;cursor:pointer}
+.auth-message{min-height:42px;font-size:13px;line-height:1.5;color:#6b583b}
+.auth-note{font-size:12px;color:var(--muted);margin-top:18px}
+@media(max-width:680px){.auth-grid-public{grid-template-columns:1fr}.auth-brand{align-items:flex-start}}
+</style>
+</head>
+<body><main class="auth-page"><div class="auth-wrap">
+<div class="auth-brand"><a class="brand" href="/"><span class="brand-mark">T<span>.</span></span><span class="brand-name">TRANSITION<span>PHASE</span></span></a><a class="back-link" href="/">← Website overview</a></div>
+<header class="auth-intro"><div class="eyebrow">YOUR PREPARATION STARTS HERE</div><h1>One account.<br><em>Your complete study space.</em></h1><p>Login to continue to your Command Centre, syllabus, lessons, practice sets and mock exams. New students can request access below.</p></header>
+<div class="auth-grid-public">
+<form id="loginForm" class="auth-card-public"><h2>Welcome back</h2>
+<label>Email<input name="email" type="email" autocomplete="username" required maxlength="254"></label>
+<label>Password<input name="password" type="password" autocomplete="current-password" required minlength="12" maxlength="128"></label>
+<button class="button button-gold" type="submit">Log in</button><p id="loginMessage" class="auth-message" aria-live="polite"></p>
+</form>
+<form id="registerForm" class="auth-card-public"><h2>Create your account</h2>
+<label>Email<input name="email" type="email" autocomplete="email" required maxlength="254"></label>
+<label>Password <small>(minimum 12 characters)</small><input name="password" type="password" autocomplete="new-password" required minlength="12" maxlength="128"></label>
+<label id="bootstrapWrap" hidden>Admin setup token <input name="adminBootstrapToken" type="password" autocomplete="off"></label>
+<button class="button button-dark" type="submit">Request access</button><p id="registerMessage" class="auth-message" aria-live="polite"></p>
+</form>
+</div><p class="auth-note">New student accounts become active after admin approval. Your study data stays linked to your approved account.</p>
+</div></main><script src="/login.js"></script></body></html>
