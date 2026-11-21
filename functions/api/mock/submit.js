@@ -17,10 +17,14 @@ export async function onRequestPost({ request, env }) {
   const key = JSON.parse(set.answer_key_json);
   if (!Array.isArray(key) || key.length !== 100) return fail("Stored answer key is invalid.", 500);
   let correct = 0, wrong = 0, unattempted = 0;
+  const questions = JSON.parse(set.questions_json);
+  const subjectBreakdown = {};
   for (let i = 0; i < 100; i++) {
-    if (body.answers[i] === null) unattempted++;
-    else if (body.answers[i] === key[i]) correct++;
-    else wrong++;
+    const subject = questions[i]?.subject || "Uncategorised";
+    subjectBreakdown[subject] ||= { correct: 0, wrong: 0, unattempted: 0 };
+    if (body.answers[i] === null) { unattempted++; subjectBreakdown[subject].unattempted++; }
+    else if (body.answers[i] === key[i]) { correct++; subjectBreakdown[subject].correct++; }
+    else { wrong++; subjectBreakdown[subject].wrong++; }
   }
   const score = Math.max(0, correct * set.correct_mark + wrong * set.wrong_mark);
   const accuracy = Math.round(correct / 100 * 10000) / 100;
@@ -38,7 +42,7 @@ export async function onRequestPost({ request, env }) {
   return json({
     ok: true, examTrack: set.exam_track, correct, wrong, unattempted,
     score: Math.round(score * 100) / 100, totalMarks: set.total_marks,
-    accuracy, attempted: correct + wrong,
+    accuracy, attempted: correct + wrong, subjectBreakdown,
     marking: { correct: set.correct_mark, wrong: set.wrong_mark, unattempted: 0 },
     attemptId
   });
