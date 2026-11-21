@@ -20,6 +20,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
+      - name: Validate official exam catalog
+        run: node scripts/validate-exam-catalog.mjs
       - name: Validate exam data
         run: node scripts/validate-exam-data.mjs
       - name: Validate server-side topic banks
