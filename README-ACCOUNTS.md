@@ -12,6 +12,7 @@ All changes are isolated on `feature/individual-accounts-exam-engine`, based on 
    - `migrations/0004_question_sets.sql`
    - `migrations/0005_auth_rate_limits.sql`
    - `migrations/0006_topic_exam_engine.sql`
+   - `migrations/0007_full_mock_engine.sql`
 3. In the Cloudflare Pages project `transition-phase`, add a D1 binding named `DB` to this database for the Preview environment first.
 4. Add encrypted Preview environment variables:
    - `ADMIN_EMAIL` = `malakargorav@gmail.com`
@@ -94,7 +95,7 @@ The following research artifacts are maintained on this feature branch:
 - `data/pyq/cwt-2025-paper-i-set-a-sample.json`: first four answer-key-matched Paper-I Set A questions. Question wording is transcribed from a secondary paper rendering; answers are matched against the SLPRB final Set A key. The records are explicitly marked `SECONDARY_TRANSCRIPTION`, not direct-PDF text extraction.
 - `scripts/validate-exam-data.mjs`: recursively validates PYQ and model-question datasets, unique IDs, exam-category codes, difficulty, MCQ options, answer consistency, and source-specific requirements. Run with `node scripts/validate-exam-data.mjs`.
 - `scripts/validate-exam-catalog.mjs`: checks the five separate recruitment profiles, required recruitment references, the two general Constable written patterns, the historical-only SI Paper-I pattern, and the explicit exclusion of a written pattern for Commando Constable (AB). Run with `node scripts/validate-exam-catalog.mjs`.
-- `scripts/validate-migrations.mjs`: applies migrations 0001–0006 to a temporary SQLite database, checks required tables/columns and foreign-key integrity. Run with `node scripts/validate-migrations.mjs` (requires Python 3 for SQLite).
+- `scripts/validate-migrations.mjs`: applies migrations 0001–0007 to a temporary SQLite database, checks required tables/columns and foreign-key integrity. Run with `node scripts/validate-migrations.mjs` (requires Python 3 for SQLite).
 - `.github/workflows/validate-exam-data.yml`: runs the official catalog validator, SQLite migration integration check, dataset validator, topic-bank validator, API regression tests, JavaScript syntax checks and whitespace checks on pull requests and feature-branch pushes.
 - `tests/*.test.mjs`: automated Node.js regression tests for password hashing, session cookie flags, same-origin enforcement, approved-account checks, Constable-only starter restrictions, server-side answer-key isolation, server-side scoring/atomic stage unlocks, per-account progress isolation/size limits, and student denial on admin-only endpoints, and full-length mock generation, answer-key secrecy, marking and one-time submissions. Run with `node --test tests/*.test.mjs`.
 
@@ -128,4 +129,4 @@ The uploaded Paper-II PDF attachment in the current conversation arrived as a ze
 - A guarded manual workflow is available at `.github/workflows/apply-preview-d1-migrations.yml`.
 - It applies migrations 0001–0007 to the Preview D1 database only after the operator types `APPLY`.
 - The repository must have Actions secrets `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`, and `CLOUDFLARE_D1_DATABASE_ID`. The Pages project must bind that same D1 database to the `DB` binding in its Preview environment.
-- After the workflow succeeds, verify the branch Preview `/api/health` endpoint returns `ok: true`. This repository cannot inspect or create Cloudflare account secrets/bindings from GitHub source access alone.
+- After the workflow succeeds, verify the branch Preview `/api/health` endpoint returns `ok: true`. Cloudflare account secrets and Pages bindings must be configured by an authorized operator; never put secret values in source control or chat.
