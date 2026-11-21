@@ -26,12 +26,12 @@ function req(body) {
     body: JSON.stringify(body)
   });
 }
-function submitDb({ expired = false, claimChanges = 1 } = {}) {
+function submitDb({ expired = false, claimChanges = 1, examTrack = "constable", correctMark = 0.5, wrongMark = 0 } = {}) {
   const set = {
-    id: "mock-1", user_id: user.id, exam_track: "constable",
+    id: "mock-1", user_id: user.id, exam_track: examTrack,
     questions_json: JSON.stringify(Array.from({ length: 100 }, (_, i) => ({ id: i, subject: "Test", question: "Q" + i, options: ["A", "B", "C", "D"] }))),
     answer_key_json: JSON.stringify(Array(100).fill(1)),
-    correct_mark: 0.5, wrong_mark: 0, total_marks: 50,
+    correct_mark: correctMark, wrong_mark: wrongMark, total_marks: examTrack === "si" ? 100 : 50,
     expires_at: expired ? "2000-01-01T00:00:00.000Z" : "2099-01-01T00:00:00.000Z",
     submitted_at: null
   };
@@ -102,4 +102,15 @@ test("mock submit supports unanswered questions and rejects expired or duplicate
   assert.equal((await submitMock({ request: req({ questionSetId: "mock-1", answers }), env: { DB: submitDb({ expired: true }) } })).status, 410);
   assert.equal((await submitMock({ request: req({ questionSetId: "mock-1", answers }), env: { DB: submitDb({ claimChanges: 0 }) } })).status, 409);
   assert.equal((await submitMock({ request: req({ questionSetId: "mock-1", answers: [1] }), env: { DB: submitDb() } })).status, 400);
+});
+
+test("SI mock submit applies negative marking exactly", async () => {
+  const DB = submitDb({ examTrack: "si", correctMark: 1, wrongMark: -0.5 });
+  const response = await submitMock({ request: req({ questionSetId: "mock-1", answers: Array(100).fill(0) }), env: { DB } });
+  assert.equal(response.status, 200);
+  const result = await response.json();
+  assert.equal(result.correct, 0);
+  assert.equal(result.wrong, 100);
+  assert.equal(result.score, -50);
+  assert.equal(result.totalMarks, 100);
 });
