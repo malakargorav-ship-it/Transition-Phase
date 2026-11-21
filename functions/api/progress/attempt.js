@@ -20,7 +20,7 @@ export async function onRequestPost({ request, env }) {
 
   const firstStage = body.stageId === "stage-1";
   if (!firstStage) {
-    const previous = body.stageId.match(/^stage-(\\d+)$/);
+    const previous = body.stageId.match(/^stage-(\d+)$/);
     if (!previous) return fail("Unknown stage.", 400);
     const prevId = `stage-${Number(previous[1])-1}`;
     const unlocked = await env.DB.prepare("SELECT 1 FROM stage_unlocks WHERE user_id=? AND exam_track=? AND stage_id=?")
@@ -35,7 +35,7 @@ export async function onRequestPost({ request, env }) {
   if (passed) {
     await env.DB.prepare("INSERT OR IGNORE INTO stage_unlocks (user_id,exam_track,stage_id) VALUES (?,?,?)")
       .bind(user.id,body.examTrack,body.stageId).run();
-    const next = body.stageId.match(/^stage-(\\d+)$/);
+    const next = body.stageId.match(/^stage-(\d+)$/);
     if (next) {
       const nextId = `stage-${Number(next[1])+1}`;
       await env.DB.prepare("INSERT OR IGNORE INTO stage_unlocks (user_id,exam_track,stage_id) VALUES (?,?,?)")
