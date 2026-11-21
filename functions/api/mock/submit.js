@@ -26,7 +26,7 @@ export async function onRequestPost({ request, env }) {
     else if (body.answers[i] === key[i]) { correct++; subjectBreakdown[subject].correct++; }
     else { wrong++; subjectBreakdown[subject].wrong++; }
   }
-  const score = Math.max(0, correct * set.correct_mark + wrong * set.wrong_mark);
+  const score = correct * set.correct_mark + wrong * set.wrong_mark;
   const accuracy = Math.round(correct / 100 * 10000) / 100;
   const attemptId = crypto.randomUUID(), claim = crypto.randomUUID();
   const statements = [
