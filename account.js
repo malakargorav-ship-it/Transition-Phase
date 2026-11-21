@@ -30,7 +30,7 @@
     $("adminPanel").hidden = user.role !== "admin";
     $("accountDifficulty").value = user.difficulty || "intermediate";
     try { const settings = await api("/api/account/settings", { method: "GET" }); localStorage.setItem("tp-difficulty", settings.difficulty); $("accountDifficulty").value = settings.difficulty; } catch {}
-    if (user.role === "admin") { await loadAdminUsers(); await loadStageRules(); await loadTopicStageRules(); }
+    if (user.role === "admin") { await loadAdminUsers(); await loadAllStageRules(); }
   }
   async function refresh() {
     try {
@@ -63,11 +63,16 @@
       }));
     } catch (error) { target.textContent = error.message; }
   }
-  async function loadStageRules() {
+  async function loadAllStageRules() {
     const list = $("stageRulesList");
     try {
-      const data = await api("/api/admin/stage-rules", { method: "GET" });
-      list.innerHTML = data.rules.length ? data.rules.map(rule => '<p>' + escapeHtml(rule.exam_track.toUpperCase() + ' · ' + rule.stage_id.toUpperCase() + ' · MIN ' + rule.minimum_difficulty.toUpperCase()) + '</p>').join("") : "<p>No custom minimums. All stages default to Beginner minimum.</p>";
+      const [data, topicData] = await Promise.all([
+        api("/api/admin/stage-rules", { method: "GET" }),
+        api("/api/admin/topic-stage-rules", { method: "GET" })
+      ]);
+      const stageRows = data.rules.map(rule => '<p>' + escapeHtml("NUMBER SYSTEM · " + rule.exam_track.toUpperCase() + ' · ' + rule.stage_id.toUpperCase() + ' · MIN ' + rule.minimum_difficulty.toUpperCase()) + '</p>');
+      const topicRows = topicData.rules.map(rule => '<p>' + escapeHtml(rule.topic_id + " · " + rule.exam_track.toUpperCase() + ' · ' + rule.stage_id.toUpperCase() + ' · MIN ' + rule.minimum_difficulty.toUpperCase()) + '</p>');
+      list.innerHTML = [...stageRows, ...topicRows].join("") || "<p>No custom minimums. All stages default to Beginner minimum.</p>";
     } catch (error) { list.textContent = error.message; }
   }
   $("saveStageRule").addEventListener("click", async () => {
@@ -78,23 +83,15 @@
         minimumDifficulty: $("ruleDifficulty").value
       }) });
       feedback("stageRuleFeedback", "Stage minimum difficulty saved.");
-      await loadStageRules();
+      await loadAllStageRules();
     } catch (error) { feedback("stageRuleFeedback", error.message); }
-  });
-  async function loadTopicStageRules() {
-    const list = $("stageRulesList");
-    try {
-      const data = await api("/api/admin/topic-stage-rules", { method: "GET" });
-      const rows = data.rules.map(rule => "<p>" + escapeHtml(rule.exam_track.toUpperCase() + " · " + rule.topic_id + " · " + rule.stage_id.toUpperCase() + " · MIN " + rule.minimum_difficulty.toUpperCase()) + "</p>");
-      list.innerHTML += rows.join("");
-    } catch (error) { list.textContent += " " + error.message; }
   }
   $("saveTopicStageRule").addEventListener("click", async () => {
     feedback("stageRuleFeedback", "Saving topic stage rule…");
     try {
       await api("/api/admin/topic-stage-rules", { method: "POST", body: JSON.stringify({ topicId: $("ruleTopic").value, examTrack: $("ruleTrack").value, stageId: $("ruleStage").value, minimumDifficulty: $("ruleDifficulty").value }) });
       feedback("stageRuleFeedback", "Topic stage minimum difficulty saved.");
-      await loadStageRules(); await loadTopicStageRules();
+      await loadAllStageRules();
     } catch (error) { feedback("stageRuleFeedback", error.message); }
   });
   function escapeHtml(value) {
