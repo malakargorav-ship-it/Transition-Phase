@@ -123,3 +123,9 @@ The uploaded Paper-II PDF attachment in the current conversation arrived as a ze
 
 - `GET /api/health` is a non-sensitive Preview diagnostic. It returns ready only when the D1 binding exists and all account, topic-exam and full-mock tables from migrations 0001–0007 are present. It does not expose account data.
 - 2026 current-affairs additions are model-practice questions sourced from Ministry of Home Affairs monthly achievement reports (February, June and September 2026). The remaining current-affairs set includes dated 2023–2025 reference items; it is not a continuously updated news feed. Official 2026 reference reports: [MHA February 2026](https://www.mha.gov.in/sites/default/files/2026-03/MonthlymajorFebuary_30032026.pdf), [MHA June 2026](https://mha.gov.in/files/achievements_documents/Achievements-english.pdf), [MHA September 2026](https://www.mha.gov.in/files/achievements_documents/MMASEP_29102026.pdf).
+
+## Preview D1 migration deployment
+- A guarded manual workflow is available at `.github/workflows/apply-preview-d1-migrations.yml`.
+- It applies migrations 0001–0007 to the Preview D1 database only after the operator types `APPLY`.
+- The repository must have Actions secrets `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`, and `CLOUDFLARE_D1_DATABASE_ID`. The Pages project must bind that same D1 database to the `DB` binding in its Preview environment.
+- After the workflow succeeds, verify the branch Preview `/api/health` endpoint returns `ok: true`. This repository cannot inspect or create Cloudflare account secrets/bindings from GitHub source access alone.
