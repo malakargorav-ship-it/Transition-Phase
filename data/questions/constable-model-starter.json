@@ -6,7 +6,10 @@
   "records": [
     {
       "question_id": "AP-MODEL-CONST-AR-0001",
-      "exam_category": "BEGINNER",
+      "exam_category": [
+        "CONSTABLE_UB",
+        "CONSTABLE_AB"
+      ],
       "subject": "Elementary Arithmetic",
       "topic": "Percentage",
       "subtopic": "Percentage change",
@@ -21,15 +24,12 @@
       "correct_option": "C",
       "correct_answer": "25%",
       "explanation": "Increase = 300 − 240 = 60. Percentage increase = (60 ÷ 240) × 100 = 25%.",
-      "difficulty": [
-        "CONSTABLE_UB",
-        "CONSTABLE_AB"
-      ],
+      "difficulty": "BEGINNER",
       "source_type": "MODEL_PRACTICE_QUESTION",
       "source_name": "TRANSITION PHASE original practice bank",
-      "source_url": "",
-      "official_source_url": "",
-      "answer_key_url": "",
+      "source_url": null,
+      "official_source_url": null,
+      "answer_key_url": null,
       "exam_year": null,
       "page_number": null,
       "verification_status": "MODEL_QUESTION",
@@ -41,7 +41,10 @@
     },
     {
       "question_id": "AP-MODEL-CONST-AR-0002",
-      "exam_category": "BEGINNER",
+      "exam_category": [
+        "CONSTABLE_UB",
+        "CONSTABLE_AB"
+      ],
       "subject": "Elementary Arithmetic",
       "topic": "Average",
       "subtopic": "Basic average",
@@ -56,15 +59,12 @@
       "correct_option": "B",
       "correct_answer": "18",
       "explanation": "Sum = 90. Average = 90 ÷ 5 = 18.",
-      "difficulty": [
-        "CONSTABLE_UB",
-        "CONSTABLE_AB"
-      ],
+      "difficulty": "INTERMEDIATE",
       "source_type": "MODEL_PRACTICE_QUESTION",
       "source_name": "TRANSITION PHASE original practice bank",
-      "source_url": "",
-      "official_source_url": "",
-      "answer_key_url": "",
+      "source_url": null,
+      "official_source_url": null,
+      "answer_key_url": null,
       "exam_year": null,
       "page_number": null,
       "verification_status": "MODEL_QUESTION",
@@ -76,7 +76,10 @@
     },
     {
       "question_id": "AP-MODEL-CONST-AR-0003",
-      "exam_category": "BEGINNER",
+      "exam_category": [
+        "CONSTABLE_UB",
+        "CONSTABLE_AB"
+      ],
       "subject": "Elementary Arithmetic",
       "topic": "Ratio and Proportion",
       "subtopic": "Sharing in a ratio",
@@ -91,15 +94,12 @@
       "correct_option": "C",
       "correct_answer": "₹480",
       "explanation": "Total parts = 7. B receives 4/7 × 840 = ₹480.",
-      "difficulty": [
-        "CONSTABLE_UB",
-        "CONSTABLE_AB"
-      ],
+      "difficulty": "INTERMEDIATE",
       "source_type": "MODEL_PRACTICE_QUESTION",
       "source_name": "TRANSITION PHASE original practice bank",
-      "source_url": "",
-      "official_source_url": "",
-      "answer_key_url": "",
+      "source_url": null,
+      "official_source_url": null,
+      "answer_key_url": null,
       "exam_year": null,
       "page_number": null,
       "verification_status": "MODEL_QUESTION",
@@ -111,7 +111,10 @@
     },
     {
       "question_id": "AP-MODEL-CONST-AR-0004",
-      "exam_category": "INTERMEDIATE",
+      "exam_category": [
+        "CONSTABLE_UB",
+        "CONSTABLE_AB"
+      ],
       "subject": "Elementary Arithmetic",
       "topic": "Time and Work",
       "subtopic": "Combined work",
@@ -126,15 +129,12 @@
       "correct_option": "B",
       "correct_answer": "7.2 days",
       "explanation": "Combined daily work = 1/12 + 1/18 = 5/36. Time = 36/5 = 7.2 days.",
-      "difficulty": [
-        "CONSTABLE_UB",
-        "CONSTABLE_AB"
-      ],
+      "difficulty": "INTERMEDIATE",
       "source_type": "MODEL_PRACTICE_QUESTION",
       "source_name": "TRANSITION PHASE original practice bank",
-      "source_url": "",
-      "official_source_url": "",
-      "answer_key_url": "",
+      "source_url": null,
+      "official_source_url": null,
+      "answer_key_url": null,
       "exam_year": null,
       "page_number": null,
       "verification_status": "MODEL_QUESTION",
@@ -146,7 +146,10 @@
     },
     {
       "question_id": "AP-MODEL-CONST-AR-0005",
-      "exam_category": "BEGINNER",
+      "exam_category": [
+        "CONSTABLE_UB",
+        "CONSTABLE_AB"
+      ],
       "subject": "Elementary Arithmetic",
       "topic": "Simple Interest",
       "subtopic": "Interest calculation",
@@ -161,15 +164,12 @@
       "correct_option": "C",
       "correct_answer": "₹600",
       "explanation": "SI = P × R × T / 100 = 2500 × 8 × 3 / 100 = ₹600.",
-      "difficulty": [
-        "CONSTABLE_UB",
-        "CONSTABLE_AB"
-      ],
+      "difficulty": "INTERMEDIATE",
       "source_type": "MODEL_PRACTICE_QUESTION",
       "source_name": "TRANSITION PHASE original practice bank",
-      "source_url": "",
-      "official_source_url": "",
-      "answer_key_url": "",
+      "source_url": null,
+      "official_source_url": null,
+      "answer_key_url": null,
       "exam_year": null,
       "page_number": null,
       "verification_status": "MODEL_QUESTION",
@@ -181,7 +181,10 @@
     },
     {
       "question_id": "AP-MODEL-CONST-EN-0001",
-      "exam_category": "BEGINNER",
+      "exam_category": [
+        "CONSTABLE_UB",
+        "CONSTABLE_AB"
+      ],
       "subject": "General English",
       "topic": "Articles",
       "subtopic": "Article usage",
@@ -196,15 +199,12 @@
       "correct_option": "B",
       "correct_answer": "an",
       "explanation": "The initial sound in “honest” is a vowel sound, so “an” is used.",
-      "difficulty": [
-        "CONSTABLE_UB",
-        "CONSTABLE_AB"
-      ],
+      "difficulty": "BEGINNER",
       "source_type": "MODEL_PRACTICE_QUESTION",
       "source_name": "TRANSITION PHASE original practice bank",
-      "source_url": "",
-      "official_source_url": "",
-      "answer_key_url": "",
+      "source_url": null,
+      "official_source_url": null,
+      "answer_key_url": null,
       "exam_year": null,
       "page_number": null,
       "verification_status": "MODEL_QUESTION",
@@ -216,7 +216,10 @@
     },
     {
       "question_id": "AP-MODEL-CONST-EN-0002",
-      "exam_category": "INTERMEDIATE",
+      "exam_category": [
+        "CONSTABLE_UB",
+        "CONSTABLE_AB"
+      ],
       "subject": "General English",
       "topic": "Tenses",
       "subtopic": "Past perfect",
@@ -231,15 +234,12 @@
       "correct_option": "C",
       "correct_answer": "had waited",
       "explanation": "The waiting began and continued before another past event; past perfect is appropriate.",
-      "difficulty": [
-        "CONSTABLE_UB",
-        "CONSTABLE_AB"
-      ],
+      "difficulty": "BEGINNER",
       "source_type": "MODEL_PRACTICE_QUESTION",
       "source_name": "TRANSITION PHASE original practice bank",
-      "source_url": "",
-      "official_source_url": "",
-      "answer_key_url": "",
+      "source_url": null,
+      "official_source_url": null,
+      "answer_key_url": null,
       "exam_year": null,
       "page_number": null,
       "verification_status": "MODEL_QUESTION",
@@ -251,7 +251,10 @@
     },
     {
       "question_id": "AP-MODEL-CONST-EN-0003",
-      "exam_category": "BEGINNER",
+      "exam_category": [
+        "CONSTABLE_UB",
+        "CONSTABLE_AB"
+      ],
       "subject": "General English",
       "topic": "Prepositions",
       "subtopic": "Preposition usage",
@@ -266,15 +269,12 @@
       "correct_option": "C",
       "correct_answer": "of",
       "explanation": "The standard construction is “consists of”.",
-      "difficulty": [
-        "CONSTABLE_UB",
-        "CONSTABLE_AB"
-      ],
+      "difficulty": "BEGINNER",
       "source_type": "MODEL_PRACTICE_QUESTION",
       "source_name": "TRANSITION PHASE original practice bank",
-      "source_url": "",
-      "official_source_url": "",
-      "answer_key_url": "",
+      "source_url": null,
+      "official_source_url": null,
+      "answer_key_url": null,
       "exam_year": null,
       "page_number": null,
       "verification_status": "MODEL_QUESTION",
@@ -286,7 +286,10 @@
     },
     {
       "question_id": "AP-MODEL-CONST-RE-0001",
-      "exam_category": "INTERMEDIATE",
+      "exam_category": [
+        "CONSTABLE_UB",
+        "CONSTABLE_AB"
+      ],
       "subject": "Logical Reasoning / Mental Ability",
       "topic": "Number Series",
       "subtopic": "Difference pattern",
@@ -301,15 +304,12 @@
       "correct_option": "C",
       "correct_answer": "43",
       "explanation": "The differences are 4, 6, 8 and 10. The next difference is 12; 31 + 12 = 43.",
-      "difficulty": [
-        "CONSTABLE_UB",
-        "CONSTABLE_AB"
-      ],
+      "difficulty": "BEGINNER",
       "source_type": "MODEL_PRACTICE_QUESTION",
       "source_name": "TRANSITION PHASE original practice bank",
-      "source_url": "",
-      "official_source_url": "",
-      "answer_key_url": "",
+      "source_url": null,
+      "official_source_url": null,
+      "answer_key_url": null,
       "exam_year": null,
       "page_number": null,
       "verification_status": "MODEL_QUESTION",
@@ -321,7 +321,10 @@
     },
     {
       "question_id": "AP-MODEL-CONST-RE-0002",
-      "exam_category": "BEGINNER",
+      "exam_category": [
+        "CONSTABLE_UB",
+        "CONSTABLE_AB"
+      ],
       "subject": "Logical Reasoning / Mental Ability",
       "topic": "Direction Sense",
       "subtopic": "Turning directions",
@@ -336,15 +339,12 @@
       "correct_option": "A",
       "correct_answer": "3 km east",
       "explanation": "The north and south movements cancel. The remaining displacement is 3 km east.",
-      "difficulty": [
-        "CONSTABLE_UB",
-        "CONSTABLE_AB"
-      ],
+      "difficulty": "INTERMEDIATE",
       "source_type": "MODEL_PRACTICE_QUESTION",
       "source_name": "TRANSITION PHASE original practice bank",
-      "source_url": "",
-      "official_source_url": "",
-      "answer_key_url": "",
+      "source_url": null,
+      "official_source_url": null,
+      "answer_key_url": null,
       "exam_year": null,
       "page_number": null,
       "verification_status": "MODEL_QUESTION",
@@ -356,7 +356,10 @@
     },
     {
       "question_id": "AP-MODEL-CONST-GK-0001",
-      "exam_category": "BEGINNER",
+      "exam_category": [
+        "CONSTABLE_UB",
+        "CONSTABLE_AB"
+      ],
       "subject": "General Awareness / General Knowledge and Current Affairs",
       "topic": "Indian Polity",
       "subtopic": "Constitution commencement",
@@ -371,15 +374,12 @@
       "correct_option": "C",
       "correct_answer": "26 January 1950",
       "explanation": "The Constitution was adopted on 26 November 1949 and came into force on 26 January 1950.",
-      "difficulty": [
-        "CONSTABLE_UB",
-        "CONSTABLE_AB"
-      ],
+      "difficulty": "BEGINNER",
       "source_type": "MODEL_PRACTICE_QUESTION",
       "source_name": "TRANSITION PHASE original practice bank",
-      "source_url": "",
-      "official_source_url": "",
-      "answer_key_url": "",
+      "source_url": null,
+      "official_source_url": null,
+      "answer_key_url": null,
       "exam_year": null,
       "page_number": null,
       "verification_status": "MODEL_QUESTION",
@@ -391,7 +391,10 @@
     },
     {
       "question_id": "AP-MODEL-CONST-AS-0001",
-      "exam_category": "BEGINNER",
+      "exam_category": [
+        "CONSTABLE_UB",
+        "CONSTABLE_AB"
+      ],
       "subject": "Assam History, Geography, Polity and Economy",
       "topic": "Assam Geography",
       "subtopic": "River systems",
@@ -406,15 +409,12 @@
       "correct_option": "B",
       "correct_answer": "Barak",
       "explanation": "The Barak River is the principal river of the Barak Valley in southern Assam.",
-      "difficulty": [
-        "CONSTABLE_UB",
-        "CONSTABLE_AB"
-      ],
+      "difficulty": "BEGINNER",
       "source_type": "MODEL_PRACTICE_QUESTION",
       "source_name": "TRANSITION PHASE original practice bank",
-      "source_url": "",
-      "official_source_url": "",
-      "answer_key_url": "",
+      "source_url": null,
+      "official_source_url": null,
+      "answer_key_url": null,
       "exam_year": null,
       "page_number": null,
       "verification_status": "MODEL_QUESTION",
