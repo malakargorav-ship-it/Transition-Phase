@@ -14,8 +14,8 @@ export async function onRequestPost({request,env}){
  if(stageNo>1){const previous=await env.DB.prepare("SELECT 1 FROM stage_unlocks WHERE user_id=? AND exam_track=? AND stage_id=?").bind(user.id,body.examTrack,"stage-"+(stageNo-1)).first();if(!previous)return fail("Previous stage ko 80% se clear karna zaroori hai.",403);}
  const bank=numberSystemStages["stage"+stageNo];if(!Array.isArray(bank)||!bank.length)return fail("Question bank is not configured.",503);
  const selected=shuffle(bank).slice(0,stageNo===1?20:bank.length),id=uuid();
- const questions=selected.map((q,index)=>({id:index,question:q[0],options:q[1]})),answers=selected.map(q=>q[2]);
+ const storedQuestions=selected.map((q,index)=>({id:index,question:q[0],options:q[1],explanation:q[3]})),questions=storedQuestions.map(({id,question,options})=>({id,question,options})),answers=selected.map(q=>q[2]);
  const expires=new Date(Date.now()+30*60*1000).toISOString();
- await env.DB.prepare("INSERT INTO question_sets (id,user_id,exam_track,stage_id,difficulty,questions_json,answer_key_json,expires_at) VALUES (?,?,?,?,?,?,?,?)").bind(id,user.id,body.examTrack,body.stageId,difficulty,JSON.stringify(questions),JSON.stringify(answers),expires).run();
+ await env.DB.prepare("INSERT INTO question_sets (id,user_id,exam_track,stage_id,difficulty,questions_json,answer_key_json,expires_at) VALUES (?,?,?,?,?,?,?,?)").bind(id,user.id,body.examTrack,body.stageId,difficulty,JSON.stringify(storedQuestions),JSON.stringify(answers),expires).run();
  return json({questionSetId:id,examTrack:body.examTrack,stageId:body.stageId,difficulty,expiresAt:expires,questions});
 }
