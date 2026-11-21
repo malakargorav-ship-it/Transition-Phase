@@ -115,10 +115,11 @@ The uploaded Paper-II PDF attachment in the current conversation arrived as a ze
 ## Full-length mock exams (Preview feature)
 - `functions/api/_lib/full-mock-banks.js` contains original model-practice question sets for English, reasoning, Assam history, India history, general knowledge and current-affairs reference. These are not PYQs.
 - `POST /api/mock/start` creates a randomized 100-question paper for approved accounts and stores its answer key server-side.
-- `POST /api/mock/submit` validates a complete 100-answer payload, applies server-side marking, enforces a one-time atomic submission and saves the result.
+- `POST /api/mock/submit` validates a complete 100-answer payload, applies server-side marking, returns a subject-wise breakdown, enforces a one-time atomic submission and saves the result.
+- `GET /api/mock/history` returns the signed-in user's latest 50 saved mock attempts.
 - General Constable UB/AB follows the identified advertisement pattern: 100 MCQs, 50 marks, 120 minutes, no negative marking. Its equal subject allocation is a platform practice design, not an official subject-wise count.
 - SI mock follows the historical CWT-2025 Paper-I marking style (100 marks, 120 minutes, -0.5 per wrong answer). It is explicitly labelled historical practice; latest-cycle SI rules must be reconciled with the applicable final official notice before describing this as the current official pattern.
 - Migration `0007_full_mock_engine.sql` creates the mock-set and attempt tables.
 
 - `GET /api/health` is a non-sensitive Preview diagnostic. It returns ready only when the D1 binding exists and all account, topic-exam and full-mock tables from migrations 0001–0007 are present. It does not expose account data.
-- 2026 current-affairs additions are model-practice questions sourced from Ministry of Home Affairs monthly achievement reports (February, June and September 2026). The remaining current-affairs set includes dated 2023–2025 reference items; it is not a continuously updated news feed.
+- 2026 current-affairs additions are model-practice questions sourced from Ministry of Home Affairs monthly achievement reports (February, June and September 2026). The remaining current-affairs set includes dated 2023–2025 reference items; it is not a continuously updated news feed. Official 2026 reference reports: [MHA February 2026](https://www.mha.gov.in/sites/default/files/2026-03/MonthlymajorFebuary_30032026.pdf), [MHA June 2026](https://mha.gov.in/files/achievements_documents/Achievements-english.pdf), [MHA September 2026](https://www.mha.gov.in/files/achievements_documents/MMASEP_29102026.pdf).
