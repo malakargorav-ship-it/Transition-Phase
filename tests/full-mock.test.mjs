@@ -92,6 +92,7 @@ test("mock submit calculates Constable score on server and atomically saves resu
   assert.equal(result.unattempted, 0);
   assert.equal(result.score, 50);
   assert.equal(result.accuracy, 100);
+  assert.deepEqual(result.subjectBreakdown.Test, { correct: 100, wrong: 0, unattempted: 0 });
   assert.equal(DB.batches.length, 1);
   assert.equal(DB.batches[0].length, 2);
 });
