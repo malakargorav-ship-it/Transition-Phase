@@ -51,6 +51,15 @@ Open the Preview Command Centre. Register using the configured admin email and t
 - Admin can set minimum difficulty independently for every topic, stage and exam track. The existing question banks are not yet difficulty-tagged, so the preference is an access rule, not a different question mix.
 - This does not add new GK, Assam GK, English, Reasoning or Current Affairs question banks. Those subjects are not present in the currently integrated 23-topic Maths bank and need verified content before being added.
 
+## Constable subject starter practice integration
+
+- Five small original model-practice banks are now available through the authenticated topic-exam engine: Elementary Arithmetic (5 questions), General English (3), Reasoning / Mental Ability (2), General Awareness / GK (1), and Assam Geography (1).
+- These options are explicitly labelled **Constable Subject Starters (Model Practice)** in the Command Centre. They are not PYQs and are not full-length mocks or comprehensive subject coverage.
+- Their answer keys remain in the server-side topic bank module; the authenticated API returns only question text and options before submission.
+- These starter banks are restricted server-side to the General Constable track. They are not available for SI until SI-specific content is separately researched and reviewed.
+- Because the smaller banks contain fewer than 10 questions, the engine serves the available number rather than fabricating additional questions. Repeated stages do not imply broader content coverage.
+- Guests retain the existing guest-practice flow; these secure starter banks require an approved account.
+
 ## API routes
 
 - `POST /api/auth/register`, `POST /api/auth/login`, `POST /api/auth/logout`, `GET /api/auth/me`
