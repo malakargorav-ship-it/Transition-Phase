@@ -8,6 +8,12 @@ export async function onRequestPost({request,env}){
  if(!set)return fail("Question set not found.",404);
  if(set.submitted_at)return fail("This question set has already been submitted.",409);
  if(new Date(set.expires_at).getTime()<Date.now())return fail("Time expired. Start a fresh question set.",410);
+ const [settings,rule]=await Promise.all([
+  env.DB.prepare("SELECT difficulty FROM users WHERE id=?").bind(user.id).first(),
+  env.DB.prepare("SELECT minimum_difficulty FROM stage_rules WHERE exam_track=? AND stage_id=?").bind(set.exam_track,set.stage_id).first()
+ ]);
+ const levels=["beginner","intermediate","advanced"];
+ if(set.difficulty!==(settings?.difficulty||"intermediate")||levels.indexOf(set.difficulty)<levels.indexOf(rule?.minimum_difficulty||"beginner"))return fail("Account difficulty ya admin stage rule change ho gaya hai. Fresh question set start karo.",403);
  const questions=JSON.parse(set.questions_json),answerKey=JSON.parse(set.answer_key_json);
  if(body.answers.length!==answerKey.length||questions.length!==answerKey.length)return fail("Please answer every question before submitting.");
  const claimed=await env.DB.prepare("UPDATE question_sets SET submitted_at=CURRENT_TIMESTAMP WHERE id=? AND user_id=? AND submitted_at IS NULL AND expires_at>?").bind(set.id,user.id,new Date().toISOString()).run();
