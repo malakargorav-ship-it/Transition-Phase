@@ -1,0 +1,913 @@
+/* TRANSITION PHASE — full-bleed cinematic preparation heroes.
+   Keep photography inside hero bands only; all study content remains untouched. */
+.tp-spotlight-host{
+  --tp-spot-x:-1000px;
+  --tp-spot-y:-1000px;
+  --tp-spot-size:260px;
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  background:#111315;
+  color:#f5f0e7;
+}
+.tp-spotlight-host::before,
+.tp-spotlight-host::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  z-index:0;
+  background-position:center center;
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+.tp-spotlight-host::before{
+  background-image:
+    linear-gradient(90deg,rgba(9,12,15,.82) 0%,rgba(9,12,15,.58) 53%,rgba(9,12,15,.30) 100%),
+    url("https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=2200&q=90");
+  transform:scale(1.025);
+  animation:tp-spot-base-in 1.5s cubic-bezier(.16,1,.3,1) both;
+}
+.tp-spotlight-host::after{
+  background-image:
+    linear-gradient(90deg,rgba(9,12,15,.20),rgba(9,12,15,.08)),
+    url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2200&q=90");
+  -webkit-mask-image:radial-gradient(circle var(--tp-spot-size) at var(--tp-spot-x) var(--tp-spot-y),
+    #000 0%,#000 40%,rgba(0,0,0,.75) 60%,rgba(0,0,0,.4) 75%,rgba(0,0,0,.12) 88%,transparent 100%);
+  mask-image:radial-gradient(circle var(--tp-spot-size) at var(--tp-spot-x) var(--tp-spot-y),
+    #000 0%,#000 40%,rgba(0,0,0,.75) 60%,rgba(0,0,0,.4) 75%,rgba(0,0,0,.12) 88%,transparent 100%);
+  -webkit-mask-repeat:no-repeat;
+  mask-repeat:no-repeat;
+}
+.tp-spotlight-host>*{position:relative;z-index:1}
+
+/* Landing page: true viewport-wide hero with the site's content grid retained. */
+.hero.section-wrap.tp-spotlight-host{
+  width:100vw;
+  max-width:none;
+  margin-left:calc(50% - 50vw);
+  padding-left:max(24px,calc((100vw - 1160px)/2));
+  padding-right:max(24px,calc((100vw - 1160px)/2));
+  min-height:calc(100svh - 82px);
+  padding-top:90px;
+  padding-bottom:80px;
+  color:#f5f0e7;
+}
+.hero.tp-spotlight-host::before,.hero.tp-spotlight-host::after{
+  background-position:center 48%;
+}
+.hero.tp-spotlight-host .eyebrow{color:#d5b477}
+.hero.tp-spotlight-host h1{color:#fff}
+.hero.tp-spotlight-host h1 em{color:#d5b477}
+.hero.tp-spotlight-host .creator-byline,
+.hero.tp-spotlight-host .hero-lede,
+.hero.tp-spotlight-host .hero-note{color:rgba(255,255,255,.78)}
+.hero.tp-spotlight-host .creator-byline strong{color:#d5b477}
+.hero.tp-spotlight-host .text-link{color:#fff}
+.hero.tp-spotlight-host .text-link span{color:#d5b477}
+.hero.tp-spotlight-host .hero-art{min-height:440px}
+.hero.tp-spotlight-host .hero-card{box-shadow:18px 22px 0 rgba(213,180,119,.22)}
+
+/* Inner pages: contained cinematic mastheads, not backgrounds behind study content. */
+.command-hero.tp-spotlight-host{
+  min-height:290px;
+  padding:42px;
+  border:1px solid rgba(213,180,119,.25);
+  color:#f5f0e7;
+}
+.command-hero.tp-spotlight-host .eyebrow,
+.subject-hero.tp-spotlight-host .eyebrow,
+.lesson-head.tp-spotlight-host .eyebrow,
+.syllabus-hero.tp-spotlight-host .eyebrow{color:#d5b477}
+.command-hero.tp-spotlight-host h1,
+.subject-hero.tp-spotlight-host h1,
+.lesson-head.tp-spotlight-host h1,
+.syllabus-hero.tp-spotlight-host h1{color:#fff}
+.command-hero.tp-spotlight-host h1 em,
+.subject-hero.tp-spotlight-host h1 em,
+.lesson-head.tp-spotlight-host h1 em,
+.syllabus-hero.tp-spotlight-host h1 em{color:#d5b477}
+.command-hero.tp-spotlight-host p,
+.subject-hero.tp-spotlight-host>div>p,
+.lesson-head.tp-spotlight-host>p,
+.syllabus-hero.tp-spotlight-host>p{color:rgba(255,255,255,.78)}
+.command-hero.tp-spotlight-host .track-select label{color:#d5b477}
+.command-hero.tp-spotlight-host .track-select select{background:#f5f0e7;color:#171717}
+.subject-hero.tp-spotlight-host{padding:48px 30px;border:1px solid rgba(213,180,119,.25)}
+.subject-hero.tp-spotlight-host .subject-progress{background:rgba(10,12,14,.82);border:1px solid rgba(213,180,119,.35)}
+.lesson-head.tp-spotlight-host{padding:44px 30px 30px;border:1px solid rgba(213,180,119,.25)}
+.lesson-head.tp-spotlight-host .lesson-tabs a{color:#f5f0e7;border-color:rgba(255,255,255,.28)}
+.lesson-head.tp-spotlight-host .lesson-tabs a:hover{border-color:#d5b477;color:#d5b477}
+.syllabus-hero.tp-spotlight-host{padding:45px 30px 34px;border:1px solid rgba(213,180,119,.25)}
+.syllabus-hero.tp-spotlight-host .track-button{background:rgba(245,240,231,.92);color:#171717}
+.syllabus-hero.tp-spotlight-host .track-button.active{background:#d5b477;color:#171717;border-color:#fff}
+
+@keyframes tp-spot-base-in{
+  from{opacity:.65;transform:scale(1.07)}
+  to{opacity:1;transform:scale(1.025)}
+}
+@media(max-width:760px){
+  .hero.section-wrap.tp-spotlight-host{
+    min-height:auto;
+    padding:64px 22px 54px;
+    margin-left:calc(50% - 50vw);
+  }
+  .hero.tp-spotlight-host .hero-art{min-height:360px}
+  .command-hero.tp-spotlight-host,
+  .subject-hero.tp-spotlight-host,
+  .lesson-head.tp-spotlight-host,
+  .syllabus-hero.tp-spotlight-host{padding:30px 20px}
+}
+@media(hover:none),(pointer:coarse){
+  .tp-spotlight-host::after{
+    -webkit-mask-image:radial-gradient(circle 220px at 50% 50%,#000 0%,rgba(0,0,0,.86) 48%,transparent 100%);
+    mask-image:radial-gradient(circle 220px at 50% 50%,#000 0%,rgba(0,0,0,.86) 48%,transparent 100%);
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  .tp-spotlight-host::before{animation:none;transform:none}
+}
+
+/* PAGE-WIDE ART DIRECTION — distinct photographic chapter backgrounds.
+   The image layers stay behind readable content and existing interactive cards. */
+
+/* Remove the two floating paper labels sitting over the preparation-log card. */
+.hero-art .floating-tag{display:none!important}
+
+/* Landing page chapters: each section gets its own atmosphere. */
+.metrics{
+  position:relative;
+  background:
+    linear-gradient(90deg,rgba(251,248,242,.93),rgba(251,248,242,.86)),
+    url("https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1800&q=85") center 45%/cover no-repeat;
+  padding-inline:24px;
+}
+.approach{
+  position:relative;
+  padding:55px 32px 1px;
+  background:
+    linear-gradient(100deg,rgba(251,248,242,.93),rgba(251,248,242,.87)),
+    url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1800&q=85") center/cover no-repeat;
+}
+.approach .principles{background:rgba(251,248,242,.72);backdrop-filter:blur(3px)}
+.subjects-section{
+  background-image:
+    linear-gradient(100deg,rgba(17,17,17,.91),rgba(17,17,17,.86)),
+    url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=2000&q=85");
+  background-position:center;background-size:cover;background-attachment:fixed;
+}
+.system-section{
+  position:relative;
+  padding-inline:28px;
+  background:
+    linear-gradient(100deg,rgba(251,248,242,.91),rgba(251,248,242,.83)),
+    url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1800&q=85") center/cover no-repeat;
+}
+.study-cta{
+  background:
+    linear-gradient(100deg,rgba(233,223,207,.91),rgba(233,223,207,.82)),
+    url("https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=1800&q=85") center/cover no-repeat;
+}
+
+/* Command Centre: distinct photographic bands for stats and each work area. */
+.command .stat-grid{
+  padding:22px;
+  background:
+    linear-gradient(100deg,rgba(251,248,242,.91),rgba(251,248,242,.82)),
+    url("https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1600&q=85") center/cover no-repeat;
+}
+.command .command-section{
+  padding:28px;
+  margin-top:24px;
+  border:1px solid rgba(199,166,106,.24);
+  background:
+    linear-gradient(100deg,rgba(251,248,242,.94),rgba(251,248,242,.88)),
+    url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=85") center/cover no-repeat;
+}
+.command .command-section:nth-of-type(4n){
+  background-image:
+    linear-gradient(100deg,rgba(244,235,221,.93),rgba(244,235,221,.86)),
+    url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=85");
+}
+
+/* Subject and syllabus pages: the masthead has its own image; learning content
+   receives quieter, different backdrops without changing cards or checkboxes. */
+.subject-page .topic-section{
+  padding:34px 26px;
+  background:
+    linear-gradient(100deg,rgba(251,248,242,.94),rgba(251,248,242,.88)),
+    url("https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=1700&q=85") center/cover no-repeat;
+}
+.syllabus-summary{
+  background-image:
+    linear-gradient(100deg,rgba(33,31,28,.91),rgba(33,31,28,.86)),
+    url("https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1600&q=85");
+  background-position:center;background-size:cover;
+}
+.syllabus-tools{
+  padding-inline:24px;
+  background:
+    linear-gradient(100deg,rgba(251,248,242,.94),rgba(251,248,242,.88)),
+    url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1600&q=85") center/cover no-repeat;
+}
+.syllabus-section{
+  background:
+    linear-gradient(100deg,rgba(255,253,248,.94),rgba(255,253,248,.88)),
+    url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1200&q=80") center/cover no-repeat;
+}
+
+/* Lesson chapters use alternating images to make scrolling feel like chapters. */
+.lesson-section{
+  padding:42px 26px;
+  background:
+    linear-gradient(100deg,rgba(251,248,242,.94),rgba(251,248,242,.89)),
+    url("https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=1600&q=85") center/cover no-repeat;
+}
+.lesson-section:nth-of-type(3n){
+  background-image:
+    linear-gradient(100deg,rgba(244,235,221,.94),rgba(244,235,221,.88)),
+    url("https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=1600&q=85");
+}
+.lesson-section .concept-card,
+.lesson-section .example-card,
+.lesson-section .question-card{backdrop-filter:blur(2px)}
+
+@media(max-width:760px){
+  .approach,.system-section{padding-inline:20px}
+  .command .command-section{padding:20px}
+  .subject-page .topic-section,.lesson-section{padding:25px 16px}
+  .subjects-section{background-attachment:scroll}
+  .metrics{padding-inline:10px}
+}
+
+
+/* FULL-BLEED CHAPTER SPOTLIGHTS — extend the same cursor reveal to every
+   landing-page chapter. Pseudo layers escape the centered content container. */
+.metrics.tp-spotlight-host,
+.approach.tp-spotlight-host,
+.subjects-section.tp-spotlight-host,
+.system-section.tp-spotlight-host,
+.study-cta.tp-spotlight-host{
+  isolation:isolate;
+  overflow:hidden;
+  position:relative;
+  background:transparent!important;
+  color:inherit;
+}
+.metrics.tp-spotlight-host::before,
+.metrics.tp-spotlight-host::after,
+.approach.tp-spotlight-host::before,
+.approach.tp-spotlight-host::after,
+.subjects-section.tp-spotlight-host::before,
+.subjects-section.tp-spotlight-host::after,
+.system-section.tp-spotlight-host::before,
+.system-section.tp-spotlight-host::after,
+.study-cta.tp-spotlight-host::before,
+.study-cta.tp-spotlight-host::after{
+  left:calc((100% - 100vw)/2);
+  width:100vw;
+  right:auto;
+  inset-block:0;
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+.metrics.tp-spotlight-host::before{
+  background-image:
+    linear-gradient(100deg,rgba(251,248,242,.56),rgba(251,248,242,.48)),
+    url("https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=2200&q=90");
+}
+.metrics.tp-spotlight-host::after{
+  background-image:
+    linear-gradient(100deg,rgba(251,248,242,.12),rgba(251,248,242,.08)),
+    url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=2200&q=90");
+}
+.approach.tp-spotlight-host::before{
+  background-image:
+    linear-gradient(100deg,rgba(251,248,242,.54),rgba(251,248,242,.43)),
+    url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=2200&q=90");
+}
+.approach.tp-spotlight-host::after{
+  background-image:
+    linear-gradient(100deg,rgba(251,248,242,.10),rgba(251,248,242,.05)),
+    url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=2200&q=90");
+}
+.subjects-section.tp-spotlight-host::before{
+  background-image:
+    linear-gradient(100deg,rgba(13,14,15,.62),rgba(13,14,15,.54)),
+    url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=2200&q=90");
+}
+.subjects-section.tp-spotlight-host::after{
+  background-image:
+    linear-gradient(100deg,rgba(13,14,15,.10),rgba(13,14,15,.06)),
+    url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2200&q=90");
+}
+.system-section.tp-spotlight-host::before{
+  background-image:
+    linear-gradient(100deg,rgba(251,248,242,.55),rgba(251,248,242,.44)),
+    url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=2200&q=90");
+}
+.system-section.tp-spotlight-host::after{
+  background-image:
+    linear-gradient(100deg,rgba(251,248,242,.10),rgba(251,248,242,.05)),
+    url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=2200&q=90");
+}
+.study-cta.tp-spotlight-host::before{
+  background-image:
+    linear-gradient(100deg,rgba(233,223,207,.53),rgba(233,223,207,.42)),
+    url("https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=2200&q=90");
+}
+.study-cta.tp-spotlight-host::after{
+  background-image:
+    linear-gradient(100deg,rgba(233,223,207,.10),rgba(233,223,207,.05)),
+    url("https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=2200&q=90");
+}
+
+/* Keep foreground content above both photographic layers. */
+.metrics.tp-spotlight-host>*,
+.approach.tp-spotlight-host>*,
+.subjects-section.tp-spotlight-host>*,
+.system-section.tp-spotlight-host>*,
+.study-cta.tp-spotlight-host>*{position:relative;z-index:1}
+
+/* The subject cards were too opaque: let the chapter photograph read through. */
+.subjects-section.tp-spotlight-host .subject-card{
+  background:rgba(31,29,26,.70);
+  backdrop-filter:blur(5px);
+  border-color:rgba(244,235,221,.22);
+}
+.subjects-section.tp-spotlight-host .subject-card.featured{
+  background:rgba(43,38,30,.76);
+  border-color:rgba(199,166,106,.62);
+}
+.subjects-section.tp-spotlight-host .subject-card:hover{
+  background:rgba(49,42,31,.82);
+}
+
+/* A slow photographic drift makes the backdrop visibly alive even before
+   the cursor spotlight moves. */
+.metrics.tp-spotlight-host::before,
+.approach.tp-spotlight-host::before,
+.subjects-section.tp-spotlight-host::before,
+.system-section.tp-spotlight-host::before,
+.study-cta.tp-spotlight-host::before{
+  animation:tp-chapter-drift 24s ease-in-out infinite alternate;
+  will-change:transform;
+}
+@keyframes tp-chapter-drift{
+  from{transform:scale(1.015) translate3d(0,0,0)}
+  to{transform:scale(1.10) translate3d(-.35%,.2%,0)}
+}
+@media(hover:none),(pointer:coarse){
+  .metrics.tp-spotlight-host::after,
+  .approach.tp-spotlight-host::after,
+  .subjects-section.tp-spotlight-host::after,
+  .system-section.tp-spotlight-host::after,
+  .study-cta.tp-spotlight-host::after{
+    -webkit-mask-image:radial-gradient(circle 300px at 50% 48%,#000 0%,rgba(0,0,0,.72) 55%,transparent 100%);
+    mask-image:radial-gradient(circle 300px at 50% 48%,#000 0%,rgba(0,0,0,.72) 55%,transparent 100%);
+    opacity:.72;
+    animation:tp-touch-reveal 9s ease-in-out infinite alternate;
+  }
+}
+@keyframes tp-touch-reveal{
+  from{opacity:.42}
+  to{opacity:.82}
+}
+@media(max-width:760px){
+  .metrics.tp-spotlight-host::before,.metrics.tp-spotlight-host::after,
+  .approach.tp-spotlight-host::before,.approach.tp-spotlight-host::after,
+  .subjects-section.tp-spotlight-host::before,.subjects-section.tp-spotlight-host::after,
+  .system-section.tp-spotlight-host::before,.system-section.tp-spotlight-host::after,
+  .study-cta.tp-spotlight-host::before,.study-cta.tp-spotlight-host::after{
+    background-position:center center;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  .metrics.tp-spotlight-host::before,.approach.tp-spotlight-host::before,
+  .subjects-section.tp-spotlight-host::before,.system-section.tp-spotlight-host::before,
+  .study-cta.tp-spotlight-host::before,.tp-spotlight-host::after{
+    animation:none!important;
+    transform:none!important;
+  }
+}
+
+
+/* FINAL READABILITY + TRUE EDGE-TO-EDGE SECTION WIDTH PATCH */
+.approach.tp-spotlight-host{
+  width:100vw!important;
+  max-width:none!important;
+  margin-left:calc(50% - 50vw)!important;
+  padding-left:max(24px,calc((100vw - 1160px)/2))!important;
+  padding-right:max(24px,calc((100vw - 1160px)/2))!important;
+  padding-top:72px;
+  padding-bottom:72px;
+}
+.approach.tp-spotlight-host .section-heading{
+  color:#171614;
+}
+.approach.tp-spotlight-host .section-heading>p{
+  color:#39352f!important;
+  font-weight:600;
+  text-shadow:0 1px 10px rgba(255,255,255,.65);
+}
+.approach.tp-spotlight-host .principles{
+  background:rgba(255,253,248,.88)!important;
+  border:1px solid rgba(55,48,38,.12);
+  backdrop-filter:blur(8px);
+}
+.approach.tp-spotlight-host .principle h3{color:#171614}
+.approach.tp-spotlight-host .principle p{color:#514a40!important}
+.approach.tp-spotlight-host .principle-no{color:#94703c}
+
+/* Dark photographic study chapter: force readable light typography on every card. */
+.subjects-section.tp-spotlight-host{color:#f7f1e7!important}
+.subjects-section.tp-spotlight-host .section-heading-light h2,
+.subjects-section.tp-spotlight-host .section-heading-light h2 em,
+.subjects-section.tp-spotlight-host .section-heading-light>p,
+.subjects-section.tp-spotlight-host .subject-card,
+.subjects-section.tp-spotlight-host .subject-card h3,
+.subjects-section.tp-spotlight-host .subject-card p,
+.subjects-section.tp-spotlight-host .subject-card .subject-count,
+.subjects-section.tp-spotlight-host .subject-card .subject-icon,
+.subjects-section.tp-spotlight-host .subject-card .subject-arrow{
+  color:#f7f1e7!important;
+}
+.subjects-section.tp-spotlight-host .section-heading-light>p,
+.subjects-section.tp-spotlight-host .subject-card p{
+  color:#ded6c9!important;
+}
+.subjects-section.tp-spotlight-host .subject-card{
+  background:rgba(22,21,20,.84)!important;
+  border-color:rgba(247,241,231,.28);
+  backdrop-filter:blur(8px);
+}
+.subjects-section.tp-spotlight-host .subject-card.featured{
+  background:rgba(43,36,26,.88)!important;
+  border-color:rgba(213,180,119,.72);
+}
+.subjects-section.tp-spotlight-host .subject-card:hover{
+  background:rgba(51,42,29,.94)!important;
+}
+
+/* Warm CTA photograph: keep heading and supporting copy dark and high-contrast. */
+.study-cta.tp-spotlight-host{
+  color:#171614!important;
+}
+.study-cta.tp-spotlight-host .cta-inner h2,
+.study-cta.tp-spotlight-host .cta-inner h2 em,
+.study-cta.tp-spotlight-host .cta-inner .eyebrow{
+  color:#171614!important;
+  text-shadow:0 1px 14px rgba(255,248,235,.62);
+}
+.study-cta.tp-spotlight-host .cta-side p{
+  color:#29251f!important;
+  font-weight:600;
+  text-shadow:0 1px 12px rgba(255,248,235,.75);
+}
+.study-cta.tp-spotlight-host .button-gold{
+  color:#171614!important;
+  background:#d5b477;
+  border:1px solid rgba(23,22,20,.25);
+}
+@media(max-width:760px){
+  .approach.tp-spotlight-host{
+    padding-left:20px!important;
+    padding-right:20px!important;
+  }
+  .approach.tp-spotlight-host .section-heading>p{margin-top:18px}
+}
+
+
+/* CHAPTER FLOW REFINEMENT — remove blank gutters, prevent clipped layouts,
+   and soften the hand-off between photographic sections. */
+.metrics.tp-spotlight-host{
+  margin-bottom:0!important;
+}
+.approach.tp-spotlight-host{
+  margin-top:0!important;
+  margin-bottom:0!important;
+  padding-top:76px!important;
+  padding-bottom:76px!important;
+}
+.approach.tp-spotlight-host .principles{
+  margin-bottom:0!important;
+}
+.approach.tp-spotlight-host::before{
+  background-image:
+    linear-gradient(to bottom,#fbf8f2 0%,rgba(251,248,242,.10) 18%,rgba(251,248,242,.10) 82%,#fbf8f2 100%),
+    linear-gradient(100deg,rgba(251,248,242,.78),rgba(251,248,242,.62)),
+    url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=2200&q=90")!important;
+}
+.approach.tp-spotlight-host .section-heading h2{
+  color:#171614!important;
+  text-shadow:0 2px 18px rgba(255,253,248,.62);
+}
+.approach.tp-spotlight-host .section-heading h2 em{
+  color:#a77d3d!important;
+}
+
+/* Make the learning-cycle chapter genuinely full-bleed, not a centered 1160px island. */
+.system-section.tp-spotlight-host{
+  width:100vw!important;
+  max-width:none!important;
+  margin-left:calc(50% - 50vw)!important;
+  padding:100px max(24px,calc((100vw - 1120px)/2))!important;
+  grid-template-columns:minmax(0,520px) minmax(0,420px)!important;
+  justify-content:center;
+  gap:clamp(42px,7vw,100px)!important;
+  box-sizing:border-box;
+}
+.system-section.tp-spotlight-host::before{
+  background-image:
+    linear-gradient(to bottom,#fbf8f2 0%,rgba(251,248,242,.08) 18%,rgba(251,248,242,.08) 82%,#e9dfcf 100%),
+    linear-gradient(100deg,rgba(251,248,242,.70),rgba(251,248,242,.58)),
+    url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=2200&q=90")!important;
+}
+.subjects-section.tp-spotlight-host::before{
+  background-image:
+    linear-gradient(to bottom,#fbf8f2 0%,rgba(13,14,15,.04) 18%,rgba(13,14,15,.04) 82%,#171614 100%),
+    linear-gradient(100deg,rgba(13,14,15,.64),rgba(13,14,15,.58)),
+    url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=2200&q=90")!important;
+}
+.study-cta.tp-spotlight-host::before{
+  background-image:
+    linear-gradient(to bottom,#e9dfcf 0%,rgba(233,223,207,.08) 18%,rgba(233,223,207,.08) 82%,#fbf8f2 100%),
+    linear-gradient(100deg,rgba(233,223,207,.68),rgba(233,223,207,.58)),
+    url("https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=2200&q=90")!important;
+}
+
+/* The cursor-reveal layer was restarting at every chapter and looked like a
+   sudden animation jump. Keep one calm, continuous photographic drift instead. */
+.metrics.tp-spotlight-host::after,
+.approach.tp-spotlight-host::after,
+.subjects-section.tp-spotlight-host::after,
+.system-section.tp-spotlight-host::after,
+.study-cta.tp-spotlight-host::after{
+  display:none!important;
+}
+.metrics.tp-spotlight-host::before,
+.approach.tp-spotlight-host::before,
+.subjects-section.tp-spotlight-host::before,
+.system-section.tp-spotlight-host::before,
+.study-cta.tp-spotlight-host::before{
+  animation:tp-chapter-drift 38s ease-in-out infinite alternate!important;
+  transform-origin:center center;
+}
+@media(max-width:760px){
+  .system-section.tp-spotlight-host{
+    grid-template-columns:minmax(0,1fr)!important;
+    padding:72px 20px!important;
+    gap:38px!important;
+  }
+}
+
+
+/* PHILOSOPHY CARDS — inset content, prevent edge clipping, and give each
+   principle its own balanced card surface without changing page behaviour. */
+.approach.tp-spotlight-host .principles{
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:16px!important;
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  background:transparent!important;
+  backdrop-filter:none!important;
+}
+.approach.tp-spotlight-host .principle,
+.approach.tp-spotlight-host .principle+.principle{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  min-width:0;
+  min-height:260px;
+  height:100%;
+  padding:30px 30px 32px!important;
+  border:1px solid rgba(67,56,40,.16)!important;
+  border-radius:4px;
+  background:rgba(255,253,248,.93)!important;
+  box-shadow:0 12px 34px rgba(44,37,27,.07);
+  backdrop-filter:blur(10px);
+  overflow:visible;
+}
+.approach.tp-spotlight-host .principle-no{
+  display:block;
+  margin:0 0 14px;
+  font-size:10px;
+  line-height:1.4;
+  letter-spacing:.16em;
+}
+.approach.tp-spotlight-host .principle-symbol{
+  display:block;
+  margin:0 0 20px!important;
+  min-height:30px;
+  font-size:28px;
+  line-height:1;
+}
+.approach.tp-spotlight-host .principle h3{
+  margin:0 0 10px!important;
+  max-width:100%;
+  font-size:clamp(17px,1.55vw,20px);
+  line-height:1.3;
+  letter-spacing:-.045em;
+  overflow-wrap:normal;
+  word-break:normal;
+}
+.approach.tp-spotlight-host .principle p{
+  margin:0!important;
+  max-width:34ch;
+  font-size:12px;
+  line-height:1.8;
+  overflow-wrap:break-word;
+  word-break:normal;
+}
+@media(hover:hover) and (pointer:fine){
+  .approach.tp-spotlight-host .principle{
+    transition:transform 260ms cubic-bezier(.2,.75,.25,1),box-shadow 260ms ease,border-color 260ms ease;
+  }
+  .approach.tp-spotlight-host .principle:hover{
+    transform:translateY(-4px);
+    border-color:rgba(167,125,61,.48)!important;
+    box-shadow:0 18px 42px rgba(44,37,27,.12);
+  }
+}
+@media(max-width:800px){
+  .approach.tp-spotlight-host .principles{
+    grid-template-columns:1fr!important;
+    gap:12px!important;
+  }
+  .approach.tp-spotlight-host .principle,
+  .approach.tp-spotlight-host .principle+.principle{
+    min-height:0;
+    padding:26px 24px 28px!important;
+  }
+  .approach.tp-spotlight-host .principle-symbol{margin-bottom:14px!important}
+  .approach.tp-spotlight-host .principle h3{font-size:19px}
+  .approach.tp-spotlight-host .principle p{max-width:48ch;font-size:12px}
+}
+@media(max-width:460px){
+  .approach.tp-spotlight-host .principle,
+  .approach.tp-spotlight-host .principle+.principle{
+    padding:23px 20px 25px!important;
+  }
+}
+
+
+/* MOBILE RESPONSIVE REPAIR — landing page only.
+   Preserve desktop art direction and all existing navigation/study behaviour. */
+@media(max-width:760px){
+  html,body{
+    max-width:100%;
+    overflow-x:hidden;
+  }
+  .site-shell{
+    width:100%;
+    max-width:100%;
+    overflow-x:clip;
+  }
+
+  /* Hero: allow grid children and long display words to shrink inside viewport. */
+  .hero.section-wrap.tp-spotlight-host{
+    width:100%;
+    max-width:100%;
+    margin-left:0;
+    padding:58px 20px 48px;
+    min-height:0;
+    grid-template-columns:minmax(0,1fr);
+    gap:28px;
+    overflow:hidden;
+  }
+  .hero.tp-spotlight-host .hero-copy{
+    width:100%;
+    min-width:0;
+    max-width:100%;
+  }
+  .hero.tp-spotlight-host .eyebrow{
+    max-width:100%;
+    font-size:8px;
+    letter-spacing:.15em;
+    line-height:1.6;
+    flex-wrap:wrap;
+  }
+  .hero.tp-spotlight-host h1{
+    width:100%;
+    max-width:100%;
+    margin:22px 0 20px;
+    font-size:clamp(38px,10.2vw,52px);
+    line-height:1.02;
+    letter-spacing:-.075em;
+    overflow-wrap:normal;
+    word-break:normal;
+  }
+  .hero.tp-spotlight-host .creator-byline{
+    width:100%;
+    max-width:100%;
+    padding:12px 14px;
+    margin:18px 0 18px;
+  }
+  .hero.tp-spotlight-host .creator-byline strong{
+    max-width:100%;
+    font-size:clamp(16px,5vw,20px);
+    overflow-wrap:anywhere;
+  }
+  .hero.tp-spotlight-host .hero-lede{
+    width:100%;
+    max-width:100%;
+    font-size:14px;
+    line-height:1.8;
+    overflow-wrap:break-word;
+    word-break:normal;
+  }
+  .hero.tp-spotlight-host .hero-actions{
+    width:100%;
+    max-width:100%;
+    align-items:flex-start;
+    gap:17px;
+  }
+  .hero.tp-spotlight-host .button{
+    max-width:100%;
+    min-height:52px;
+    padding:15px 18px;
+    font-size:11px;
+  }
+  .hero.tp-spotlight-host .hero-note{
+    max-width:100%;
+    font-size:8px;
+    letter-spacing:.13em;
+    line-height:1.7;
+    flex-wrap:wrap;
+  }
+  .hero.tp-spotlight-host .hero-art{
+    width:100%;
+    min-width:0;
+    min-height:320px;
+    overflow:hidden;
+  }
+  .hero.tp-spotlight-host .hero-card{
+    width:min(78%,330px);
+    max-width:100%;
+  }
+  .hero.tp-spotlight-host .orbit-one{width:min(88vw,360px)}
+  .hero.tp-spotlight-host .orbit-two{width:min(78vw,320px)}
+  .hero.tp-spotlight-host .tag-top{right:2px}
+  .hero.tp-spotlight-host .tag-bottom{left:2px}
+
+  /* Stats: clean two-column grid with enough room for long labels. */
+  .metrics.tp-spotlight-host{
+    width:calc(100% - 32px);
+    max-width:620px;
+    margin:0 auto!important;
+    padding:20px 14px!important;
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    column-gap:0;
+    row-gap:18px;
+    align-items:stretch;
+  }
+  .metrics.tp-spotlight-host .metric{
+    min-width:0;
+    min-height:112px;
+    padding:10px 12px!important;
+    border-right:1px solid rgba(23,23,23,.14);
+    border-bottom:1px solid rgba(23,23,23,.14);
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    gap:8px;
+  }
+  .metrics.tp-spotlight-host .metric:nth-child(2n){
+    border-right:0;
+  }
+  .metrics.tp-spotlight-host .metric:nth-child(3),
+  .metrics.tp-spotlight-host .metric:nth-child(4){
+    border-bottom:0;
+  }
+  .metrics.tp-spotlight-host .metric strong{
+    display:block;
+    font-size:clamp(29px,8vw,36px);
+    line-height:1;
+    white-space:nowrap;
+  }
+  .metrics.tp-spotlight-host .metric>span,
+  .metrics.tp-spotlight-host .metric-note>span{
+    display:block;
+    font-size:7px;
+    line-height:1.55;
+    letter-spacing:.12em;
+    overflow-wrap:anywhere;
+  }
+  .metrics.tp-spotlight-host .metric-note p{
+    font-size:clamp(13px,3.8vw,16px);
+    line-height:1.35;
+  }
+
+  /* Philosophy: retain the vertical card stack and make every text block fit. */
+  .approach.tp-spotlight-host{
+    width:100vw!important;
+    max-width:100vw!important;
+    margin-left:calc(50% - 50vw)!important;
+    padding:58px 18px 58px!important;
+  }
+  .approach.tp-spotlight-host .section-heading{
+    width:100%;
+    min-width:0;
+    margin-bottom:28px;
+  }
+  .approach.tp-spotlight-host .section-heading h2{
+    max-width:100%;
+    font-size:clamp(37px,10vw,48px);
+    line-height:1.04;
+    letter-spacing:-.07em;
+    overflow-wrap:normal;
+  }
+  .approach.tp-spotlight-host .section-heading>p{
+    max-width:100%;
+    font-size:13px;
+    line-height:1.8;
+    overflow-wrap:break-word;
+  }
+  .approach.tp-spotlight-host .principles{
+    width:100%;
+    grid-template-columns:minmax(0,1fr)!important;
+    gap:12px!important;
+  }
+  .approach.tp-spotlight-host .principle,
+  .approach.tp-spotlight-host .principle+.principle{
+    width:100%;
+    min-width:0;
+    min-height:0;
+    height:auto;
+    padding:24px 22px 26px!important;
+    border:1px solid rgba(67,56,40,.16)!important;
+    border-radius:5px;
+    overflow:visible;
+  }
+  .approach.tp-spotlight-host .principle-no{
+    margin-bottom:12px;
+  }
+  .approach.tp-spotlight-host .principle-symbol{
+    margin:0 0 15px!important;
+    min-height:28px;
+    line-height:1;
+  }
+  /* Force the diagonal arrow into text presentation instead of Apple's blue emoji. */
+  .approach.tp-spotlight-host .principle:first-child .principle-symbol{
+    font-size:0!important;
+  }
+  .approach.tp-spotlight-host .principle:first-child .principle-symbol::before{
+    content:"↗︎";
+    display:inline-block;
+    color:#b18b4e;
+    font:400 28px/1 Arial,sans-serif;
+  }
+  .approach.tp-spotlight-host .principle h3{
+    width:100%;
+    font-size:19px;
+    line-height:1.3;
+    margin:0 0 9px!important;
+    overflow-wrap:break-word;
+  }
+  .approach.tp-spotlight-host .principle p{
+    width:100%;
+    max-width:100%;
+    font-size:13px;
+    line-height:1.75;
+    margin:0!important;
+    overflow-wrap:break-word;
+  }
+
+  /* Prevent other landing-page chapters from creating sideways overflow. */
+  .subjects-section.tp-spotlight-host,
+  .system-section.tp-spotlight-host,
+  .study-cta.tp-spotlight-host{
+    max-width:100vw;
+    overflow:hidden;
+  }
+  .subjects-section.tp-spotlight-host .section-wrap{
+    width:calc(100% - 36px);
+  }
+  .system-section.tp-spotlight-host{
+    width:100vw!important;
+    margin-left:calc(50% - 50vw)!important;
+    padding:64px 18px!important;
+  }
+  .system-section.tp-spotlight-host .system-visual,
+  .system-section.tp-spotlight-host .system-copy{
+    width:100%;
+    min-width:0;
+  }
+  .study-cta.tp-spotlight-host .cta-inner{
+    width:calc(100% - 36px);
+    min-width:0;
+  }
+}
+@media(max-width:390px){
+  .hero.section-wrap.tp-spotlight-host{padding-inline:17px}
+  .hero.tp-spotlight-host h1{font-size:clamp(36px,9.8vw,42px)}
+  .metrics.tp-spotlight-host{width:calc(100% - 24px);padding-inline:8px!important}
+  .metrics.tp-spotlight-host .metric{padding-inline:9px!important}
+  .approach.tp-spotlight-host{padding-inline:15px!important}
+  .approach.tp-spotlight-host .principle,
+  .approach.tp-spotlight-host .principle+.principle{padding-inline:19px!important}
+}

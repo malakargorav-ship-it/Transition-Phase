@@ -1,0 +1,91 @@
+/* TRANSITION PHASE — shared, balanced motion layer
+   Additive only: this file does not alter study logic or stored data. */
+:root{
+  --tp-motion-ease:cubic-bezier(.2,.75,.25,1);
+  --tp-motion-duration:650ms;
+}
+body{animation:tp-page-enter 420ms var(--tp-motion-ease) both}
+@keyframes tp-page-enter{from{opacity:.72}to{opacity:1}}
+
+.tp-motion-in{
+  opacity:0;
+  transform:translate3d(0,16px,0) scale(.995);
+  transition:opacity var(--tp-motion-duration) var(--tp-motion-ease),
+             transform var(--tp-motion-duration) var(--tp-motion-ease);
+  transition-delay:var(--tp-motion-delay,0ms);
+  will-change:opacity,transform;
+}
+.tp-motion-in.is-in{
+  opacity:1;
+  transform:translate3d(0,0,0) scale(1);
+  will-change:auto;
+}
+.tp-motion-in.is-in:hover{transform:translate3d(0,-3px,0) scale(1)}
+.tp-motion-in.is-in:active{transform:translate3d(0,-1px,0) scale(.995)}
+
+.progress-track>i,.summary-bar>i{
+  transition:width 850ms var(--tp-motion-ease);
+  will-change:width;
+}
+
+button,.button,.nav-cta,.topic-open,.small-button,.track-button,
+.lesson-tabs a,.question-option,.app-option,.section-toggle{
+  transition:transform 180ms var(--tp-motion-ease),
+             background-color 220ms ease,
+             border-color 220ms ease,
+             color 220ms ease,
+             box-shadow 220ms ease;
+}
+button:active,.button:active,.nav-cta:active,.topic-open:active,
+.small-button:active,.track-button:active{
+  transform:scale(.975);
+}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{
+  outline:2px solid var(--gold,#c7a66a);
+  outline-offset:3px;
+}
+.question-feedback{animation:tp-feedback-in 300ms var(--tp-motion-ease) both}
+@keyframes tp-feedback-in{
+  from{opacity:0;transform:translateY(7px)}
+  to{opacity:1;transform:translateY(0)}
+}
+.topic-card,.stat-card,.concept-card,.example-card,.question-card,
+.syllabus-section,.principle,.practice-launch,.sprint-card{
+  transition:transform 260ms var(--tp-motion-ease),
+             box-shadow 260ms var(--tp-motion-ease),
+             border-color 220ms ease,
+             background-color 220ms ease;
+}
+@media(hover:hover) and (pointer:fine){
+  .stat-card:hover,.concept-card:hover,.example-card:hover,
+  .question-card:hover,.syllabus-section:hover,.practice-launch:hover,
+  .sprint-card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 12px 28px rgba(23,23,23,.07);
+  }
+  .principle:hover{transform:translateY(-2px)}
+  .topic-card:hover{transform:translateY(-3px)}
+}
+.hero-card{translate:0 0;animation:tp-card-float 8s ease-in-out infinite}
+.floating-tag{translate:0 0;animation:tp-tag-float 6.5s ease-in-out infinite}
+.tag-bottom{animation-delay:-2.7s}
+.orbit-one{translate:0 0;animation:tp-orbit-float 15s ease-in-out infinite alternate}
+.orbit-two{translate:0 0;animation:tp-orbit-float 19s ease-in-out infinite alternate-reverse}
+@keyframes tp-card-float{0%,100%{translate:0 0}50%{translate:0 -7px}}
+@keyframes tp-tag-float{0%,100%{translate:0 0}50%{translate:0 -5px}}
+@keyframes tp-orbit-float{from{translate:0 -7px}to{translate:0 7px}}
+
+@media(max-width:600px){
+  :root{--tp-motion-duration:520ms}
+  .hero-card{animation-duration:10s}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*:before,*:after{
+    scroll-behavior:auto!important;
+    animation-duration:.01ms!important;
+    animation-iteration-count:1!important;
+    transition-duration:.01ms!important;
+  }
+  .tp-motion-in{opacity:1!important;transform:none!important;will-change:auto!important}
+  .progress-track>i,.summary-bar>i{transition:none!important}
+}
