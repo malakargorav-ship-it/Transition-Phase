@@ -17,7 +17,9 @@
     $("accountHeading").textContent = "Student account";
     $("accountMessage").textContent = "Login or create an account to keep your preparation connected to your profile.";
   }
-  async function showSignedIn(user) {\n    const active = localStorage.getItem("tp-active-user");\n    if (active !== user.id) { localStorage.setItem("tp-active-user", user.id); try { const remote = await api("/api/progress/state", { method: "GET" }); if (remote.snapshot) localStorage.setItem("tp-command-v1:" + user.id, JSON.stringify(remote.snapshot)); } catch {} window.location.reload(); return; }
+  async function showSignedIn(user) {
+    const active = localStorage.getItem("tp-active-user");
+    if (active !== user.id) { localStorage.setItem("tp-active-user", user.id); try { const remote = await api("/api/progress/state", { method: "GET" }); if (remote.snapshot) localStorage.setItem("tp-command-v1:" + user.id, JSON.stringify(remote.snapshot)); } catch {} window.location.reload(); return; }
     $("authForms").hidden = true; $("signedInPanel").hidden = false;
     $("accountStatus").textContent = user.role === "admin" ? "ADMIN" : "APPROVED STUDENT";
     $("accountHeading").textContent = "Your study profile";
@@ -26,7 +28,8 @@
     $("accountRole").textContent = user.role.toUpperCase();
     $("studentAccountInfo").hidden = user.role === "admin";
     $("adminPanel").hidden = user.role !== "admin";
-    $("accountDifficulty").value = user.difficulty || "intermediate";\n    try { const settings = await api("/api/account/settings", { method: "GET" }); localStorage.setItem("tp-difficulty", settings.difficulty); $("accountDifficulty").value = settings.difficulty; } catch {}
+    $("accountDifficulty").value = user.difficulty || "intermediate";
+    try { const settings = await api("/api/account/settings", { method: "GET" }); localStorage.setItem("tp-difficulty", settings.difficulty); $("accountDifficulty").value = settings.difficulty; } catch {}
     if (user.role === "admin") { await loadAdminUsers(); await loadStageRules(); }
   }
   async function refresh() {
@@ -114,7 +117,8 @@
   $("accountDifficulty").addEventListener("change", async event => {
     feedback("difficultyFeedback", "Saving preference…");
     try {
-      await api("/api/account/settings", { method: "POST", body: JSON.stringify({ difficulty: event.target.value }) });\n      localStorage.setItem("tp-difficulty", event.target.value);
+      await api("/api/account/settings", { method: "POST", body: JSON.stringify({ difficulty: event.target.value }) });
+      localStorage.setItem("tp-difficulty", event.target.value);
       feedback("difficultyFeedback", "Difficulty preference saved.");
     } catch (error) { feedback("difficultyFeedback", error.message); }
   });
