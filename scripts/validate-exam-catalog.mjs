@@ -29,7 +29,7 @@ for (const profile of profiles) {
   const recruitment = profile.recruitment_reference;
   if (!recruitment?.advertisement_no || !/^\\d{4}-\\d{2}-\\d{2}$/.test(recruitment.date || "") ||
       typeof recruitment.vacancies !== "number" || recruitment.vacancies < 0 ||
-      !/^https:\\/\\//.test(recruitment.url || "")) {
+      !(recruitment.url || "").startsWith("https://")) {
     fail(label + ": recruitment reference must include advertisement, date, non-negative vacancies and HTTPS source URL.");
   }
 }
