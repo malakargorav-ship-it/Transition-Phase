@@ -8,7 +8,7 @@ This implementation is isolated on `feature/individual-accounts-exam-engine`. Th
 2. Apply migrations in order:
    - `migrations/0001_accounts_progress.sql`
    - `migrations/0002_stage_rules.sql`
-   - `migrations/0003_user_progress.sql`
+   - `migrations/0003_user_progress.sql`\n   - `migrations/0004_question_sets.sql`
 3. In Cloudflare Pages project `transition-phase`, add a D1 binding named **DB** to this database for the Preview environment first.
 4. Add encrypted Preview environment variables:
    - `ADMIN_EMAIL` = `malakargorav@gmail.com`
@@ -35,7 +35,7 @@ Open the Preview Command Centre. Register using the configured admin email and t
 - `GET /api/admin/stage-rules`, `POST /api/admin/stage-rules`
 - `GET /api/account/settings`, `POST /api/account/settings`
 - `GET /api/progress/state`, `POST /api/progress/state`
-- `POST /api/progress/attempt`
+- `POST /api/progress/attempt` (disabled; direct client scores are rejected)\n- `POST /api/exam/start`, `POST /api/exam/submit` (server-issued sets and server-side scoring)
 
 ## Security notes and remaining production gates
 
@@ -44,7 +44,7 @@ Open the Preview Command Centre. Register using the configured admin email and t
 - Server checks admin role, account approval, per-user data scope, selected difficulty, stage minimum and previous-stage unlock before accepting a stage-attempt record.
 - Admin bootstrap requires both the configured email and a one-time secret. Public registration cannot self-assign admin.
 - Student email ownership is not yet verified by an email provider. Admin must independently verify identity before approval. Password reset and email verification should be added before open public registration.
-- Important: the current practice bank and answer checking still run in browser JavaScript. The stage-attempt endpoint receives the browser-computed score; a technically skilled user could tamper with it. This is not yet tamper-proof exam delivery. Before relying on stage unlocks for a public competitive platform, move question selection, answer keys, scoring and unlock decisions fully server-side.
+- Number System Stage 1–5 question selection, answer keys, scoring and unlock decisions now run in Cloudflare Pages Functions. Browser-submitted scores are rejected by the legacy endpoint. Each attempt receives a randomized fresh set; Stage 1 samples 20 of 45 questions and Stages 2–5 use their current 12-question banks. Other topic practice still uses the existing browser-side question engine.\n- The existing question banks are not yet tagged into Beginner/Intermediate/Advanced variants. Difficulty is saved per account and admin minimum difficulty is enforced, but selecting a difficulty currently does not alter question composition. Do not advertise this as adaptive difficulty until banks are tagged and expanded.\n- Before public production use, add email verification and password reset, test the complete auth lifecycle, and consider rate limits/abuse protection on registration and login.
 - The new account and cloud progress layer does not replace or delete existing local progress. Anonymous/guest mode remains available.
 - Current Affairs, GK and Assam GK content availability is unchanged.
 - No changes have been merged to `main`; production remains untouched until preview testing and explicit approval.
