@@ -41,5 +41,14 @@ export async function onRequest(context) {
     if (path.startsWith("/api/")) return json({ error: "Login required." }, 401);
     return loginRedirect(request);
   }
-  return next();
+
+  // Authenticated study pages must never be stored in a shared or browser cache.
+  const response = await next();
+  const headers = new Headers(response.headers);
+  headers.set("Cache-Control", "private, no-store");
+  return new Response(response.body, {
+    status: response.status,
+    statusText: response.statusText,
+    headers
+  });
 }
