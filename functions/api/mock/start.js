@@ -1,6 +1,6 @@
 import { json, fail, currentUser, readJson, isSameOrigin, uuid } from "../_lib/auth.js";
-import { topicBanks } from "./_lib/topic-banks.js";
-import { fullMockBanks } from "./_lib/full-mock-banks.js";
+import { topicBanks } from "../_lib/topic-banks.js";
+import { fullMockBanks } from "../_lib/full-mock-banks.js";
 
 const shuffle = items => {
   const copy = items.slice();
