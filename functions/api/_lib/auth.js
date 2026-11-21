@@ -74,7 +74,7 @@ export const clearSessionCookie = "tp_session=; HttpOnly; Secure; SameSite=Lax; 
 
 export async function currentUser(request, db) {
   const cookie = request.headers.get("Cookie") || "";
-  const match = cookie.match(/(?:^|;\\s*)tp_session=([a-f0-9]{64})(?:;|$)/);
+  const match = cookie.match(/(?:^|;\s*)tp_session=([a-f0-9]{64})(?:;|$)/);
   if (!match) return null;
   const tokenHash = await sha256(match[1]);
   const row = await db.prepare(`SELECT u.id,u.email,u.role,u.status,u.difficulty,s.expires_at
