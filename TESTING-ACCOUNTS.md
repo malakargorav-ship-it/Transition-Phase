@@ -1,6 +1,6 @@
 # Preview test checklist — accounts and progress
 
-Run this checklist only after the Preview D1 binding and secrets are configured and migrations 0001–0005 have been applied.
+Run this checklist only after the Preview D1 binding and secrets are configured and migrations 0001–0006 have been applied.
 
 ## Authentication
 - [ ] Register the configured admin email with the private bootstrap token.
@@ -24,8 +24,17 @@ Run this checklist only after the Preview D1 binding and secrets are configured 
 - [ ] Confirm each new practice set randomizes question order.
 - [ ] Confirm existing guest progress is still present in guest mode.
 
+## Other Maths topic progression
+- [ ] For each of the 22 additional Maths topics, start Stage 1 while signed in; confirm question text/options are returned without answer keys.
+- [ ] Submit a complete test; confirm score and explanations are returned only after submission.
+- [ ] Confirm 80% unlocks Stage 2 for that topic and track only.
+- [ ] Confirm below 80% leaves the next stage locked.
+- [ ] Confirm topic A progress does not unlock topic B.
+- [ ] Set an admin minimum difficulty for a topic stage and confirm lower preference is rejected.
+- [ ] Confirm guest mode still uses the original local practice flow.
+
 ## Known blockers before public production use
-- Number System Stage 1–5 is server-issued and server-scored. Other topic practice remains browser-side and does not participate in the five-stage server unlock system.
+- Number System and the 22 additional existing Maths topics now have server-issued, server-scored five-stage engines. GK, Assam GK, English, Reasoning and Current Affairs question banks are not added by this change.
 - Email verification and password reset are not implemented. Admin must independently verify identity before approving students. Login is rate-limited after repeated failed attempts.
 - Difficulty preferences are stored and checked against stage minimums, but question banks still need explicit Beginner/Intermediate/Advanced tagging.
 - Current Affairs, GK and Assam GK question content is not added by this change.
