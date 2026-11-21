@@ -1,5 +1,7 @@
 const encoder = new TextEncoder();
-const ITERATIONS = 310000;
+// Cloudflare Workers Web Crypto currently rejects PBKDF2 iteration counts above 100,000.
+// Persist the count per user so future parameter upgrades remain verifiable.
+const ITERATIONS = 100000;
 const SESSION_DAYS = 7;
 
 export const json = (data, status = 200, extraHeaders = {}) =>
