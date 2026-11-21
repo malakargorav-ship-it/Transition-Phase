@@ -88,3 +88,12 @@ The following research artifacts are maintained on this feature branch:
 The CWT-2025 Paper-II Set A answer key currently located is provisional. It must remain labelled provisional until a final key is found. General Constable (AB) must remain separate from Commando Constable (AB); the latter's identified advertisement does not list a written test.
 
 These research artifacts do not yet change the production exam UI or replace the existing Number System / Maths engine. Full paper extraction, all-set reconciliation, and the exam-category-aware UI/API integration remain subsequent implementation steps.
+
+## Constable practice-bank starter
+
+- `data/questions/constable-model-starter.json`: 12 original practice questions across Elementary Arithmetic, General English, Logical Reasoning/Mental Ability, General Awareness/Indian Polity, and Assam Geography.
+- These are authored practice questions, not PYQs. They are explicitly tagged `MODEL_PRACTICE_QUESTION` and must never be displayed as historical exam questions.
+- The CWT-2025 Paper-II Set A official question booklet and provisional answer key links are recorded in `data/official-exam-catalog.json`. The provisional key remains labelled provisional.
+- Run `node scripts/validate-exam-data.mjs` to validate the question records in both `data/pyq` and `data/questions`.
+
+The uploaded Paper-II PDF attachment in the current conversation arrived as a zero-byte file, so no question text was extracted from that attachment. The official SLPRB booklet is linked in the catalog; a secondary searchable transcription was used only to confirm the paper metadata and identify question locations. No Constable question has been added as a PYQ until its full text and matching answer are independently checked against the official booklet/key.
