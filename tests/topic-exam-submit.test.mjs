@@ -21,6 +21,7 @@ function setup({ submitted = null, expired = false } = {}) {
     batches,
     prepare(sql) {
       return {
+        sql,
         values: [],
         bind(...values) { this.values = values; return this; },
         async first() {
