@@ -1,3 +1,4 @@
+import { lessonQuestionBanks } from "./lesson-question-banks.js";
 // Original model-practice questions for full-length Assam Police mock exams.
 // These are NOT previous-year questions. Subject allocations are practice design,
 // not official subject-wise counts unless an advertisement explicitly states them.
@@ -188,3 +189,15 @@ export const fullMockBanks = {
     ,q("Which programme was launched in Assam in February 2026 with an outlay of ₹6,839 crore?",["PM-KISAN","Vibrant Villages Programme-II","PMAY-Urban 2.0","AMRUT 3.0"],1,"Vibrant Villages Programme-II was launched at Nathanpur, Assam, on 20 February 2026.")
   ]
 };
+
+const appendUnique = (base, additions) => {
+  const seen = new Set(base.map(item => item[0].trim().toLowerCase()));
+  return [...base, ...additions.filter(item => {
+    const key = item[0].trim().toLowerCase();
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  })];
+};
+fullMockBanks.english = appendUnique(fullMockBanks.english, lessonQuestionBanks.english);
+fullMockBanks.reasoning = appendUnique(fullMockBanks.reasoning, lessonQuestionBanks.reasoning);
