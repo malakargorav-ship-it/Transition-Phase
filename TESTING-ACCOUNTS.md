@@ -1,6 +1,6 @@
 # Preview test checklist — accounts and progress
 
-Run this checklist only after the Preview D1 binding and secrets are configured and migrations 0001–0006 have been applied.
+Run this checklist only after the Preview D1 binding and secrets are configured and migrations 0001–0007 have been applied.
 
 ## Authentication
 - [ ] Register the configured admin email with the private bootstrap token.
