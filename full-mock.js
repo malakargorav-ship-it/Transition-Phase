@@ -2,7 +2,7 @@
   const $ = id => document.getElementById(id);
   const section = $("fullMockSection");
   if (!section) return;
-  let active = null, index = 0, answers = [], timer = null, deadline = 0;
+  let active = null, index = 0, answers = [], timer = null, deadline = 0, submitting = false;
   const message = (text, bad = false) => {
     $("fullMockFeedback").textContent = text;
     $("fullMockFeedback").classList.toggle("error", bad);
@@ -68,11 +68,12 @@
     $("fullMockAnswered").textContent = answers.filter(x => x !== null).length + " / 100 answered";
   };
   const finish = async () => {
-    if (!active) return;
+    if (!active || submitting) return;
+    submitting = true;
     $("fullMockSubmit").disabled = true;
     try {
       const result = await api("/api/mock/submit", { questionSetId: active.questionSetId, answers });
-      clearInterval(timer); active = null;
+      clearInterval(timer); active = null; submitting = false;
       $("fullMockExam").hidden = true; $("fullMockResult").hidden = false;
       $("fullMockResult").innerHTML = "";
       const h = document.createElement("h3"); h.textContent = "Mock completed";
@@ -92,7 +93,7 @@
       loadHistory();
       message("Result securely calculated and saved on the server.");
     } catch (error) {
-      $("fullMockSubmit").disabled = false; message(error.message, true);
+      submitting = false; $("fullMockSubmit").disabled = false; message(error.message, true);
     }
   };
   const tick = () => {
@@ -101,7 +102,7 @@
     const mm = String(Math.floor(remaining % 3600 / 60)).padStart(2, "0");
     const ss = String(remaining % 60).padStart(2, "0");
     $("fullMockTimer").textContent = hh + ":" + mm + ":" + ss;
-    if (remaining === 0) finish();
+    if (remaining === 0) { clearInterval(timer); finish(); }
   };
   loadHistory();
   $("refreshFullMockHistory").addEventListener("click", loadHistory);
