@@ -83,7 +83,7 @@ export const fullMockBanks = {
     q("Which hill range is located in central Assam?",["Aravalli","Karbi Anglong Hills","Nilgiri","Satpura"],1,"The Karbi Anglong plateau and hills occupy central Assam."),
     q("Which district is associated with the Digboi oil field?",["Tinsukia","Dhubri","Nalbari","Hailakandi"],0,"Digboi is in Tinsukia district in Upper Assam."),
     q("Which national park is situated in the eastern part of Assam and known for feral horses?",["Dibru-Saikhowa","Orang","Raimona","Manas"],0,"Dibru-Saikhowa is known for its riverine ecosystem and feral horses."),
-    q("The highest peak in Assam is commonly identified with:",["Chenghehishon","Naga Hills","Patkai","Nilachal"],0,"Chenghehishon in the Dima Hasao region is commonly cited as Assam's highest peak."),
+    q("Which is commonly identified as the highest named peak in Assam?",["Thumjang","Hempeupet","Singhasan","Shillong Peak"],0,"Thumjang in the Borail range is commonly identified as Assam's highest named peak; Assam PWD documents list it at about 1,866 metres."),
     q("Which lake in Assam is a Ramsar site?",["Deepor Beel","Chilika","Loktak","Wular"],0,"Deepor Beel near Guwahati is Assam's Ramsar wetland."),
     q("Which river flows through Guwahati?",["Brahmaputra","Barak","Dibang","Lohit"],0,"Guwahati is situated on the southern bank of the Brahmaputra."),
     q("Which national park is known for the golden langur in western Assam?",["Raimona","Kaziranga","Nameri","Orang"],0,"Raimona National Park is an important habitat for the golden langur."),
