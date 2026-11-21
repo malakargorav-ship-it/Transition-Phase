@@ -93,7 +93,8 @@ The following research artifacts are maintained on this feature branch:
 - `docs/official-assam-police-baseline.md`: source-linked official recruitment and examination baseline.
 - `data/pyq/cwt-2025-paper-i-set-a-sample.json`: first four answer-key-matched Paper-I Set A questions. Question wording is transcribed from a secondary paper rendering; answers are matched against the SLPRB final Set A key. The records are explicitly marked `SECONDARY_TRANSCRIPTION`, not direct-PDF text extraction.
 - `scripts/validate-exam-data.mjs`: recursively validates PYQ and model-question datasets, unique IDs, exam-category codes, difficulty, MCQ options, answer consistency, and source-specific requirements. Run with `node scripts/validate-exam-data.mjs`.
-- `.github/workflows/validate-exam-data.yml`: runs the dataset validator, JavaScript syntax checks and whitespace checks on pull requests and feature-branch pushes.
+- `scripts/validate-exam-catalog.mjs`: checks the five separate recruitment profiles, required recruitment references, the two general Constable written patterns, the historical-only SI Paper-I pattern, and the explicit exclusion of a written pattern for Commando Constable (AB). Run with `node scripts/validate-exam-catalog.mjs`.
+- `.github/workflows/validate-exam-data.yml`: runs the official catalog validator, dataset validator, topic-bank validator, JavaScript syntax checks and whitespace checks on pull requests and feature-branch pushes.
 
 The CWT-2025 Paper-II Set A answer key currently located is provisional. It must remain labelled provisional until a final key is found. General Constable (AB) must remain separate from Commando Constable (AB); the latter's identified advertisement does not list a written test.
 
