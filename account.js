@@ -35,7 +35,7 @@
   async function refresh() {
     try {
       const data = await api("/api/auth/me", { method: "GET" });
-      if (data.user) await showSignedIn(data.user); else showSignedOut();
+      if (data.user) await showSignedIn(data.user); else { if (localStorage.getItem("tp-active-user")) { localStorage.removeItem("tp-active-user"); window.location.reload(); return; } showSignedOut(); }
     } catch (error) {
       showSignedOut(); feedback("loginFeedback", error.message);
     }
