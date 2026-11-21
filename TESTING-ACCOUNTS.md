@@ -69,5 +69,5 @@ Run this checklist only after the Preview D1 binding and secrets are configured 
 - Test responsive layout on iPhone and desktop before merging.
 
 - [ ] In Cloudflare Preview, open `/api/health`; require `{ ok: true, database: "connected", schema: "ready", migration: 7 }`.
-- [ ] Confirm GitHub repository secrets `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`, and `CLOUDFLARE_D1_DATABASE_ID` are configured; dispatch the guarded Preview migration workflow with `APPLY`.
+- [ ] Confirm GitHub repository secrets `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`, and `CLOUDFLARE_PREVIEW_D1_DATABASE_ID` are configured; dispatch the guarded Preview migration workflow with `APPLY`.
 - [ ] Confirm the Cloudflare Pages Preview environment binds the same D1 database as `DB` (Production remains separate).
