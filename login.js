@@ -3,8 +3,11 @@
   const ADMIN_EMAIL = "malakargorav@gmail.com";
   const params = new URLSearchParams(location.search);
   const requested = params.get("next") || "/command.html";
-  const next = requested.startsWith("/") && !requested.startsWith("//") &&
-    !requested.startsWith("/login") && !requested.startsWith("/api/") ? requested : "/command.html";
+  const destination = new URL(requested, location.origin);
+  const next = destination.origin === location.origin &&
+    !destination.pathname.startsWith("/login") && !destination.pathname.startsWith("/api/")
+    ? destination.pathname + destination.search + destination.hash
+    : "/command.html";
   const message = (id, value) => { $(id).textContent = value || ""; };
   const values = form => Object.fromEntries(new FormData(form).entries());
   async function api(path, body) {
