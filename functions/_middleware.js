@@ -27,7 +27,8 @@ export async function onRequest(context) {
   if (PUBLIC_PATHS.has(path)) return next();
 
   // Public presentation assets are not study content or application data.
-  const extension = path.includes(".") ? path.slice(path.lastIndexOf(".")).toLowerCase() : "";\n  if ([".css", ".svg", ".png", ".jpg", ".jpeg", ".webp", ".ico", ".woff", ".woff2"].includes(extension)) return next();
+  const extension = path.includes(".") ? path.slice(path.lastIndexOf(".")).toLowerCase() : "";
+  if ([".css", ".svg", ".png", ".jpg", ".jpeg", ".webp", ".ico", ".woff", ".woff2"].includes(extension)) return next();
 
   // All study pages, question banks, application JavaScript and non-auth APIs
   // require a valid, approved server-side session.
