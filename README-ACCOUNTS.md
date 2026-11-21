@@ -10,8 +10,8 @@ All changes are isolated on `feature/individual-accounts-exam-engine`, based on 
    - `migrations/0002_stage_rules.sql`
    - `migrations/0003_user_progress.sql`
    - `migrations/0004_question_sets.sql`
-   - `migrations/0005_auth_rate_limits.sql
-   - `migrations/0006_topic_exam_engine.sql``
+   - `migrations/0005_auth_rate_limits.sql`
+   - `migrations/0006_topic_exam_engine.sql`
 3. In the Cloudflare Pages project `transition-phase`, add a D1 binding named `DB` to this database for the Preview environment first.
 4. Add encrypted Preview environment variables:
    - `ADMIN_EMAIL` = `malakargorav@gmail.com`
