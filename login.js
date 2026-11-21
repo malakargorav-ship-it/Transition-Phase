@@ -44,11 +44,12 @@
   });
   $("registerForm").addEventListener("submit", async event => {
     event.preventDefault();
+    const form = event.currentTarget;
     const button = event.submitter; button.disabled = true;
     message("registerMessage", "Submitting your registration…");
     try {
       const result = await api("/api/auth/register", values(event.currentTarget));
-      event.currentTarget.reset(); $("bootstrapWrap").hidden = true;
+      form.reset(); $("bootstrapWrap").hidden = true;
       message("registerMessage", result.message || "Registration received. Admin approval ke baad login kar paoge.");
       if (result.status === "approved") location.replace(next);
     } catch (error) { message("registerMessage", error.message); }
