@@ -14,7 +14,7 @@ export async function onRequestPost({request,env}){
  if(!isSameOrigin(request))return fail("Cross-origin request blocked.",403);
  if(!env.DB)return fail("Account service is not configured yet.",503);
  const body=await readJson(request);
- if(!body||!validEmail(body.email)||typeof body.password!=="string")return fail("Email aur password required hai.");
+ if(!body||!validEmail(body.email)||typeof body.password!=="string"||body.password.length>128)return fail("Valid email aur 1–128 character password required hai.");
  const email=body.email.trim().toLowerCase(),ip=request.headers.get("CF-Connecting-IP")||"unknown",keys=await rateKeys(email,ip);
  if(await blocked(env.DB,keys))return fail("Too many login attempts. 15 minutes baad try karo.",429);
  const user=await env.DB.prepare("SELECT * FROM users WHERE email=?").bind(email).first();
