@@ -30,8 +30,15 @@ Run this checklist only after the Preview D1 binding and secrets are configured 
 - [ ] Confirm 80% unlocks Stage 2 for that topic and track only.
 - [ ] Confirm below 80% leaves the next stage locked.
 - [ ] Confirm topic A progress does not unlock topic B.
+- [ ] Complete a topic exam, sign out and back in, and verify its server-recorded attempt and unlock remain available.
+- [ ] Confirm the admin rule list displays both Number System and topic-stage rules after saving either rule.
 - [ ] Set an admin minimum difficulty for a topic stage and confirm lower preference is rejected.
 - [ ] Confirm guest mode still uses the original local practice flow.
+
+## Automated repository checks
+- [ ] Confirm GitHub Actions runs `Validate exam data and JavaScript` on the pull request.
+- [ ] Confirm the data validator reports all records and no duplicate IDs, invalid category codes or answer mismatches.
+- [ ] Confirm JavaScript syntax and `git diff --check` jobs pass.
 
 ## Known blockers before public production use
 - Number System and the 22 additional existing Maths topics now have server-issued, server-scored five-stage engines. GK, Assam GK, English, Reasoning and Current Affairs question banks are not added by this change.
