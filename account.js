@@ -19,7 +19,45 @@
   }
   async function showSignedIn(user) {
     const active = localStorage.getItem("tp-active-user");
-    if (active !== user.id) { localStorage.setItem("tp-active-user", user.id); try { const remote = await api("/api/progress/state", { method: "GET" }); if (remote.snapshot) { const snapshot = remote.snapshot; snapshot.adaptive = snapshot.adaptive || {}; ["si","constable"].forEach(track => { const stageNumbers = (remote.unlocks || []).filter(x => x.exam_track === track).map(x => Number(String(x.stage_id).replace("stage-",""))).filter(Number.isFinite); const maxStage = stageNumbers.length ? Math.max(...stageNumbers) : 1; const key = track + "|number-system"; const oldProgress = snapshot.adaptive[key] || {}; snapshot.adaptive[key] = { ...oldProgress, level: maxStage, selectedLevel: maxStage, unlocked: maxStage }; const topicUnlocks = remote.topicUnlocks || []; const topicIds = [...new Set(topicUnlocks.filter(x => x.exam_track === track).map(x => x.topic_id))]; topicIds.forEach(topicId => { const nums = topicUnlocks.filter(x => x.exam_track === track && x.topic_id === topicId).map(x => Number(String(x.stage_id).replace("stage-",""))).filter(Number.isFinite); const max = nums.length ? Math.max(...nums) : 1; const k = track + "|" + topicId; const old = snapshot.adaptive[k] || {}; snapshot.adaptive[k] = { ...old, level: max, selectedLevel: max, unlocked: max }; }); }); localStorage.setItem("tp-command-v1:" + user.id, JSON.stringify(snapshot)); } } catch {} window.location.reload(); return; }
+    const switched = active !== user.id;
+    if (switched) localStorage.setItem("tp-active-user", user.id);
+    let shouldReload = switched;
+    try {
+      const remote = await api("/api/progress/state", { method: "GET" });
+      const storageKey = "tp-command-v1:" + user.id;
+      let snapshot = remote.snapshot;
+      if (!snapshot) {
+        try { snapshot = JSON.parse(localStorage.getItem(storageKey) || "null"); } catch { snapshot = null; }
+      }
+      if (snapshot && typeof snapshot === "object") {
+        snapshot.adaptive = snapshot.adaptive || {};
+        ["si", "constable"].forEach(track => {
+          const stageNumbers = (remote.unlocks || []).filter(x => x.exam_track === track)
+            .map(x => Number(String(x.stage_id).replace("stage-", ""))).filter(Number.isFinite);
+          const maxStage = stageNumbers.length ? Math.max(...stageNumbers) : 1;
+          const key = track + "|number-system";
+          snapshot.adaptive[key] = { ...(snapshot.adaptive[key] || {}), level: maxStage, selectedLevel: maxStage, unlocked: maxStage };
+          const topicUnlocks = remote.topicUnlocks || [];
+          const topicIds = [...new Set(topicUnlocks.filter(x => x.exam_track === track).map(x => x.topic_id))];
+          topicIds.forEach(topicId => {
+            const nums = topicUnlocks.filter(x => x.exam_track === track && x.topic_id === topicId)
+              .map(x => Number(String(x.stage_id).replace("stage-", ""))).filter(Number.isFinite);
+            const max = nums.length ? Math.max(...nums) : 1;
+            const key = track + "|" + topicId;
+            snapshot.adaptive[key] = { ...(snapshot.adaptive[key] || {}), level: max, selectedLevel: max, unlocked: max };
+          });
+        });
+        const nextSnapshot = JSON.stringify(snapshot);
+        if (localStorage.getItem(storageKey) !== nextSnapshot) {
+          localStorage.setItem(storageKey, nextSnapshot);
+          shouldReload = true;
+        }
+      }
+    } catch (error) {
+      // A temporary progress API failure must not block account access.
+      console.warn("Could not refresh cloud progress:", error.message);
+    }
+    if (shouldReload) { window.location.reload(); return; }
     $("authForms").hidden = true; $("signedInPanel").hidden = false;
     $("accountStatus").textContent = user.role === "admin" ? "ADMIN" : "APPROVED STUDENT";
     $("accountHeading").textContent = "Your study profile";
@@ -29,7 +67,11 @@
     $("studentAccountInfo").hidden = user.role === "admin";
     $("adminPanel").hidden = user.role !== "admin";
     $("accountDifficulty").value = user.difficulty || "intermediate";
-    try { const settings = await api("/api/account/settings", { method: "GET" }); localStorage.setItem("tp-difficulty", settings.difficulty); $("accountDifficulty").value = settings.difficulty; } catch {}
+    try {
+      const settings = await api("/api/account/settings", { method: "GET" });
+      localStorage.setItem("tp-difficulty", settings.difficulty);
+      $("accountDifficulty").value = settings.difficulty;
+    } catch {}
     if (user.role === "admin") { await loadAdminUsers(); await loadAllStageRules(); }
   }
   async function refresh() {
