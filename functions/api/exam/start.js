@@ -6,7 +6,7 @@ export async function onRequestPost({request,env}){
  if(!isSameOrigin(request))return fail("Cross-origin request blocked.",403);
  const user=await currentUser(request,env.DB);if(!user)return fail("Login required.",401);
  const body=await readJson(request);if(!body||!["si","constable"].includes(body.examTrack)||!stages.includes(body.stageId))return fail("Invalid exam stage.");
- const settings=await env.DB.prepare("SELECT difficulty FROM user_settings WHERE user_id=?").bind(user.id).first();
+ const settings=await env.DB.prepare("SELECT difficulty FROM users WHERE id=?").bind(user.id).first();
  const difficulty=settings?.difficulty||"intermediate";
  const rule=await env.DB.prepare("SELECT minimum_difficulty FROM stage_rules WHERE exam_track=? AND stage_id=?").bind(body.examTrack,body.stageId).first();
  if(difficulties.indexOf(difficulty)<difficulties.indexOf(rule?.minimum_difficulty||"beginner"))return fail("Is stage ke liye admin ne higher minimum difficulty set ki hai.",403);
