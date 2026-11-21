@@ -30,6 +30,8 @@ jobs:
         run: node scripts/validate-exam-data.mjs
       - name: Validate server-side topic banks
         run: node scripts/validate-topic-banks.mjs
+      - name: Validate full-length mock banks
+        run: node scripts/validate-full-mock-banks.mjs
       - name: Check JavaScript syntax
         shell: bash
         run: |
