@@ -8,7 +8,8 @@ const files = [
   "migrations/0003_user_progress.sql",
   "migrations/0004_question_sets.sql",
   "migrations/0005_auth_rate_limits.sql",
-  "migrations/0006_topic_exam_engine.sql"
+  "migrations/0006_topic_exam_engine.sql",
+  "migrations/0007_full_mock_engine.sql"
 ];
 const migrations = files.map(path => ({ path, sql: fs.readFileSync(path, "utf8") }));
 const python = String.raw`
@@ -34,7 +35,9 @@ required = {
     "topic_question_sets": {"id", "user_id", "topic_id", "answer_key_json", "submitted_at"},
     "topic_stage_rules": {"exam_track", "topic_id", "stage_id", "minimum_difficulty"},
     "topic_stage_unlocks": {"user_id", "exam_track", "topic_id", "stage_id"},
-    "topic_stage_attempts": {"id", "user_id", "topic_id", "score", "passed", "question_set_id"}
+    "topic_stage_attempts": {"id", "user_id", "topic_id", "score", "passed", "question_set_id"},
+    "full_mock_sets": {"id", "user_id", "exam_track", "questions_json", "answer_key_json", "duration_minutes", "expires_at"},
+    "full_mock_attempts": {"id", "user_id", "question_set_id", "correct_count", "wrong_count", "unattempted_count", "score", "total_marks", "accuracy"}
 }
 for table, columns in required.items():
     found = {row[1] for row in db.execute(f'PRAGMA table_info("{table}")')}
