@@ -128,5 +128,5 @@ The uploaded Paper-II PDF attachment in the current conversation arrived as a ze
 ## Preview D1 migration deployment
 - A guarded manual workflow is available at `.github/workflows/apply-preview-d1-migrations.yml`.
 - It applies migrations 0001–0007 to the Preview D1 database only after the operator types `APPLY`.
-- The repository must have Actions secrets `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`, and `CLOUDFLARE_D1_DATABASE_ID`. The Pages project must bind that same D1 database to the `DB` binding in its Preview environment.
+- The repository must have Actions secrets `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`, and `CLOUDFLARE_PREVIEW_D1_DATABASE_ID`. The Pages project must bind that same D1 database to the `DB` binding in its Preview environment.
 - After the workflow succeeds, verify the branch Preview `/api/health` endpoint returns `ok: true`. Cloudflare account secrets and Pages bindings must be configured by an authorized operator; never put secret values in source control or chat.
