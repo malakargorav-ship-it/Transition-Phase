@@ -1,6 +1,6 @@
 # Preview test checklist — accounts and progress
 
-Run this checklist only after the Preview D1 binding and secrets are configured and migrations 0001–0003 have been applied.
+Run this checklist only after the Preview D1 binding and secrets are configured and migrations 0001–0005 have been applied.
 
 ## Authentication
 - [ ] Register the configured admin email with the private bootstrap token.
@@ -25,8 +25,8 @@ Run this checklist only after the Preview D1 binding and secrets are configured 
 - [ ] Confirm existing guest progress is still present in guest mode.
 
 ## Known blockers before public production use
-- Question banks and answer checking still run in browser JavaScript; a user can tamper with a submitted score. Server-side question delivery and scoring must replace this before stage progression is treated as secure.
-- Email verification and password reset are not implemented. Admin must independently verify identity before approving students.
+- Number System Stage 1–5 is server-issued and server-scored. Other topic practice remains browser-side and does not participate in the five-stage server unlock system.
+- Email verification and password reset are not implemented. Admin must independently verify identity before approving students. Login is rate-limited after repeated failed attempts.
 - Difficulty preferences are stored and checked against stage minimums, but question banks still need explicit Beginner/Intermediate/Advanced tagging.
 - Current Affairs, GK and Assam GK question content is not added by this change.
 - Test responsive layout on iPhone and desktop before merging.
