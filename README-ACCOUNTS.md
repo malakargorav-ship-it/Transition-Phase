@@ -119,3 +119,6 @@ The uploaded Paper-II PDF attachment in the current conversation arrived as a ze
 - General Constable UB/AB follows the identified advertisement pattern: 100 MCQs, 50 marks, 120 minutes, no negative marking. Its equal subject allocation is a platform practice design, not an official subject-wise count.
 - SI mock follows the historical CWT-2025 Paper-I marking style (100 marks, 120 minutes, -0.5 per wrong answer). It is explicitly labelled historical practice; latest-cycle SI rules must be reconciled with the applicable final official notice before describing this as the current official pattern.
 - Migration `0007_full_mock_engine.sql` creates the mock-set and attempt tables.
+
+- `GET /api/health` is a non-sensitive Preview diagnostic. It returns ready only when the D1 binding exists and all account, topic-exam and full-mock tables from migrations 0001–0007 are present. It does not expose account data.
+- 2026 current-affairs additions are model-practice questions sourced from Ministry of Home Affairs monthly achievement reports (February, June and September 2026). The remaining current-affairs set includes dated 2023–2025 reference items; it is not a continuously updated news feed.
