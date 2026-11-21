@@ -4,7 +4,7 @@ import fs from "node:fs";
 const catalog = JSON.parse(fs.readFileSync("data/official-exam-catalog.json", "utf8"));
 const errors = [];
 const fail = message => errors.push(message);
-const isIsoDate = value => typeof value === "string" && /^\\d{4}-\\d{2}-\\d{2}$/.test(value) && Number.isFinite(Date.parse(value));
+const isIsoDate = value => typeof value === "string" && Number.isFinite(Date.parse(value)) && new Date(value).toISOString().slice(0, 10) === value;
 const profiles = Array.isArray(catalog.exam_profiles) ? catalog.exam_profiles : [];
 const byId = new Map(profiles.map(profile => [profile.exam_id, profile]));
 const required = [
