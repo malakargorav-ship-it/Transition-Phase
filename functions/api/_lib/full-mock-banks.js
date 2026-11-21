@@ -37,7 +37,7 @@ export const fullMockBanks = {
     q("If 5 * 3 means 5² + 3, what is 4 * 2?",["10","16","18","20"],2,"4² + 2 = 18."),
     q("Complete the series: A, C, F, J, O, __.",["S","T","U","V"],2,"Letter gaps increase by 1: +2, +3, +4, +5, then +6."),
     q("Which number is different?",["16","25","36","48"],3,"16, 25 and 36 are perfect squares; 48 is not."),
-    q("If SOUTH is written as TPVUI, NORTH is written as:",["OPSUI","OPSUI","MPSUI","OPSTI"],0,"Each letter moves one place forward."),
+    q("If SOUTH is written as TPVUI, NORTH is written as:",["OPSUI","OPSVI","MPSUI","OPSTI"],0,"Each letter moves one place forward."),
     q("Arrange in dictionary order: Apply, Apt, Apple, April.",["Apple, Apply, April, Apt","April, Apple, Apply, Apt","Apt, April, Apple, Apply","Apple, April, Apply, Apt"],0,"Compare letters alphabetically: April, Apple, Apply, Apt."),
     q("A clock shows 3:00. What is the angle between its hands?",["60°","75°","90°","120°"],2,"At 3:00 the hands are three hour marks apart: 90 degrees."),
     q("If yesterday was Monday, what day will be the day after tomorrow?",["Tuesday","Wednesday","Thursday","Friday"],2,"Yesterday Monday means today Tuesday; day after tomorrow is Thursday."),
