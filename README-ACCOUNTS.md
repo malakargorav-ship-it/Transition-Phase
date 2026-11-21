@@ -10,7 +10,8 @@ All changes are isolated on `feature/individual-accounts-exam-engine`, based on 
    - `migrations/0002_stage_rules.sql`
    - `migrations/0003_user_progress.sql`
    - `migrations/0004_question_sets.sql`
-   - `migrations/0005_auth_rate_limits.sql`
+   - `migrations/0005_auth_rate_limits.sql
+   - `migrations/0006_topic_exam_engine.sql``
 3. In the Cloudflare Pages project `transition-phase`, add a D1 binding named `DB` to this database for the Preview environment first.
 4. Add encrypted Preview environment variables:
    - `ADMIN_EMAIL` = `malakargorav@gmail.com`
@@ -40,7 +41,15 @@ Open the Preview Command Centre. Register using the configured admin email and t
 - A question set is single-use and expires after 30 minutes.
 - Stage unlocks are stored per account and exam track. Passing a stage with at least 80% unlocks the next stage for that user only.
 - The old `POST /api/progress/attempt` route rejects direct client-computed scores with HTTP 410.
-- Other topic practice still uses the existing browser-side question engine and is not part of this secure five-stage flow.
+- Other existing Maths topics now use the topic exam endpoints and secure five-stage flow. Topics without question banks remain unavailable until verified content is added.
+
+## Server-side topic exam engine
+
+- The same account-gated, randomized, server-scored five-stage engine is extended to all 22 additional existing Maths topic banks: Place Value, Divisibility, Factors & Multiples, HCF & LCM, Remainders, Simplification, Fractions & Decimals, Percentage, Ratio & Proportion, Profit/Loss/Discount, Simple/Compound Interest, Average, Ages, Time & Work, Pipes & Cisterns, Partnership, Mixture & Alligation, Time/Speed/Distance, Mensuration, Geometry, Trigonometry and Data Interpretation.
+- Each attempt selects up to 10 random questions from that topic bank. Each topic has independent per-student, per-exam-track stage unlocks; 80% is required to unlock the next stage.
+- Correct answers and explanations stay server-side until submission. Question sets are single-use and expire after 30 minutes.
+- Admin can set minimum difficulty independently for every topic, stage and exam track. The existing question banks are not yet difficulty-tagged, so the preference is an access rule, not a different question mix.
+- This does not add new GK, Assam GK, English, Reasoning or Current Affairs question banks. Those subjects are not present in the currently integrated 23-topic Maths bank and need verified content before being added.
 
 ## API routes
 
@@ -49,7 +58,9 @@ Open the Preview Command Centre. Register using the configured admin email and t
 - `GET /api/admin/stage-rules`, `POST /api/admin/stage-rules`
 - `GET /api/account/settings`, `POST /api/account/settings`
 - `GET /api/progress/state`, `POST /api/progress/state`
-- `POST /api/exam/start`, `POST /api/exam/submit`
+- `POST /api/exam/start`, `POST /api/exam/submit` (Number System)
+- `POST /api/topic-exam/start`, `POST /api/topic-exam/submit` (other existing Maths topics)
+- `GET /api/admin/topic-stage-rules`, `POST /api/admin/topic-stage-rules`
 - `POST /api/progress/attempt` (disabled; direct client scores are rejected)
 
 ## Security and remaining production gates
