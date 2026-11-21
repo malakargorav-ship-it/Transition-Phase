@@ -17,7 +17,7 @@
     $("accountHeading").textContent = "Student account";
     $("accountMessage").textContent = "Login or create an account to keep your preparation connected to your profile.";
   }
-  async function showSignedIn(user) {
+  async function showSignedIn(user) {\n    const active = localStorage.getItem("tp-active-user");\n    if (active !== user.id) { localStorage.setItem("tp-active-user", user.id); try { const remote = await api("/api/progress/state", { method: "GET" }); if (remote.snapshot) localStorage.setItem("tp-command-v1:" + user.id, JSON.stringify(remote.snapshot)); } catch {} window.location.reload(); return; }
     $("authForms").hidden = true; $("signedInPanel").hidden = false;
     $("accountStatus").textContent = user.role === "admin" ? "ADMIN" : "APPROVED STUDENT";
     $("accountHeading").textContent = "Your study profile";
@@ -108,7 +108,7 @@
     finally { button.disabled = false; }
   });
   $("logoutButton").addEventListener("click", async () => {
-    try { await api("/api/auth/logout", { method: "POST", body: "{}" }); showSignedOut(); }
+    try { await api("/api/auth/logout", { method: "POST", body: "{}" }); localStorage.removeItem("tp-active-user"); window.location.reload(); }
     catch (error) { alert(error.message); }
   });
   $("accountDifficulty").addEventListener("change", async event => {
