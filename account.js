@@ -27,7 +27,7 @@
     $("studentAccountInfo").hidden = user.role === "admin";
     $("adminPanel").hidden = user.role !== "admin";
     $("accountDifficulty").value = user.difficulty || "intermediate";
-    if (user.role === "admin") await loadAdminUsers();
+    if (user.role === "admin") { await loadAdminUsers(); await loadStageRules(); }
   }
   async function refresh() {
     try {
@@ -60,6 +60,24 @@
       }));
     } catch (error) { target.textContent = error.message; }
   }
+  async function loadStageRules() {
+    const list = $("stageRulesList");
+    try {
+      const data = await api("/api/admin/stage-rules", { method: "GET" });
+      list.innerHTML = data.rules.length ? data.rules.map(rule => '<p>' + escapeHtml(rule.exam_track.toUpperCase() + ' · ' + rule.stage_id.toUpperCase() + ' · MIN ' + rule.minimum_difficulty.toUpperCase()) + '</p>').join("") : "<p>No custom minimums. All stages default to Beginner minimum.</p>";
+    } catch (error) { list.textContent = error.message; }
+  }
+  $("saveStageRule").addEventListener("click", async () => {
+    feedback("stageRuleFeedback", "Saving stage rule…");
+    try {
+      await api("/api/admin/stage-rules", { method: "POST", body: JSON.stringify({
+        examTrack: $("ruleTrack").value, stageId: $("ruleStage").value,
+        minimumDifficulty: $("ruleDifficulty").value
+      }) });
+      feedback("stageRuleFeedback", "Stage minimum difficulty saved.");
+      await loadStageRules();
+    } catch (error) { feedback("stageRuleFeedback", error.message); }
+  });
   function escapeHtml(value) {
     return String(value ?? "").replace(/[&<>"']/g, char => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;" })[char]);
   }
