@@ -12,7 +12,7 @@ for (const [subject, bank] of Object.entries(fullMockBanks)) {
     const label = subject + " #" + (i + 1);
     if (typeof prompt !== "string" || !prompt.trim()) errors.push(label + ": missing prompt.");
     if (!Array.isArray(options) || options.length !== 4 || options.some(x => typeof x !== "string" || !x.trim())) errors.push(label + ": exactly four non-empty options required.");
-    else if (new Set(options.map(x => x.trim().toLowerCase())).size !== 4) errors.push(label + ": duplicate options.");
+    else if (new Set(options.map(x => x.trim().toLowerCase())).size !== 4) errors.push(label + ": duplicate options in " + JSON.stringify(prompt) + " => " + JSON.stringify(options));
     if (!Number.isInteger(answer) || answer < 0 || answer > 3) errors.push(label + ": answer index must be 0..3.");
     if (typeof explanation !== "string" || !explanation.trim()) errors.push(label + ": explanation required.");
     const key = String(prompt || "").trim().toLowerCase();
