@@ -16,6 +16,24 @@
     if (!response.ok) throw new Error(payload.error || "Request failed (" + response.status + ").");
     return payload;
   };
+  const loadHistory = async () => {
+    const target = $("fullMockHistory");
+    try {
+      const response = await fetch("/api/mock/history", { credentials: "same-origin" });
+      const payload = await response.json().catch(() => ({}));
+      if (!response.ok) { target.textContent = response.status === 401 ? "Login with your approved account to view saved attempts." : (payload.error || "History unavailable."); return; }
+      target.innerHTML = "";
+      if (!payload.attempts?.length) { target.textContent = "No completed mocks yet."; return; }
+      payload.attempts.forEach(attempt => {
+        const row = document.createElement("div"); row.className = "full-mock-history-row";
+        const title = document.createElement("strong");
+        title.textContent = (attempt.exam_track === "si" ? "SI" : "Constable") + " · " + attempt.score + " / " + attempt.total_marks;
+        const detail = document.createElement("span");
+        detail.textContent = "Correct " + attempt.correct_count + " · Wrong " + attempt.wrong_count + " · Unattempted " + attempt.unattempted_count + " · Accuracy " + attempt.accuracy + "% · " + new Date(attempt.completed_at).toLocaleString();
+        row.append(title, detail); target.append(row);
+      });
+    } catch { target.textContent = "History could not be loaded. Try refreshing after login."; }
+  };
   const render = () => {
     if (!active) return;
     const q = active.questions[index];
@@ -62,9 +80,16 @@
       score.textContent = result.score + " / " + result.totalMarks;
       const stats = document.createElement("p");
       stats.textContent = "Correct: " + result.correct + " · Wrong: " + result.wrong + " · Unattempted: " + result.unattempted + " · Accuracy: " + result.accuracy + "%";
+      const breakdown = document.createElement("div"); breakdown.className = "full-mock-breakdown";
+      Object.entries(result.subjectBreakdown || {}).forEach(([subject, values]) => {
+        const row = document.createElement("p");
+        row.textContent = subject + " — Correct " + values.correct + ", Wrong " + values.wrong + ", Unattempted " + values.unattempted;
+        breakdown.append(row);
+      });
       const note = document.createElement("p");
       note.textContent = result.examTrack === "si" ? "Historical SI CWT-2025 marking-style practice result; not a prediction of current-cycle selection." : "General Constable practice result. No negative marking.";
-      $("fullMockResult").append(h, score, stats, note);
+      $("fullMockResult").append(h, score, stats, breakdown, note);
+      loadHistory();
       message("Result securely calculated and saved on the server.");
     } catch (error) {
       $("fullMockSubmit").disabled = false; message(error.message, true);
@@ -78,6 +103,7 @@
     $("fullMockTimer").textContent = hh + ":" + mm + ":" + ss;
     if (remaining === 0) finish();
   };
+  loadHistory();
   $("startFullMock").addEventListener("click", async () => {
     const track = $("fullMockTrack").value;
     $("startFullMock").disabled = true; message("Preparing a randomized 100-question paper…");
