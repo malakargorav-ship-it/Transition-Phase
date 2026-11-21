@@ -50,6 +50,7 @@ Run this checklist only after the Preview D1 binding and secrets are configured 
 - [ ] Confirm guest mode still uses the original local practice flow.
 
 ## Automated repository checks
+- [ ] Confirm automated Node tests cover password hashing, unique salts, session-cookie security flags, same-origin enforcement, approved-account session checks, Constable-only starter restrictions and answer-key isolation.
 - [ ] Confirm GitHub Actions runs `Validate exam data and JavaScript` on the pull request.
 - [ ] Confirm the data validator reports all records and no duplicate IDs, invalid category codes or answer mismatches.
 - [ ] Confirm JavaScript syntax and `git diff --check` jobs pass.
