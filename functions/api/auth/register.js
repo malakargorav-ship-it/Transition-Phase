@@ -11,12 +11,13 @@ export async function onRequestPost({ request, env }) {
   const existing = await env.DB.prepare("SELECT id FROM users WHERE email=?").bind(email).first();
   if (existing) return fail("Is email se account already registered hai.", 409);
 
-  const id = uuid();
-  const credentials = await hashPassword(body.password);
   const isAdminEmail = email === String(env.ADMIN_EMAIL || "").trim().toLowerCase();
   const isAdminBootstrap = isAdminEmail && typeof env.ADMIN_BOOTSTRAP_TOKEN === "string" &&
     env.ADMIN_BOOTSTRAP_TOKEN.length >= 32 && body.adminBootstrapToken === env.ADMIN_BOOTSTRAP_TOKEN;
   if (isAdminEmail && !isAdminBootstrap) return fail("Admin email requires the private bootstrap token.", 403);
+
+  const id = uuid();
+  const credentials = await hashPassword(body.password);
 
   const role = isAdminBootstrap ? "admin" : "student";
   const status = isAdminBootstrap ? "approved" : "pending";
