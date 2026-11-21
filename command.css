@@ -49,3 +49,11 @@
 .full-mock-score{display:block;font-size:2.4rem;color:var(--accent,#c99b45);margin:12px 0}
 #fullMockFeedback.error{color:#d44}
 @media(max-width:600px){.full-mock-launch,.full-mock-exam,.full-mock-result{padding:14px}.full-mock-palette{grid-template-columns:repeat(8,minmax(0,1fr))}#fullMockQuestion{font-size:1.08rem}}
+
+
+.full-mock-history-wrap{margin-top:20px}
+.full-mock-history{display:grid;gap:9px}
+.full-mock-history-row{display:grid;gap:5px;padding:12px 14px;border:1px solid var(--line,rgba(255,255,255,.14));border-radius:10px}
+.full-mock-history-row span{font-size:.86rem;color:var(--muted,#777);line-height:1.5}
+.full-mock-breakdown{display:grid;gap:4px;margin:14px 0}
+.full-mock-breakdown p{margin:0;padding:8px 10px;background:rgba(128,128,128,.07);border-radius:8px;font-size:.9rem}
