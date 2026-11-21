@@ -8,6 +8,7 @@ const ids = new Set();
 let total = 0, pyqTotal = 0, modelTotal = 0;
 const allowedSourceTypes = new Set(catalog.question_source_types);
 const allowedDifficulties = new Set(catalog.difficulty_levels);
+const allowedCategories = new Set((catalog.exam_profiles || []).map(x => x.category));
 const errors = [];
 
 function walk(dir) {
@@ -26,26 +27,30 @@ for (const id of ["assam-police-si-ub", "assam-police-si-ab-commando", "assam-po
 }
 
 for (const file of [...walk(path.join(root, "data/pyq")), ...walk(path.join(root, "data/questions"))]) {
-  const dataset = JSON.parse(fs.readFileSync(file, "utf8"));
+  let dataset;
+  try { dataset = JSON.parse(fs.readFileSync(file, "utf8")); }
+  catch (error) { fail(path.relative(root, file) + ": invalid JSON (" + error.message + ")"); continue; }
   if (!Array.isArray(dataset.records)) { fail(path.relative(root, file) + ": missing records array"); continue; }
   for (const q of dataset.records) {
     total++;
+    const label = q.question_id || path.relative(root, file) + " record " + total;
     if (q.source_type === "VERIFIED_ASSAM_POLICE_PYQ") pyqTotal++;
     if (q.source_type === "MODEL_PRACTICE_QUESTION") modelTotal++;
-    if (!q.question_id || ids.has(q.question_id)) fail(file + ": missing or duplicate question_id " + q.question_id);
+    if (!q.question_id || ids.has(q.question_id)) fail(label + ": missing or duplicate question_id");
     ids.add(q.question_id);
-    if (!q.question_text || !q.subject || !q.topic || !q.subtopic) fail(q.question_id + ": missing question taxonomy/text");
+    if (!q.question_text || !q.subject || !q.topic || !q.subtopic) fail(label + ": missing question taxonomy/text");
+    if (!Array.isArray(q.exam_category) || q.exam_category.length === 0 || q.exam_category.some(x => !allowedCategories.has(x))) fail(label + ": exam_category must be a non-empty array of catalog category codes");
     const opts = q.options || {};
-    if (!["A", "B", "C", "D"].every(k => typeof opts[k] === "string" && opts[k].trim())) fail(q.question_id + ": requires four non-empty options");
-    if (!["A", "B", "C", "D"].includes(q.correct_option)) fail(q.question_id + ": invalid correct_option");
-    if (q.correct_answer !== opts[q.correct_option]) fail(q.question_id + ": correct_answer does not match correct option");
-    if (!q.explanation || !allowedDifficulties.has(q.difficulty)) fail(q.question_id + ": missing explanation or invalid difficulty");
-    if (!allowedSourceTypes.has(q.source_type)) fail(q.question_id + ": invalid source_type");
-    if (q.source_type === "VERIFIED_ASSAM_POLICE_PYQ" && (!q.exam_year || !q.source_url || !q.official_source_url || !q.answer_key_url)) {
-      fail(q.question_id + ": PYQ missing year, transcription source, official source or answer-key URL");
+    if (!["A", "B", "C", "D"].every(k => typeof opts[k] === "string" && opts[k].trim())) fail(label + ": requires four non-empty options");
+    if (!["A", "B", "C", "D"].includes(q.correct_option)) fail(label + ": invalid correct_option");
+    if (q.correct_answer !== opts[q.correct_option]) fail(label + ": correct_answer does not match correct option");
+    if (!q.explanation || !allowedDifficulties.has(q.difficulty)) fail(label + ": missing explanation or invalid difficulty");
+    if (!allowedSourceTypes.has(q.source_type)) fail(label + ": invalid source_type");
+    if (q.source_type === "VERIFIED_ASSAM_POLICE_PYQ" && (!q.exam_year || !q.source_name || !q.source_url || !q.official_source_url || !q.answer_key_url)) {
+      fail(label + ": PYQ missing year, source name, transcription source, official source or answer-key URL");
     }
-    if (q.source_type === "MODEL_PRACTICE_QUESTION" && (q.exam_year != null || !q.source_name || q.source_url || q.answer_key_url)) {
-      fail(q.question_id + ": model question must not claim an exam year or PYQ source/key");
+    if (q.source_type === "MODEL_PRACTICE_QUESTION" && (q.exam_year != null || !q.source_name || q.source_url || q.answer_key_url || q.verification_status !== "MODEL_QUESTION")) {
+      fail(label + ": model question must not claim an exam year, PYQ source/key or official verification");
     }
   }
 }
