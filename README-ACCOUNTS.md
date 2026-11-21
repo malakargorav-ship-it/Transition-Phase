@@ -110,3 +110,12 @@ These research artifacts do not yet change the production exam UI or replace the
 - Run `node scripts/validate-exam-data.mjs` to validate the question records in both `data/pyq` and `data/questions`.
 
 The uploaded Paper-II PDF attachment in the current conversation arrived as a zero-byte file, so no question text was extracted from that attachment. The official SLPRB booklet is linked in the catalog; a secondary searchable transcription was used only to confirm the paper metadata and identify question locations. No Constable question has been added as a PYQ until its full text and matching answer are independently checked against the official booklet/key.
+
+
+## Full-length mock exams (Preview feature)
+- `functions/api/_lib/full-mock-banks.js` contains original model-practice question sets for English, reasoning, Assam history, India history, general knowledge and current-affairs reference. These are not PYQs.
+- `POST /api/mock/start` creates a randomized 100-question paper for approved accounts and stores its answer key server-side.
+- `POST /api/mock/submit` validates a complete 100-answer payload, applies server-side marking, enforces a one-time atomic submission and saves the result.
+- General Constable UB/AB follows the identified advertisement pattern: 100 MCQs, 50 marks, 120 minutes, no negative marking. Its equal subject allocation is a platform practice design, not an official subject-wise count.
+- SI mock follows the historical CWT-2025 Paper-I marking style (100 marks, 120 minutes, -0.5 per wrong answer). It is explicitly labelled historical practice; latest-cycle SI rules must be reconciled with the applicable final official notice before describing this as the current official pattern.
+- Migration `0007_full_mock_engine.sql` creates the mock-set and attempt tables.
