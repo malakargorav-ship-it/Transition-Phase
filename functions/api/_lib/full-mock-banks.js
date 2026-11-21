@@ -88,7 +88,7 @@ export const fullMockBanks = {
     q("Which national park is known for the golden langur in western Assam?",["Raimona","Kaziranga","Nameri","Orang"],0,"Raimona National Park is an important habitat for the golden langur."),
     q("The Assam-Meghalaya border region includes which hill system?",["Garo Hills","Vindhya","Pir Panjal","Zanskar"],0,"The Garo Hills lie in Meghalaya along Assam's southern boundary."),
     q("Which crop is strongly associated with Assam's Brahmaputra valley agriculture?",["Tea","Saffron","Olive","Coffee"],0,"Tea is a major plantation crop and economic activity in Assam."),
-    q("Which pass connects Assam with Arunachal Pradesh near the eastern border?",["Bum La","Sela","Bhutan Gate","No named pass"],1,"Sela Pass is a major high-altitude route in Arunachal Pradesh, not an Assam valley pass; this question is not suitable for Assam district geography." ),
+    q("Hoollongapar Gibbon Sanctuary is located in which district?",["Jorhat","Cachar","Dhubri","Dima Hasao"],0,"Hoollongapar Gibbon Sanctuary is located in Jorhat district of Assam."),
     q("Which region of Assam is drained mainly by the Barak river system?",["Barak Valley","Brahmaputra Valley","North Bank","Upper Assam"],0,"The Barak system drains the southern Barak Valley districts.")
   ],
   assamPolityEconomy: [
