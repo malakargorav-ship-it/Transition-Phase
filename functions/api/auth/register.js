@@ -13,9 +13,10 @@ export async function onRequestPost({ request, env }) {
 
   const id = uuid();
   const credentials = await hashPassword(body.password);
-  const isAdminBootstrap = email === String(env.ADMIN_EMAIL || "").trim().toLowerCase() &&
-    typeof env.ADMIN_BOOTSTRAP_TOKEN === "string" && env.ADMIN_BOOTSTRAP_TOKEN.length >= 32 &&
-    body.adminBootstrapToken === env.ADMIN_BOOTSTRAP_TOKEN;
+  const isAdminEmail = email === String(env.ADMIN_EMAIL || "").trim().toLowerCase();
+  const isAdminBootstrap = isAdminEmail && typeof env.ADMIN_BOOTSTRAP_TOKEN === "string" &&
+    env.ADMIN_BOOTSTRAP_TOKEN.length >= 32 && body.adminBootstrapToken === env.ADMIN_BOOTSTRAP_TOKEN;
+  if (isAdminEmail && !isAdminBootstrap) return fail("Admin email requires the private bootstrap token.", 403);
 
   const role = isAdminBootstrap ? "admin" : "student";
   const status = isAdminBootstrap ? "approved" : "pending";
