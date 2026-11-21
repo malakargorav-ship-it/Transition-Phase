@@ -8,12 +8,14 @@ export async function onRequestPost({request,env}){
  const user=await currentUser(request,env.DB);if(!user)return fail("Login required.",401);
  const body=await readJson(request);
  if(!body||!allowed.has(body.topicId)||!["si","constable"].includes(body.examTrack)||!stages.includes(body.stageId))return fail("Invalid topic exam request.");
+ const isConstableStarter=body.topicId.startsWith("constable-starter-");
+ if(isConstableStarter&&body.examTrack!=="constable")return fail("Yeh starter practice bank sirf General Constable UB/AB track ke liye hai.",403);
  const settings=await env.DB.prepare("SELECT difficulty FROM users WHERE id=?").bind(user.id).first(),difficulty=settings?.difficulty||"intermediate";
  const rule=await env.DB.prepare("SELECT minimum_difficulty FROM topic_stage_rules WHERE exam_track=? AND topic_id=? AND stage_id=?").bind(body.examTrack,body.topicId,body.stageId).first();
  if(levels.indexOf(difficulty)<levels.indexOf(rule?.minimum_difficulty||"beginner"))return fail("Admin ne is topic stage ke liye higher minimum difficulty set ki hai.",403);
  const n=Number(body.stageId.slice(6));
  if(n>1){const prev=await env.DB.prepare("SELECT 1 FROM topic_stage_unlocks WHERE user_id=? AND exam_track=? AND topic_id=? AND stage_id=?").bind(user.id,body.examTrack,body.topicId,"stage-"+(n-1)).first();if(!prev)return fail("Previous stage ko 80% se clear karna zaroori hai.",403);}
- const bank=topicBanks[body.topicId];if(!Array.isArray(bank)||bank.length<5)return fail("Is topic ka question bank abhi available nahi hai.",503);
+ const bank=topicBanks[body.topicId];if(!Array.isArray(bank)||!bank.length)return fail("Is topic ka question bank abhi available nahi hai.",503);
  const count=Math.min(10,bank.length),selected=shuffle(bank).slice(0,count),id=uuid();
  const stored=selected.map((q,i)=>({id:i,question:q[0],options:q[1],explanation:q[3]})),questions=stored.map(({id,question,options})=>({id,question,options})),answers=selected.map(q=>q[2]);
  const expires=new Date(Date.now()+30*60*1000).toISOString();
