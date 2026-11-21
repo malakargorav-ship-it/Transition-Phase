@@ -1,0 +1,428 @@
+{
+  "schema_version": "1.0.0",
+  "dataset_id": "assam-police-constable-model-practice-starter",
+  "dataset_type": "MODEL_PRACTICE_QUESTION",
+  "note": "Original practice questions authored for this platform; these are not previous-year questions.",
+  "records": [
+    {
+      "question_id": "AP-MODEL-CONST-AR-0001",
+      "exam_category": [
+        "CONSTABLE_UB",
+        "CONSTABLE_AB"
+      ],
+      "subject": "Elementary Arithmetic",
+      "topic": "Percentage",
+      "subtopic": "Percentage change",
+      "question_type": "MCQ",
+      "question_text": "A number increases from 240 to 300. What is the percentage increase?",
+      "options": {
+        "A": "40%",
+        "B": "20%",
+        "C": "25%",
+        "D": "30%"
+      },
+      "correct_option": "C",
+      "correct_answer": "25%",
+      "explanation": "Increase = 300 − 240 = 60. Percentage increase = (60 ÷ 240) × 100 = 25%.",
+      "difficulty": "BEGINNER",
+      "source_type": "MODEL_PRACTICE_QUESTION",
+      "source_name": "TRANSITION PHASE original practice bank",
+      "source_url": null,
+      "official_source_url": null,
+      "answer_key_url": null,
+      "exam_year": null,
+      "page_number": null,
+      "verification_status": "MODEL_QUESTION",
+      "tags": [
+        "assam-police",
+        "constable",
+        "original-practice"
+      ]
+    },
+    {
+      "question_id": "AP-MODEL-CONST-AR-0002",
+      "exam_category": [
+        "CONSTABLE_UB",
+        "CONSTABLE_AB"
+      ],
+      "subject": "Elementary Arithmetic",
+      "topic": "Average",
+      "subtopic": "Basic average",
+      "question_type": "MCQ",
+      "question_text": "The average of 12, 15, 18, 21 and 24 is:",
+      "options": {
+        "A": "16",
+        "B": "18",
+        "C": "19",
+        "D": "20"
+      },
+      "correct_option": "B",
+      "correct_answer": "18",
+      "explanation": "Sum = 90. Average = 90 ÷ 5 = 18.",
+      "difficulty": "INTERMEDIATE",
+      "source_type": "MODEL_PRACTICE_QUESTION",
+      "source_name": "TRANSITION PHASE original practice bank",
+      "source_url": null,
+      "official_source_url": null,
+      "answer_key_url": null,
+      "exam_year": null,
+      "page_number": null,
+      "verification_status": "MODEL_QUESTION",
+      "tags": [
+        "assam-police",
+        "constable",
+        "original-practice"
+      ]
+    },
+    {
+      "question_id": "AP-MODEL-CONST-AR-0003",
+      "exam_category": [
+        "CONSTABLE_UB",
+        "CONSTABLE_AB"
+      ],
+      "subject": "Elementary Arithmetic",
+      "topic": "Ratio and Proportion",
+      "subtopic": "Sharing in a ratio",
+      "question_type": "MCQ",
+      "question_text": "₹840 is divided between A and B in the ratio 3:4. What is B's share?",
+      "options": {
+        "A": "₹360",
+        "B": "₹420",
+        "C": "₹480",
+        "D": "₹520"
+      },
+      "correct_option": "C",
+      "correct_answer": "₹480",
+      "explanation": "Total parts = 7. B receives 4/7 × 840 = ₹480.",
+      "difficulty": "INTERMEDIATE",
+      "source_type": "MODEL_PRACTICE_QUESTION",
+      "source_name": "TRANSITION PHASE original practice bank",
+      "source_url": null,
+      "official_source_url": null,
+      "answer_key_url": null,
+      "exam_year": null,
+      "page_number": null,
+      "verification_status": "MODEL_QUESTION",
+      "tags": [
+        "assam-police",
+        "constable",
+        "original-practice"
+      ]
+    },
+    {
+      "question_id": "AP-MODEL-CONST-AR-0004",
+      "exam_category": [
+        "CONSTABLE_UB",
+        "CONSTABLE_AB"
+      ],
+      "subject": "Elementary Arithmetic",
+      "topic": "Time and Work",
+      "subtopic": "Combined work",
+      "question_type": "MCQ",
+      "question_text": "A can complete a job in 12 days and B in 18 days. Working together, how many days will they take?",
+      "options": {
+        "A": "6 days",
+        "B": "7.2 days",
+        "C": "8 days",
+        "D": "9 days"
+      },
+      "correct_option": "B",
+      "correct_answer": "7.2 days",
+      "explanation": "Combined daily work = 1/12 + 1/18 = 5/36. Time = 36/5 = 7.2 days.",
+      "difficulty": "INTERMEDIATE",
+      "source_type": "MODEL_PRACTICE_QUESTION",
+      "source_name": "TRANSITION PHASE original practice bank",
+      "source_url": null,
+      "official_source_url": null,
+      "answer_key_url": null,
+      "exam_year": null,
+      "page_number": null,
+      "verification_status": "MODEL_QUESTION",
+      "tags": [
+        "assam-police",
+        "constable",
+        "original-practice"
+      ]
+    },
+    {
+      "question_id": "AP-MODEL-CONST-AR-0005",
+      "exam_category": [
+        "CONSTABLE_UB",
+        "CONSTABLE_AB"
+      ],
+      "subject": "Elementary Arithmetic",
+      "topic": "Simple Interest",
+      "subtopic": "Interest calculation",
+      "question_type": "MCQ",
+      "question_text": "Find the simple interest on ₹2,500 at 8% per annum for 3 years.",
+      "options": {
+        "A": "₹500",
+        "B": "₹550",
+        "C": "₹600",
+        "D": "₹650"
+      },
+      "correct_option": "C",
+      "correct_answer": "₹600",
+      "explanation": "SI = P × R × T / 100 = 2500 × 8 × 3 / 100 = ₹600.",
+      "difficulty": "INTERMEDIATE",
+      "source_type": "MODEL_PRACTICE_QUESTION",
+      "source_name": "TRANSITION PHASE original practice bank",
+      "source_url": null,
+      "official_source_url": null,
+      "answer_key_url": null,
+      "exam_year": null,
+      "page_number": null,
+      "verification_status": "MODEL_QUESTION",
+      "tags": [
+        "assam-police",
+        "constable",
+        "original-practice"
+      ]
+    },
+    {
+      "question_id": "AP-MODEL-CONST-EN-0001",
+      "exam_category": [
+        "CONSTABLE_UB",
+        "CONSTABLE_AB"
+      ],
+      "subject": "General English",
+      "topic": "Articles",
+      "subtopic": "Article usage",
+      "question_type": "MCQ",
+      "question_text": "Choose the correct article: She is ___ honest officer.",
+      "options": {
+        "A": "a",
+        "B": "an",
+        "C": "the",
+        "D": "no article"
+      },
+      "correct_option": "B",
+      "correct_answer": "an",
+      "explanation": "The initial sound in “honest” is a vowel sound, so “an” is used.",
+      "difficulty": "BEGINNER",
+      "source_type": "MODEL_PRACTICE_QUESTION",
+      "source_name": "TRANSITION PHASE original practice bank",
+      "source_url": null,
+      "official_source_url": null,
+      "answer_key_url": null,
+      "exam_year": null,
+      "page_number": null,
+      "verification_status": "MODEL_QUESTION",
+      "tags": [
+        "assam-police",
+        "constable",
+        "original-practice"
+      ]
+    },
+    {
+      "question_id": "AP-MODEL-CONST-EN-0002",
+      "exam_category": [
+        "CONSTABLE_UB",
+        "CONSTABLE_AB"
+      ],
+      "subject": "General English",
+      "topic": "Tenses",
+      "subtopic": "Past perfect",
+      "question_type": "MCQ",
+      "question_text": "By the time the bus arrived, we ___ for an hour.",
+      "options": {
+        "A": "wait",
+        "B": "have waited",
+        "C": "had waited",
+        "D": "are waiting"
+      },
+      "correct_option": "C",
+      "correct_answer": "had waited",
+      "explanation": "The waiting began and continued before another past event; past perfect is appropriate.",
+      "difficulty": "BEGINNER",
+      "source_type": "MODEL_PRACTICE_QUESTION",
+      "source_name": "TRANSITION PHASE original practice bank",
+      "source_url": null,
+      "official_source_url": null,
+      "answer_key_url": null,
+      "exam_year": null,
+      "page_number": null,
+      "verification_status": "MODEL_QUESTION",
+      "tags": [
+        "assam-police",
+        "constable",
+        "original-practice"
+      ]
+    },
+    {
+      "question_id": "AP-MODEL-CONST-EN-0003",
+      "exam_category": [
+        "CONSTABLE_UB",
+        "CONSTABLE_AB"
+      ],
+      "subject": "General English",
+      "topic": "Prepositions",
+      "subtopic": "Preposition usage",
+      "question_type": "MCQ",
+      "question_text": "The committee consists ___ five members.",
+      "options": {
+        "A": "from",
+        "B": "with",
+        "C": "of",
+        "D": "by"
+      },
+      "correct_option": "C",
+      "correct_answer": "of",
+      "explanation": "The standard construction is “consists of”.",
+      "difficulty": "BEGINNER",
+      "source_type": "MODEL_PRACTICE_QUESTION",
+      "source_name": "TRANSITION PHASE original practice bank",
+      "source_url": null,
+      "official_source_url": null,
+      "answer_key_url": null,
+      "exam_year": null,
+      "page_number": null,
+      "verification_status": "MODEL_QUESTION",
+      "tags": [
+        "assam-police",
+        "constable",
+        "original-practice"
+      ]
+    },
+    {
+      "question_id": "AP-MODEL-CONST-RE-0001",
+      "exam_category": [
+        "CONSTABLE_UB",
+        "CONSTABLE_AB"
+      ],
+      "subject": "Logical Reasoning / Mental Ability",
+      "topic": "Number Series",
+      "subtopic": "Difference pattern",
+      "question_type": "MCQ",
+      "question_text": "Find the next number: 3, 7, 13, 21, 31, __.",
+      "options": {
+        "A": "41",
+        "B": "42",
+        "C": "43",
+        "D": "45"
+      },
+      "correct_option": "C",
+      "correct_answer": "43",
+      "explanation": "The differences are 4, 6, 8 and 10. The next difference is 12; 31 + 12 = 43.",
+      "difficulty": "BEGINNER",
+      "source_type": "MODEL_PRACTICE_QUESTION",
+      "source_name": "TRANSITION PHASE original practice bank",
+      "source_url": null,
+      "official_source_url": null,
+      "answer_key_url": null,
+      "exam_year": null,
+      "page_number": null,
+      "verification_status": "MODEL_QUESTION",
+      "tags": [
+        "assam-police",
+        "constable",
+        "original-practice"
+      ]
+    },
+    {
+      "question_id": "AP-MODEL-CONST-RE-0002",
+      "exam_category": [
+        "CONSTABLE_UB",
+        "CONSTABLE_AB"
+      ],
+      "subject": "Logical Reasoning / Mental Ability",
+      "topic": "Direction Sense",
+      "subtopic": "Turning directions",
+      "question_type": "MCQ",
+      "question_text": "A person walks 5 km north, turns right and walks 3 km, then turns right and walks 5 km. Where is the person from the starting point?",
+      "options": {
+        "A": "3 km east",
+        "B": "3 km west",
+        "C": "5 km south",
+        "D": "8 km east"
+      },
+      "correct_option": "A",
+      "correct_answer": "3 km east",
+      "explanation": "The north and south movements cancel. The remaining displacement is 3 km east.",
+      "difficulty": "INTERMEDIATE",
+      "source_type": "MODEL_PRACTICE_QUESTION",
+      "source_name": "TRANSITION PHASE original practice bank",
+      "source_url": null,
+      "official_source_url": null,
+      "answer_key_url": null,
+      "exam_year": null,
+      "page_number": null,
+      "verification_status": "MODEL_QUESTION",
+      "tags": [
+        "assam-police",
+        "constable",
+        "original-practice"
+      ]
+    },
+    {
+      "question_id": "AP-MODEL-CONST-GK-0001",
+      "exam_category": [
+        "CONSTABLE_UB",
+        "CONSTABLE_AB"
+      ],
+      "subject": "General Awareness / General Knowledge and Current Affairs",
+      "topic": "Indian Polity",
+      "subtopic": "Constitution commencement",
+      "question_type": "MCQ",
+      "question_text": "The Constitution of India came into force on:",
+      "options": {
+        "A": "15 August 1947",
+        "B": "26 November 1949",
+        "C": "26 January 1950",
+        "D": "2 October 1950"
+      },
+      "correct_option": "C",
+      "correct_answer": "26 January 1950",
+      "explanation": "The Constitution was adopted on 26 November 1949 and came into force on 26 January 1950.",
+      "difficulty": "BEGINNER",
+      "source_type": "MODEL_PRACTICE_QUESTION",
+      "source_name": "TRANSITION PHASE original practice bank",
+      "source_url": null,
+      "official_source_url": null,
+      "answer_key_url": null,
+      "exam_year": null,
+      "page_number": null,
+      "verification_status": "MODEL_QUESTION",
+      "tags": [
+        "assam-police",
+        "constable",
+        "original-practice"
+      ]
+    },
+    {
+      "question_id": "AP-MODEL-CONST-AS-0001",
+      "exam_category": [
+        "CONSTABLE_UB",
+        "CONSTABLE_AB"
+      ],
+      "subject": "Assam History, Geography, Polity and Economy",
+      "topic": "Assam Geography",
+      "subtopic": "River systems",
+      "question_type": "MCQ",
+      "question_text": "Which river flows through the Barak Valley of Assam?",
+      "options": {
+        "A": "Subansiri",
+        "B": "Barak",
+        "C": "Manas",
+        "D": "Dhansiri"
+      },
+      "correct_option": "B",
+      "correct_answer": "Barak",
+      "explanation": "The Barak River is the principal river of the Barak Valley in southern Assam.",
+      "difficulty": "BEGINNER",
+      "source_type": "MODEL_PRACTICE_QUESTION",
+      "source_name": "TRANSITION PHASE original practice bank",
+      "source_url": null,
+      "official_source_url": null,
+      "answer_key_url": null,
+      "exam_year": null,
+      "page_number": null,
+      "verification_status": "MODEL_QUESTION",
+      "tags": [
+        "assam-police",
+        "constable",
+        "original-practice"
+      ]
+    }
+  ]
+}
