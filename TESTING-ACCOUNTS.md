@@ -50,10 +50,11 @@ Run this checklist only after the Preview D1 binding and secrets are configured 
 - [ ] Confirm guest mode still uses the original local practice flow.
 
 ## Automated repository checks
-- [ ] Confirm migrations 0001–0006 apply in sequence to a fresh SQLite database and required tables/columns plus foreign-key integrity validate.
+- [ ] Confirm migrations 0001–0007 apply in sequence to a fresh SQLite database and required tables/columns plus foreign-key integrity validate.
 - [ ] Confirm automated Node tests cover password hashing, unique salts, session-cookie security flags, same-origin enforcement, approved-account session checks, Constable-only starter restrictions and answer-key isolation.
 - [ ] Confirm progress API regression tests enforce per-user query scoping, reject cross-origin writes and reject oversized snapshots.
 - [ ] Confirm student sessions cannot read admin user lists or create admin stage rules/approve accounts.
+- [ ] Confirm full mock API tests cover 100-question SI/Constable paper generation, correct marking rules, answer-key secrecy, invalid tracks, server-side scoring, timer expiry and duplicate-submission conflict.
 - [ ] Confirm topic-exam submit regression tests cover server scoring, pass/fail unlock behavior, expired/used sets, incomplete submissions and atomic D1 claim behavior.
 - [ ] Confirm GitHub Actions runs `Validate exam data and JavaScript` on the pull request.
 - [ ] Confirm the data validator reports all records and no duplicate IDs, invalid category codes or answer mismatches.
