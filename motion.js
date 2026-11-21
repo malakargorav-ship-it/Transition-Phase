@@ -34,6 +34,9 @@
 
   function initMotion(root=document){
     collect(root,selectors).forEach((el,index)=>{
+      /* Lesson pages must remain readable even if an observer is delayed or
+         restored-scroll state prevents an initial intersection callback. */
+      if(el.closest('.lesson-page')) return;
       if(el.dataset.tpMotionReady||el.classList.contains('reveal')) return;
       el.dataset.tpMotionReady='true';
       el.classList.add('tp-motion-in');
