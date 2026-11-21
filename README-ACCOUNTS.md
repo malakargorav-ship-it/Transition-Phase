@@ -24,7 +24,7 @@ Open the Preview Command Centre. Register using the configured admin email and t
 - Student registers with email and a password (minimum 12 characters).
 - Registration starts as `pending`; login is blocked until approval.
 - Admin approves, rejects or revokes accounts from the Command Centre.
-- Approved students log in and select Beginner, Intermediate or Advanced.
+- Approved students log in and select Beginner, Intermediate or Advanced. The preference is stored per account and checked against the admin-set stage minimum; the existing question banks are not yet tagged into three difficulty variants, so selection does not yet alter question composition.
 - Their Command Centre state is stored under their own account and synced to D1. Different accounts use separate local profiles and cloud snapshots.
 - Admin can set a minimum difficulty for each of five stages for SI and Constable separately.
 
