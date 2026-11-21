@@ -26,7 +26,7 @@
     $("accountRole").textContent = user.role.toUpperCase();
     $("studentAccountInfo").hidden = user.role === "admin";
     $("adminPanel").hidden = user.role !== "admin";
-    $("accountDifficulty").value = user.difficulty || "intermediate";
+    $("accountDifficulty").value = user.difficulty || "intermediate";\n    try { const settings = await api("/api/account/settings", { method: "GET" }); localStorage.setItem("tp-difficulty", settings.difficulty); $("accountDifficulty").value = settings.difficulty; } catch {}
     if (user.role === "admin") { await loadAdminUsers(); await loadStageRules(); }
   }
   async function refresh() {
@@ -114,7 +114,7 @@
   $("accountDifficulty").addEventListener("change", async event => {
     feedback("difficultyFeedback", "Saving preference…");
     try {
-      await api("/api/account/settings", { method: "POST", body: JSON.stringify({ difficulty: event.target.value }) });
+      await api("/api/account/settings", { method: "POST", body: JSON.stringify({ difficulty: event.target.value }) });\n      localStorage.setItem("tp-difficulty", event.target.value);
       feedback("difficultyFeedback", "Difficulty preference saved.");
     } catch (error) { feedback("difficultyFeedback", error.message); }
   });
