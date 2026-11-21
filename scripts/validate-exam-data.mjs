@@ -49,6 +49,9 @@ for (const file of [...walk(path.join(root, "data/pyq")), ...walk(path.join(root
     if (q.source_type === "VERIFIED_ASSAM_POLICE_PYQ" && (!q.exam_year || !q.source_name || !q.source_url || !q.official_source_url || !q.answer_key_url)) {
       fail(label + ": PYQ missing year, source name, transcription source, official source or answer-key URL");
     }
+    if (q.source_type === "OTHER_EXAM_PYQ" && (!q.exam_year || !q.source_name || !q.source_url || !q.answer_key_url)) {
+      fail(label + ": other-exam PYQ missing year, source name, source URL or answer-key URL");
+    }
     if (q.source_type === "MODEL_PRACTICE_QUESTION" && (q.exam_year != null || !q.source_name || q.source_url || q.answer_key_url || q.verification_status !== "MODEL_QUESTION")) {
       fail(label + ": model question must not claim an exam year, PYQ source/key or official verification");
     }
