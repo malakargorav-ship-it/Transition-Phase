@@ -22,6 +22,8 @@ jobs:
           node-version: 22
       - name: Validate official exam catalog
         run: node scripts/validate-exam-catalog.mjs
+      - name: Apply and validate D1 migrations in SQLite
+        run: node scripts/validate-migrations.mjs
       - name: Test authentication and session security
         run: node --test tests/*.test.mjs
       - name: Validate exam data
