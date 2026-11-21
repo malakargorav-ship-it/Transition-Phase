@@ -81,6 +81,22 @@
       await loadStageRules();
     } catch (error) { feedback("stageRuleFeedback", error.message); }
   });
+  async function loadTopicStageRules() {
+    const list = $("stageRulesList");
+    try {
+      const data = await api("/api/admin/topic-stage-rules", { method: "GET" });
+      const rows = data.rules.map(rule => "<p>" + escapeHtml(rule.exam_track.toUpperCase() + " · " + rule.topic_id + " · " + rule.stage_id.toUpperCase() + " · MIN " + rule.minimum_difficulty.toUpperCase()) + "</p>");
+      list.innerHTML += rows.join("");
+    } catch (error) { list.textContent += " " + error.message; }
+  }
+  $("saveTopicStageRule").addEventListener("click", async () => {
+    feedback("stageRuleFeedback", "Saving topic stage rule…");
+    try {
+      await api("/api/admin/topic-stage-rules", { method: "POST", body: JSON.stringify({ topicId: $("ruleTopic").value, examTrack: $("ruleTrack").value, stageId: $("ruleStage").value, minimumDifficulty: $("ruleDifficulty").value }) });
+      feedback("stageRuleFeedback", "Topic stage minimum difficulty saved.");
+      await loadStageRules(); await loadTopicStageRules();
+    } catch (error) { feedback("stageRuleFeedback", error.message); }
+  });
   function escapeHtml(value) {
     return String(value ?? "").replace(/[&<>"']/g, char => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;" })[char]);
   }
