@@ -7,7 +7,7 @@ export async function onRequestPost({ request, env }) {
   if (!user) return fail("Login required.", 401);
   const body = await readJson(request);
   if (!body || !["si","constable"].includes(body.examTrack) || typeof body.stageId !== "string" ||
-      body.stageId.length > 80 || !difficulties.includes(body.difficulty) ||
+      !/^stage-[1-5]$/.test(body.stageId) || !difficulties.includes(body.difficulty) ||
       !Number.isInteger(body.score) || body.score < 0 || body.score > 100 ||
       typeof body.questionSetId !== "string" || body.questionSetId.length > 100) return fail("Invalid attempt data.");
 
