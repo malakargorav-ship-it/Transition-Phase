@@ -85,7 +85,7 @@
       feedback("stageRuleFeedback", "Stage minimum difficulty saved.");
       await loadAllStageRules();
     } catch (error) { feedback("stageRuleFeedback", error.message); }
-  }
+  });
   $("saveTopicStageRule").addEventListener("click", async () => {
     feedback("stageRuleFeedback", "Saving topic stage rule…");
     try {
