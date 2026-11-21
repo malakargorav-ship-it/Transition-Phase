@@ -27,7 +27,7 @@ function buildConstableSet() {
     ["Elementary Arithmetic", arithmetic, 20],
     ["General English", fullMockBanks.english, 20],
     ["Logical Reasoning / Mental Ability", fullMockBanks.reasoning, 20],
-    ["Assam History, Geography, Polity and Economy", [...fullMockBanks.assamHistory, ...fullMockBanks.indiaHistory], 20],
+    ["Assam History, Geography, Polity and Economy", [...fullMockBanks.assamHistory, ...fullMockBanks.assamGeography, ...fullMockBanks.assamPolityEconomy, ...fullMockBanks.indiaHistory], 20],
     ["General Awareness / GK and Current Affairs", [...fullMockBanks.generalKnowledge, ...fullMockBanks.currentAffairsStatic], 20]
   ];
   return pools.flatMap(([subject, bank, count]) => take(bank, count, subject));
