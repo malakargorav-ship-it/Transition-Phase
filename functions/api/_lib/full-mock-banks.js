@@ -38,7 +38,7 @@ export const fullMockBanks = {
     q("Complete the series: A, C, F, J, O, __.",["S","T","U","V"],2,"Letter gaps increase by 1: +2, +3, +4, +5, then +6."),
     q("Which number is different?",["16","25","36","48"],3,"16, 25 and 36 are perfect squares; 48 is not."),
     q("If SOUTH is written as TPVUI, NORTH is written as:",["OPSUI","OPSUI","MPSUI","OPSTI"],0,"Each letter moves one place forward."),
-    q("Arrange in dictionary order: Apply, Apt, Apple, April.",["Apple, Apply, April, Apt","April, Apple, Apply, Apt","Apt, April, Apple, Apply","Apple, April, Apply, Apt"],1,"Compare letters alphabetically: April, Apple, Apply, Apt."),
+    q("Arrange in dictionary order: Apply, Apt, Apple, April.",["Apple, Apply, April, Apt","April, Apple, Apply, Apt","Apt, April, Apple, Apply","Apple, April, Apply, Apt"],0,"Compare letters alphabetically: April, Apple, Apply, Apt."),
     q("A clock shows 3:00. What is the angle between its hands?",["60°","75°","90°","120°"],2,"At 3:00 the hands are three hour marks apart: 90 degrees."),
     q("If yesterday was Monday, what day will be the day after tomorrow?",["Tuesday","Wednesday","Thursday","Friday"],2,"Yesterday Monday means today Tuesday; day after tomorrow is Thursday."),
     q("Find the missing term: 3, 9, 27, __, 243.",["54","72","81","90"],2,"Each term is multiplied by 3."),
@@ -64,7 +64,7 @@ export const fullMockBanks = {
     q("The Ambubachi Mela is associated with:",["Umananda Temple","Kamakhya Temple","Navagraha Temple","Sukreswar Temple"],1,"Ambubachi Mela is held at Kamakhya Temple in Guwahati."),
     q("Who founded the Koch kingdom in the 16th century?",["Nara Narayan","Biswa Singha","Chilarai","Raghudev"],1,"Biswa Singha founded the Koch kingdom."),
     q("Which Ahom ruler is associated with the construction of Rang Ghar?",["Rudra Singha","Pramatta Singha","Sukaphaa","Jayadhwaj Singha"],1,"Pramatta Singha built the present Rang Ghar structure."),
-    q("The first Assamese newspaper 'Dainik Batori' was published in:",["1935","1946","1950","1962"],1,"Dainik Batori began publication in 1946."),
+    q("The first Assamese newspaper 'Dainik Batori' was published in:",["1935","1946","1950","1962"],0,"Dainik Batori began publication in 1935."),
     q("Who led the 1857 uprising in Assam?",["Maniram Dewan","Lachit Borphukan","Piyali Phukan","Kushal Konwar"],0,"Maniram Dewan was a key figure in the 1857 revolt in Assam."),
     q("Which freedom fighter from Assam was hanged in 1943?",["Kanaklata Barua","Kushal Konwar","Tarun Ram Phookan","Chandraprabha Saikiani"],1,"Kushal Konwar was executed by the British in 1943."),
     q("The first Assamese film 'Joymoti' was released in:",["1925","1935","1945","1955"],1,"Jyoti Prasad Agarwala's Joymoti was released in 1935.")
