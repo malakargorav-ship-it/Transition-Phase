@@ -11,9 +11,11 @@ export async function onRequestPost({ request, env }) {
       !Number.isInteger(body.score) || body.score < 0 || body.score > 100 ||
       typeof body.questionSetId !== "string" || body.questionSetId.length > 100) return fail("Invalid attempt data.");
 
-  const settings = await env.DB.prepare("SELECT minimum_difficulty FROM user_settings WHERE user_id=?").bind(user.id).first();
+  const settings = await env.DB.prepare("SELECT difficulty FROM user_settings WHERE user_id=?").bind(user.id).first();
+  if (body.difficulty !== (settings?.difficulty || "intermediate")) return fail("Attempt difficulty does not match your saved profile.", 403);
+  const rule = await env.DB.prepare("SELECT minimum_difficulty FROM stage_rules WHERE exam_track=? AND stage_id=?").bind(body.examTrack,body.stageId).first();
   const rank = difficulties.indexOf(body.difficulty);
-  const minimum = difficulties.indexOf(settings?.minimum_difficulty || "beginner");
+  const minimum = difficulties.indexOf(rule?.minimum_difficulty || "beginner");
   if (rank < minimum) return fail("Is stage ke liye selected difficulty admin minimum se kam hai.", 403);
 
   const firstStage = body.stageId === "stage-1";
