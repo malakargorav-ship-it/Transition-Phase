@@ -66,3 +66,5 @@ Run this checklist only after the Preview D1 binding and secrets are configured 
 - Difficulty preferences are stored and checked against stage minimums, but question banks still need explicit Beginner/Intermediate/Advanced tagging.
 - Current Affairs, GK and Assam GK question content is not added by this change.
 - Test responsive layout on iPhone and desktop before merging.
+
+- [ ] In Cloudflare Preview, open `/api/health`; require `{ ok: true, database: "connected", schema: "ready", migration: 7 }`.
