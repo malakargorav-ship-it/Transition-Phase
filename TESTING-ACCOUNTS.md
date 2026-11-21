@@ -50,6 +50,7 @@ Run this checklist only after the Preview D1 binding and secrets are configured 
 - [ ] Confirm guest mode still uses the original local practice flow.
 
 ## Automated repository checks
+- [ ] Confirm migrations 0001–0006 apply in sequence to a fresh SQLite database and required tables/columns plus foreign-key integrity validate.
 - [ ] Confirm automated Node tests cover password hashing, unique salts, session-cookie security flags, same-origin enforcement, approved-account session checks, Constable-only starter restrictions and answer-key isolation.
 - [ ] Confirm progress API regression tests enforce per-user query scoping, reject cross-origin writes and reject oversized snapshots.
 - [ ] Confirm topic-exam submit regression tests cover server scoring, pass/fail unlock behavior, expired/used sets, incomplete submissions and atomic D1 claim behavior.
